@@ -53,7 +53,7 @@ struct eurovision_t {
 
 
 bool ConstNameTest(const char *name) {
-    for (int i = 0; name[i] != '\0'; i++) {
+    for (int i = 0; name[i] != '\0'; i ++) {
         if (((name[i] >= 'a' && name[i] <= 'z') || name[i] == ' ') == false)
             return false;
     }
@@ -95,8 +95,8 @@ bool AssociatedCountryId(Eurovision eurovision, int *judgeResults) {
         return true;
     }
 
-    for (int i = 0; i < RANKED_COUNTRIES; ++i) {
-        if (!UniqueCountryName(eurovision, judgeResults[i]) == false) {
+    for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
+        if (! UniqueCountryName(eurovision, judgeResults[i]) == false) {
             return false;
         }
     }
@@ -129,7 +129,7 @@ int StringToIntNoFree(char *str) {
 
 EurovisionResult VotesTest(Eurovision eurovision, int stateGiver,
                            int stateTaker) {
-    if (!eurovision) {
+    if (! eurovision) {
         return EUROVISION_NULL_ARGUMENT;
     }
     if (stateGiver < 0 || stateTaker < 0) {
@@ -156,7 +156,7 @@ void freeString(Element str) {
 
 void CalculatePointsFromJudge(Eurovision eurovision) {
     LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
-        for (int i = 0; i < RANKED_COUNTRIES; ++i) {
+        for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
             LIST_FOREACH(Country, country, eurovision->list_of_countries) {
                 if (judge->judge_points[i] == country->unique_id) {
                     country->pre_average_points_judge = country->pre_average_points_judge + JudgeRank(i);
@@ -198,7 +198,7 @@ int JudgeRank(int number) { // as specified in jude ranking PDF
 EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_countries) {
 
     int *ptr = (int *) malloc(2 * amount_of_countries * sizeof(int));
-    if (!ptr) {
+    if (! ptr) {
         return EUROVISION_OUT_OF_MEMORY;
     }
     // 0 till amount_of_countries country unique_id .
@@ -206,7 +206,7 @@ EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_
     int i = 0;
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         ptr[i] = country->unique_id;
-        ++i;
+        ++ i;
     } //stores ok
 
     /*
@@ -222,15 +222,15 @@ EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_
 }
 
 EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int array_length) {
-    for (int j = 0; j < array_length; ++j) {
-        for (int k = 0; k < array_length; ++k) {
+    for (int j = 0; j < array_length; ++ j) {
+        for (int k = 0; k < array_length; ++ k) {
             ptr[array_length + k] = 0;
         }
         LIST_FOREACH(Points, points, eurovision->list_of_points) {
             if (ptr[j] == points->points_from_country) {
-                for (int i = 0; i < array_length; ++i) {
+                for (int i = 0; i < array_length; ++ i) {
                     if (ptr[i] == points->points_to_country)
-                        ptr[i + array_length]++;
+                        ptr[i + array_length] ++;
                 }
             }
         }
@@ -249,7 +249,7 @@ EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int
 
 EurovisionResult CalculateFriendlyCountry(Eurovision eurovision, int *ptr, int country, int array_length) {
     int temp = 0, index = 0;
-    for (int j = 0; j < array_length; ++j) {
+    for (int j = 0; j < array_length; ++ j) {
         if (ptr[j + array_length] > temp) {
             temp = ptr[j + array_length];
             index = j;
@@ -277,8 +277,8 @@ EurovisionResult CalculateFriendlyCountry(Eurovision eurovision, int *ptr, int c
 
 void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
     int j = 0, temp = 0, index = 0;
-    for (int i = 0; i < RANKED_COUNTRIES; ++i) {
-        for (j = 0; j < array_length; ++j) {
+    for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
+        for (j = 0; j < array_length; ++ j) {
             if (ptr[j + array_length] > temp) {
                 temp = ptr[j + array_length];
                 index = j;
@@ -313,7 +313,7 @@ void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int numb
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         country->post_average_points =
                 (country->pre_average_points) / ((float) number_of_countries - THE_COUNTRY_ITSELF);
-        if (eurovision->initialization->list_of_judges == true) {
+        if (eurovision->initialization->list_of_judges == true && number_of_jadges != 0) {
             country->post_average_points_judge =
                     (country->pre_average_points_judge) / ((float) number_of_jadges);
         }
@@ -328,20 +328,20 @@ void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int numb
 
 List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
     List list = listCreate(copyString, freeString);
-    if (!list) {
+    if (! list) {
         return NULL;
     }
     Country temp_country = malloc(sizeof(*temp_country));
     Country ptr = temp_country;
     temp_country->final_score = 0;
-    for (int i = 0; i < amount_of_countries; ++i) {
+    for (int i = 0; i < amount_of_countries; ++ i) {
         LIST_FOREACH(Country, country, eurovision->list_of_countries) {
             if (country->calculated_place == false) {
                 if (country->final_score > temp_country->final_score) {
                     temp_country = country;
                 }
                 if (country->final_score == temp_country->final_score) {
-                    if (country->unique_id > temp_country->unique_id) {
+                    if (country->unique_id < temp_country->unique_id) {
                         temp_country = country;
                     }
                 }
@@ -364,7 +364,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
 
 char *ConnectStrings(const char *s1, const char *s2) {
     char *result = malloc(strlen(s1) + strlen(s2) + 1);
-    if (!result) {
+    if (! result) {
         return NULL;
     }
     strcpy(result, s1);
@@ -381,7 +381,7 @@ List ListOfStringsFilter(List list) {
         LIST_FOREACH(Name, name_copy, new_list) {
 
             if (strcmp(name, name_copy) != 0) {
-                list_size++;
+                list_size ++;
             }
             if (list_size == listGetSize(new_list)) {
                 if (listInsertLast(new_list, name) != LIST_SUCCESS) {
@@ -395,7 +395,25 @@ List ListOfStringsFilter(List list) {
     listDestroy(list);
     return new_list;
 }
+/*
+List ListSort(List list) {
+    List new_list;
+    Name name = listGetFirst(list);
+    Name str;
+    listRemoveCurrent(list);
+    LIST_FOREACH(Name, str, list) {
 
+    }
+
+
+    return new_list;
+}
+
+Name CutString(Name str) {
+    Name temp = strstr(str, " ");
+
+}
+*/
 
 List FilterLexicographicFilter(List list) {
     int array_length = listGetSize(list);
@@ -411,6 +429,8 @@ List FilterLexicographicFilter(List list) {
         }
         index++;
     }
+
+
     listDestroy(list);
     StringsQuickSort(array_of_strings, array_length); // works ok
 
@@ -447,7 +467,6 @@ void StringsQuickSort(char *str[], unsigned int length) {
     StringsQuickSort(str, pivot++);
     StringsQuickSort(str + pivot, length - pivot);
 }
-
 
 
 

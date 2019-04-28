@@ -285,7 +285,6 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-
     return list;
 
 
@@ -324,6 +323,7 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
             LIST_FOREACH(Name, name, state->gave_max_points) {
                 if (StringToIntNoFree(name) == country->unique_id) {
                     if (strcmp(country->country_name, state->country_name) > 0) { //state->country_name should be first
+
                         if (listInsertLast(list,
                                            ConnectStrings(state->country_name,
                                                           ConnectStrings(" - ", country->country_name))) !=
@@ -339,6 +339,7 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
                             LIST_SUCCESS) {
                             return NULL;
                         }
+
                     }
                 }
             }
