@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Ivang\Desktop\matam1
+CMAKE_SOURCE_DIR = C:\Users\Ivang\Desktop\matam1\matam_1_2019
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Ivang\Desktop\matam1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/eurovisionContest.dir/depend.make
@@ -59,100 +59,100 @@ include CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.obj: CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.obj: CMakeFiles/eurovisionContest.dir/includes_C.rsp
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.obj: ../tests/eurovisionTests.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTests.c.obj   -c C:\Users\Ivang\Desktop\matam1\tests\eurovisionTests.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTests.c.obj   -c C:\Users\Ivang\Desktop\matam1\matam_1_2019\tests\eurovisionTests.c
 
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\tests\eurovisionTests.c > CMakeFiles\eurovisionContest.dir\tests\eurovisionTests.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\matam_1_2019\tests\eurovisionTests.c > CMakeFiles\eurovisionContest.dir\tests\eurovisionTests.c.i
 
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\tests\eurovisionTests.c -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTests.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\matam_1_2019\tests\eurovisionTests.c -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTests.c.s
 
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.obj: CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.obj: CMakeFiles/eurovisionContest.dir/includes_C.rsp
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.obj: ../tests/eurovisionTestsMain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTestsMain.c.obj   -c C:\Users\Ivang\Desktop\matam1\tests\eurovisionTestsMain.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTestsMain.c.obj   -c C:\Users\Ivang\Desktop\matam1\matam_1_2019\tests\eurovisionTestsMain.c
 
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\tests\eurovisionTestsMain.c > CMakeFiles\eurovisionContest.dir\tests\eurovisionTestsMain.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\matam_1_2019\tests\eurovisionTestsMain.c > CMakeFiles\eurovisionContest.dir\tests\eurovisionTestsMain.c.i
 
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\tests\eurovisionTestsMain.c -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTestsMain.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\matam_1_2019\tests\eurovisionTestsMain.c -o CMakeFiles\eurovisionContest.dir\tests\eurovisionTestsMain.c.s
 
 CMakeFiles/eurovisionContest.dir/eurovision.c.obj: CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/eurovision.c.obj: CMakeFiles/eurovisionContest.dir/includes_C.rsp
 CMakeFiles/eurovisionContest.dir/eurovision.c.obj: ../eurovision.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/eurovisionContest.dir/eurovision.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\eurovision.c.obj   -c C:\Users\Ivang\Desktop\matam1\eurovision.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/eurovisionContest.dir/eurovision.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\eurovision.c.obj   -c C:\Users\Ivang\Desktop\matam1\matam_1_2019\eurovision.c
 
 CMakeFiles/eurovisionContest.dir/eurovision.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/eurovisionContest.dir/eurovision.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\eurovision.c > CMakeFiles\eurovisionContest.dir\eurovision.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\matam_1_2019\eurovision.c > CMakeFiles\eurovisionContest.dir\eurovision.c.i
 
 CMakeFiles/eurovisionContest.dir/eurovision.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/eurovisionContest.dir/eurovision.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\eurovision.c -o CMakeFiles\eurovisionContest.dir\eurovision.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\matam_1_2019\eurovision.c -o CMakeFiles\eurovisionContest.dir\eurovision.c.s
 
 CMakeFiles/eurovisionContest.dir/country.c.obj: CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/country.c.obj: CMakeFiles/eurovisionContest.dir/includes_C.rsp
 CMakeFiles/eurovisionContest.dir/country.c.obj: ../country.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/eurovisionContest.dir/country.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\country.c.obj   -c C:\Users\Ivang\Desktop\matam1\country.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/eurovisionContest.dir/country.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\country.c.obj   -c C:\Users\Ivang\Desktop\matam1\matam_1_2019\country.c
 
 CMakeFiles/eurovisionContest.dir/country.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/eurovisionContest.dir/country.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\country.c > CMakeFiles\eurovisionContest.dir\country.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\matam_1_2019\country.c > CMakeFiles\eurovisionContest.dir\country.c.i
 
 CMakeFiles/eurovisionContest.dir/country.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/eurovisionContest.dir/country.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\country.c -o CMakeFiles\eurovisionContest.dir\country.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\matam_1_2019\country.c -o CMakeFiles\eurovisionContest.dir\country.c.s
 
 CMakeFiles/eurovisionContest.dir/judge.c.obj: CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/judge.c.obj: CMakeFiles/eurovisionContest.dir/includes_C.rsp
 CMakeFiles/eurovisionContest.dir/judge.c.obj: ../judge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/eurovisionContest.dir/judge.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\judge.c.obj   -c C:\Users\Ivang\Desktop\matam1\judge.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/eurovisionContest.dir/judge.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\judge.c.obj   -c C:\Users\Ivang\Desktop\matam1\matam_1_2019\judge.c
 
 CMakeFiles/eurovisionContest.dir/judge.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/eurovisionContest.dir/judge.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\judge.c > CMakeFiles\eurovisionContest.dir\judge.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\matam_1_2019\judge.c > CMakeFiles\eurovisionContest.dir\judge.c.i
 
 CMakeFiles/eurovisionContest.dir/judge.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/eurovisionContest.dir/judge.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\judge.c -o CMakeFiles\eurovisionContest.dir\judge.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\matam_1_2019\judge.c -o CMakeFiles\eurovisionContest.dir\judge.c.s
 
 CMakeFiles/eurovisionContest.dir/points.c.obj: CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/points.c.obj: CMakeFiles/eurovisionContest.dir/includes_C.rsp
 CMakeFiles/eurovisionContest.dir/points.c.obj: ../points.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/eurovisionContest.dir/points.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\points.c.obj   -c C:\Users\Ivang\Desktop\matam1\points.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/eurovisionContest.dir/points.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\points.c.obj   -c C:\Users\Ivang\Desktop\matam1\matam_1_2019\points.c
 
 CMakeFiles/eurovisionContest.dir/points.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/eurovisionContest.dir/points.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\points.c > CMakeFiles\eurovisionContest.dir\points.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\matam_1_2019\points.c > CMakeFiles\eurovisionContest.dir\points.c.i
 
 CMakeFiles/eurovisionContest.dir/points.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/eurovisionContest.dir/points.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\points.c -o CMakeFiles\eurovisionContest.dir\points.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\matam_1_2019\points.c -o CMakeFiles\eurovisionContest.dir\points.c.s
 
 CMakeFiles/eurovisionContest.dir/support_functions.c.obj: CMakeFiles/eurovisionContest.dir/flags.make
 CMakeFiles/eurovisionContest.dir/support_functions.c.obj: CMakeFiles/eurovisionContest.dir/includes_C.rsp
 CMakeFiles/eurovisionContest.dir/support_functions.c.obj: ../support_functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/eurovisionContest.dir/support_functions.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\support_functions.c.obj   -c C:\Users\Ivang\Desktop\matam1\support_functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/eurovisionContest.dir/support_functions.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\eurovisionContest.dir\support_functions.c.obj   -c C:\Users\Ivang\Desktop\matam1\matam_1_2019\support_functions.c
 
 CMakeFiles/eurovisionContest.dir/support_functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/eurovisionContest.dir/support_functions.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\support_functions.c > CMakeFiles\eurovisionContest.dir\support_functions.c.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ivang\Desktop\matam1\matam_1_2019\support_functions.c > CMakeFiles\eurovisionContest.dir\support_functions.c.i
 
 CMakeFiles/eurovisionContest.dir/support_functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/eurovisionContest.dir/support_functions.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\support_functions.c -o CMakeFiles\eurovisionContest.dir\support_functions.c.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ivang\Desktop\matam1\matam_1_2019\support_functions.c -o CMakeFiles\eurovisionContest.dir\support_functions.c.s
 
 # Object files for target eurovisionContest
 eurovisionContest_OBJECTS = \
@@ -179,7 +179,7 @@ eurovisionContest.exe: ../libmtm.a
 eurovisionContest.exe: CMakeFiles/eurovisionContest.dir/linklibs.rsp
 eurovisionContest.exe: CMakeFiles/eurovisionContest.dir/objects1.rsp
 eurovisionContest.exe: CMakeFiles/eurovisionContest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable eurovisionContest.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable eurovisionContest.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\eurovisionContest.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -192,6 +192,6 @@ CMakeFiles/eurovisionContest.dir/clean:
 .PHONY : CMakeFiles/eurovisionContest.dir/clean
 
 CMakeFiles/eurovisionContest.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Ivang\Desktop\matam1 C:\Users\Ivang\Desktop\matam1 C:\Users\Ivang\Desktop\matam1\cmake-build-debug C:\Users\Ivang\Desktop\matam1\cmake-build-debug C:\Users\Ivang\Desktop\matam1\cmake-build-debug\CMakeFiles\eurovisionContest.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Ivang\Desktop\matam1\matam_1_2019 C:\Users\Ivang\Desktop\matam1\matam_1_2019 C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug C:\Users\Ivang\Desktop\matam1\matam_1_2019\cmake-build-debug\CMakeFiles\eurovisionContest.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/eurovisionContest.dir/depend
 

@@ -4,12 +4,13 @@ project(matam1 C)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Wall -pedantic-errors -Werror -DNDEBUG -L.")
 
-include_directories(${MY_SOURCE_DIR}/tests)
+include_directories( ${MY_SOURCE_DIR}/tests)
 
 add_executable(eurovisionContest
         eurovision.h
         libmtm.a
         list.h
+        set.h
         tests/test_utilities.h
         tests/eurovisionTests.c
         tests/eurovisionTests.h
