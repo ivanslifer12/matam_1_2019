@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "eurovisionTests.h"
-#include "../eurovision.h"
-#include "../list.h"
-#include "../namelib.h"
-#include "stdlib.h"
-#include "assert.h"
-
-
 
 #define TEST(t)                                                                \
   do {                                                                         \
@@ -18,9 +11,7 @@
       printf("Test %s: FAIL\n", #t);                                           \
   } while (0);
 
-
 int main(int argc, char *argv[]) {
-
     TEST(testAddState)
     TEST(testRemoveState)
     TEST(testAddJudge)

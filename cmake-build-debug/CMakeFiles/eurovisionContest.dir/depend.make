@@ -52,9 +52,6 @@ CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.o: ../namelib.h
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.o: ../tests/eurovisionTests.c
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.o: ../tests/eurovisionTests.h
 
-CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.o: ../eurovision.h
-CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.o: ../list.h
-CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.o: ../namelib.h
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.o: ../tests/eurovisionTests.h
 CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.o: ../tests/eurovisionTestsMain.c
 
