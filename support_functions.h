@@ -55,6 +55,7 @@ EurovisionResult CalculateFriendlyCountry(Eurovision eurovision, int *ptr,int co
 char* ConnectStrings(const char *s1, const char *s2);
 
 List ListOfStringsFilter(List list);
-List ListSort(List list);
-Name CutString(Name str);
+void StringsQuickSort(char *str[], unsigned int length);
+void SwapStringPointers(char **str1, char **str2);
+List FilterLexicographicFilter(List list);
 #endif //MATAM1_SUPPORT_FUNCTIONS_H

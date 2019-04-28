@@ -1,14 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.obj"
-  "CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.obj"
-  "CMakeFiles/eurovisionContest.dir/eurovision.c.obj"
-  "CMakeFiles/eurovisionContest.dir/country.c.obj"
-  "CMakeFiles/eurovisionContest.dir/judge.c.obj"
-  "CMakeFiles/eurovisionContest.dir/points.c.obj"
-  "CMakeFiles/eurovisionContest.dir/support_functions.c.obj"
+  "CMakeFiles/eurovisionContest.dir/tests/eurovisionTests.c.o"
+  "CMakeFiles/eurovisionContest.dir/tests/eurovisionTestsMain.c.o"
+  "CMakeFiles/eurovisionContest.dir/eurovision.c.o"
+  "CMakeFiles/eurovisionContest.dir/country.c.o"
+  "CMakeFiles/eurovisionContest.dir/judge.c.o"
+  "CMakeFiles/eurovisionContest.dir/points.c.o"
+  "CMakeFiles/eurovisionContest.dir/support_functions.c.o"
   "eurovisionContest.pdb"
   "eurovisionContest.exe"
-  "eurovisionContest.exe.manifest"
   "libeurovisionContest.dll.a"
 )
 
