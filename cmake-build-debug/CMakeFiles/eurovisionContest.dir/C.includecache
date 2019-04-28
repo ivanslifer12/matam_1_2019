@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Ivang/Desktop/matam1/tests/eurovisionTests.h
+stdbool.h
+-
+
+C:/Users/Ivang/Desktop/matam1/tests/eurovisionTestsMain.c
+stdio.h
+-
+stdlib.h
+-
+eurovisionTests.h
+C:/Users/Ivang/Desktop/matam1/tests/eurovisionTests.h
+
