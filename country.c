@@ -18,7 +18,7 @@ struct country_t {
     Score pre_average_points_judge;
     Score post_average_points_judge;
     Score final_score;
-    bool     calculated_place;
+    bool  calculated_place;
     List  gave_max_points;
 
 };

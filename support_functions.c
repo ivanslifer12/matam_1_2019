@@ -145,8 +145,12 @@ EurovisionResult VotesTest(Eurovision eurovision, int stateGiver,
 }
 
 ListElement copyString(ListElement str) {
-    char *copy = malloc(strlen(str) + 1);
-    return copy ? strcpy(copy, (Name) str) : NULL;
+    char *copy = strdup((Name) str);
+    if (! copy) {
+        return NULL;
+    }
+    return copy;
+
 }
 
 void freeString(Element str) {
@@ -235,18 +239,37 @@ EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int
             }
         }
         // each country to whom the points had been given (works)
-        /* for (int z = 0; z < array_length; ++ z)
-             printf("\n the giver :%d gave :%d the follwing amount of points:%d ", ptr[j], ptr[z],
-                    ptr[z + array_length]); */
-        if (CalculateFriendlyCountry(eurovision, ptr, j, array_length) != EUROVISION_SUCCESS) {
-            return EUROVISION_NULL_ARGUMENT;
+        int temp = MaxInArray(ptr, array_length, array_length);
+        for (int index = 0; index < array_length; ++ index) {
+            if (ptr[index + array_length] == temp && temp != 0) {
+                LIST_FOREACH(Country, state, eurovision->list_of_countries) {
+                    if (state->unique_id == ptr[j]) {
+                        if (listInsertLast(state->gave_max_points, IntToString(ptr[index])) != LIST_SUCCESS) {
+                            return EUROVISION_NULL_ARGUMENT;
+                        }
+                    }
+                }
+               /* printf("\n the giver :%d gave :%d the follwing amount of points:%d ", ptr[j], ptr[index],
+                       ptr[index + array_length]);
+                printf("\n"); */ //array interpretation
+            }
         }
         AddPointsToTheNext(eurovision, ptr, array_length);
-
     }
     return EUROVISION_SUCCESS;
 }
 
+int MaxInArray(int *array, int array_length, int array_offset) {
+    int temp = 0;
+    for (int i = 0; i < array_length; ++ i) {
+        if (array[i + array_offset] > temp) {
+            temp = array[i + array_offset];
+        }
+    }
+    return temp;
+}
+
+/*old code used for refrance
 EurovisionResult CalculateFriendlyCountry(Eurovision eurovision, int *ptr, int country, int array_length) {
     int temp = 0, index = 0;
     for (int j = 0; j < array_length; ++ j) {
@@ -273,7 +296,7 @@ EurovisionResult CalculateFriendlyCountry(Eurovision eurovision, int *ptr, int c
 
     return EUROVISION_SUCCESS;
 }
-
+*/
 
 void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
     int j = 0, temp = 0, index = 0;
@@ -299,9 +322,7 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
                     country->pre_average_points = country->pre_average_points + JudgeRank(i);
                 }
             }
-            if (i == 0) {
 
-            }
         }
         ptr[index + array_length] = 0; //so we wont check it again
         temp = 0;
@@ -334,6 +355,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
     Country temp_country = malloc(sizeof(*temp_country));
     Country ptr = temp_country;
     temp_country->final_score = 0;
+    temp_country->country_name = NULL;
     for (int i = 0; i < amount_of_countries; ++ i) {
         LIST_FOREACH(Country, country, eurovision->list_of_countries) {
             if (country->calculated_place == false) {
@@ -342,6 +364,9 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
                 }
                 if (country->final_score == temp_country->final_score) {
                     if (country->unique_id < temp_country->unique_id) {
+                        temp_country = country;
+                    }
+                    if (country->final_score == 0 && temp_country->country_name == NULL) {
                         temp_country = country;
                     }
                 }
@@ -388,13 +413,15 @@ List ListOfStringsFilter(List list) {
                     return NULL;
                 }
             }
-            list_size = 0;
+
         }
+        list_size = 0;
     }
 
     listDestroy(list);
     return new_list;
 }
+
 /*
 List ListSort(List list) {
     List new_list;
@@ -418,28 +445,26 @@ Name CutString(Name str) {
 List FilterLexicographicFilter(List list) {
     int array_length = listGetSize(list);
     Name *array_of_strings = (Name *) malloc(sizeof(Name) * array_length);
-    if (!array_of_strings) {
+    if (! array_of_strings) {
         return NULL;
     }
     int index = 0;
     LIST_FOREACH(Name, name, list) {
         array_of_strings[index] = strdup(name);
-        if (!array_of_strings[index]) {
+        if (! array_of_strings[index]) {
             return NULL;
         }
-        index++;
+        index ++;
     }
-
-
     listDestroy(list);
     StringsQuickSort(array_of_strings, array_length); // works ok
-
     List new_list = listCreate(copyString, freeString);
-    for (int i = 0; i < array_length; ++i) {
-        listInsertLast(new_list, array_of_strings[i]);
+    for (int i = 0; i < array_length; ++ i) {
+        if (listInsertLast(new_list, array_of_strings[i]) != LIST_SUCCESS) {
+            return NULL;
+        }
     }
-
-    for (int j = 0; j < array_length; ++j) {
+    for (int j = 0; j < array_length; ++ j) {
         free(array_of_strings[j]);
     }
     free(array_of_strings);
@@ -459,14 +484,16 @@ void StringsQuickSort(char *str[], unsigned int length) {
     if (length <= 1)
         return;
     SwapStringPointers(str + ((unsigned int) rand() % length), str + length - 1);
-    for (i = 0; i < length - 1; ++i) {
+    for (i = 0; i < length - 1; ++ i) {
         if (strcmp(str[i], str[length - 1]) < 0)
-            SwapStringPointers(str + i, str + pivot++);
+            SwapStringPointers(str + i, str + pivot ++);
     }
     SwapStringPointers(str + pivot, str + length - 1);
-    StringsQuickSort(str, pivot++);
+    StringsQuickSort(str, pivot ++);
     StringsQuickSort(str + pivot, length - pivot);
 }
+
+
 
 
 

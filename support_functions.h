@@ -51,11 +51,12 @@ void AddPointsToTheNext(Eurovision eurovision,int* ptr,int array_length);
 void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int number_of_countries,int audiencePercent);
 List MakeWinnersList(Eurovision eurovision,int amount_of_countries);
 EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int array_length);
-EurovisionResult CalculateFriendlyCountry(Eurovision eurovision, int *ptr,int country,int array_length);
+//EurovisionResult CalculateFriendlyCountry(Eurovision eurovision, int *ptr,int country,int array_length);
 char* ConnectStrings(const char *s1, const char *s2);
 
 List ListOfStringsFilter(List list);
 void SwapStringPointers(char **str1, char **str2);
 void StringsQuickSort(char *str[], unsigned int length);
 List FilterLexicographicFilter(List list);
+int MaxInArray(int * array,int array_length,int array_offset );
 #endif //MATAM1_SUPPORT_FUNCTIONS_H

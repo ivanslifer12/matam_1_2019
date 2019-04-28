@@ -1,3 +1,0 @@
-/cygdrive/c/Users/Ivang/Desktop/matam1/matam_1_2019/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/Ivang/Desktop/matam1/matam_1_2019/cmake-build-debug/CMakeFiles/eurovisionContest.dir
-/cygdrive/c/Users/Ivang/Desktop/matam1/matam_1_2019/cmake-build-debug/CMakeFiles/edit_cache.dir

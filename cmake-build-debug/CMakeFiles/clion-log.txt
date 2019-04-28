@@ -1,4 +1,0 @@
-C:\Users\Ivang\.CLion2019.1\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/Ivang/Desktop/matam1/matam_1_2019
--- Configuring done
--- Generating done
--- Build files have been written to: /cygdrive/c/Users/Ivang/Desktop/matam1/matam_1_2019/cmake-build-debug

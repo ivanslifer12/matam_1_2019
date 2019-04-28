@@ -765,6 +765,7 @@ bool runAudience1(Eurovision eurovision) {
 
 bool runFriendly1(Eurovision eurovision) {
     List ranking = 	eurovisionRunGetFriendlyStates(eurovision);
+    printf("\n the length is : %d\n",listGetSize(ranking));
     CHECK(listGetSize(ranking), 1);
     char* current = (char*)listGetFirst(ranking);
 	CHECK(strcmp(current, "clcladeuwgepxggktlacfsfmbmjhvzaeocxeyvrtchabwrmihewtogduvjbgge zz hvej zevmahnad - ydqghnuyhixygfqmptnkwixceqfuoxf zxrivstmsuaqzpysfhwxhlxanmz"), 0);

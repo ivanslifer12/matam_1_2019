@@ -326,6 +326,7 @@ bool testRunGetFriendlyStates() {
 
   List friendlies = eurovisionRunGetFriendlyStates(eurovision);
   CHECK((friendlies == NULL), false);
+  printf("the list size is:%d\n",listGetSize(friendlies));
   CHECK(listGetSize(friendlies), 2);
   char *current = (char *)listGetFirst(friendlies);
   CHECK(strcmp(current, "croatia - malta"), 0);

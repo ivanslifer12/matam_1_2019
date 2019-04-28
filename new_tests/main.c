@@ -1,6 +1,6 @@
 #include "utils.c"
 #include "test1.c"
-/*#include "test2.c"
+#include "test2.c"
 #include "test3.c"
 #include "test4.c"
 #include "test5.c"
@@ -99,22 +99,22 @@
 #include "test98.c"
 #include "test99.c"
 #include "test100.c"
-*/
+
 
 int main(int argc, char *argv[]) {
-	TEST(test1_runContest);
- 	/*TEST(test1_runAudience);
+	//TEST(test1_runContest);
+ //	TEST(test1_runAudience);
 	TEST(test1_runFriendly);
-	TEST(test2_runContest);
-	TEST(test2_runAudience);
-	TEST(test2_runFriendly);*/
-/*	TEST(test3_runContest);
-	TEST(test3_runAudience);
-	TEST(test3_runFriendly);
-	TEST(test4_runContest);
-	TEST(test4_runAudience);
-	TEST(test4_runFriendly);
-	TEST(test5_runContest);
+	//TEST(test2_runContest);
+//	TEST(test2_runAudience);
+//	TEST(test2_runFriendly);
+//	TEST(test3_runContest);
+//	TEST(test3_runAudience);
+//	TEST(test3_runFriendly);
+//	TEST(test4_runContest);
+//	TEST(test4_runAudience);
+//	TEST(test4_runFriendly);
+/*	TEST(test5_runContest);
 	TEST(test5_runAudience);
 	TEST(test5_runFriendly);
 	TEST(test6_runContest);
