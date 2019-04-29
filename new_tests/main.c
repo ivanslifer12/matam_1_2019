@@ -102,22 +102,22 @@
 
 
 int main(int argc, char *argv[]) {
-	//TEST(test1_runContest);
- //	TEST(test1_runAudience);
+ 	//TEST(test1_runAudience);
 	//TEST(test1_runFriendly);
-	//TEST(test2_runContest);
-//	TEST(test2_runAudience);
-//	TEST(test2_runFriendly);
-	TEST(test3_runContest);
+    //TEST(test1_runContest);
+	TEST(test2_runContest);
+	//TEST(test2_runAudience);
+	//TEST(test2_runFriendly);
+	//TEST(test3_runContest);
 	//TEST(test3_runAudience);
-//	TEST(test3_runFriendly);
+	//TEST(test3_runFriendly);
 //	TEST(test4_runContest);
-//	TEST(test4_runAudience);
+	//TEST(test4_runAudience);
 	//TEST(test13_runAudience);
-  //  TEST(test39_runAudience);
-  //  TEST(test62_runAudience);
-    //TEST(test89_runAudience);
-  //  TEST(test91_runAudience);
+    //TEST(test39_runAudience);
+    //TEST(test62_runAudience);
+   // TEST(test89_runAudience);
+   // TEST(test91_runAudience);
 /*	TEST(test5_runContest);
 	TEST(test5_runAudience);
 	TEST(test5_runFriendly);

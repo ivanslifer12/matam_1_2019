@@ -112,13 +112,11 @@ EurovisionResult eurovisionAddState(Eurovision eurovision, int stateId,
         }
     }
 
-
-    if (listInsertLast(eurovision->list_of_countries,
-                       AllocateCountry((Element) stateName, (Element) songName, (Element) IntToString(stateId))) ==
-        //test for leak
-        LIST_OUT_OF_MEMORY) {
+    Country temp = AllocateCountry((Element) stateName, (Element) songName, (Element) IntToString(stateId));
+    if (listInsertLast(eurovision->list_of_countries, temp) == LIST_OUT_OF_MEMORY) {
         return EUROVISION_OUT_OF_MEMORY;
     }
+    FreeCountry(temp);
     eurovision->initialization->list_of_countries = true;
     return EUROVISION_SUCCESS;
 
@@ -148,13 +146,14 @@ EurovisionResult eurovisionAddJudge(Eurovision eurovision, int judgeId,
         return EUROVISION_STATE_NOT_EXIST;
     }
 
-    if (listInsertLast(eurovision->list_of_judges,
-                       AllocateJudge((Element) IntToString(judgeId), (Element) judgeName, (Element) judgeResults)) ==
-        //test leak
-        LIST_OUT_OF_MEMORY) {
+    Judge temp = AllocateJudge((Element) IntToString(judgeId), (Element) judgeName, (Element) judgeResults);
+    if (! temp) {
         return EUROVISION_OUT_OF_MEMORY;
     }
-
+    if (listInsertLast(eurovision->list_of_judges, temp) == LIST_OUT_OF_MEMORY) {
+        return EUROVISION_OUT_OF_MEMORY;
+    }
+    FreeJudge(temp);
     eurovision->initialization->list_of_judges = true;
     return EUROVISION_SUCCESS;
 }
@@ -163,12 +162,14 @@ EurovisionResult eurovisionAddVote(Eurovision eurovision, int stateGiver,
                                    int stateTaker) {
     int temp;
     if ((temp = VotesTest(eurovision, stateGiver, stateTaker)) == EUROVISION_SUCCESS) {
-        if (listInsertLast(eurovision->list_of_points,
-                           CreatePointsStruct(IntToString(stateGiver), IntToString(stateTaker))) ==
-            //test leak
-            LIST_OUT_OF_MEMORY) {
+        if (! temp) {
             return EUROVISION_OUT_OF_MEMORY;
         }
+        Points ptr = CreatePointsStruct(IntToString(stateGiver), IntToString(stateTaker));
+        if (listInsertLast(eurovision->list_of_points, ptr) != LIST_SUCCESS) {
+            return EUROVISION_OUT_OF_MEMORY;
+        }
+        FreePoints(ptr);
         eurovision->initialization->list_of_points = true;
         return EUROVISION_SUCCESS;
     }
@@ -285,6 +286,11 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
+    /*  LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+        printf("\nName :%s people score :%.4f judge score:%.4f final score:%.4f", country->country_name,
+                country->post_average_points, country->post_average_points_judge, country->final_score);
+     }
+   */
     return list;
 
 
@@ -318,6 +324,7 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
     if (! list) {
         return NULL;
     }
+    Name str = NULL;
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         LIST_FOREACH(Name, name, country->gave_max_points) {
             LIST_FOREACH(Country, state, copy_country) {
@@ -326,20 +333,18 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
                         if (StringToIntNoFree(copy_name) == country->unique_id) {
                             if (strcmp(country->country_name, state->country_name) >
                                 0) { //state->country_name should be first
-                                if (listInsertLast(list,
-                                                   ConnectStrings(state->country_name,
-                                                                  ConnectStrings(" - ", country->country_name))) !=
-                                    LIST_SUCCESS) {
+                                str =ConnectThreeStrings(state->country_name," - ",country->country_name);
+                                if (listInsertLast(list, str) != LIST_SUCCESS) {
                                     return NULL;
                                 }
+                                free(str);
                             }
                             if (strcmp(country->country_name, state->country_name) < 0) {
-                                if (listInsertLast(list,
-                                                   ConnectStrings(country->country_name,
-                                                                  ConnectStrings(" - ", state->country_name))) !=
-                                    LIST_SUCCESS) {
+                                str = ConnectThreeStrings(country->country_name," - ",state->country_name);
+                                if (listInsertLast(list, str) != LIST_SUCCESS) {
                                     return NULL;
                                 }
+                                free(str);
                             }
                         }
                     }
@@ -348,7 +353,7 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
         }
     }
     listDestroy(copy_country);
-    list=FilterListForFriends(list);
+    list = FilterListForFriends(list);
     return list;
 
 }

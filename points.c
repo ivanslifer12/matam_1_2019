@@ -51,7 +51,7 @@ ListElement CopyPoints(Element points_struct){
 }
 
 void FreePoints(Element points_struct) {
-    if((Points)points_struct) {
+    if(points_struct==NULL) {
         return;
     }
     free((Points)points_struct);

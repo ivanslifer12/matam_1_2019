@@ -787,6 +787,7 @@ bool test1_runAudience(){
     assert(eurovision);
     setup1(eurovision);
     runAudience1(eurovision);
+
     eurovisionDestroy(eurovision);
     return true;
 }

@@ -18,8 +18,8 @@ struct country_t {
     Score pre_average_points_judge;
     Score post_average_points_judge;
     Score final_score;
-    bool  calculated_place;
-    List  gave_max_points;
+    bool calculated_place;
+    List gave_max_points;
 
 };
 
@@ -43,9 +43,9 @@ Country AllocateCountry(Element country_name, Element song_name, Element unique_
     created_country->pre_average_points_judge = 0;
     created_country->post_average_points_judge = 0;
     created_country->post_average_points = 0;
-    created_country->final_score=0;
-    created_country->calculated_place=false;
-    created_country->gave_max_points=listCreate(copyString,freeString);
+    created_country->final_score = 0;
+    created_country->calculated_place = false;
+    created_country->gave_max_points = listCreate(copyString, freeString);
     return created_country;
 
 }
@@ -55,8 +55,8 @@ ListElement CopyCountry(Element country_struct) {
     if (! created_country) {
         return NULL;
     }
-    created_country->calculated_place=((Country)created_country)->calculated_place;
-    created_country->final_score=((Country)country_struct)->final_score;
+    created_country->calculated_place = ((Country) country_struct)->calculated_place;
+    created_country->final_score = ((Country) country_struct)->final_score;
     created_country->unique_id = ((Country) country_struct)->unique_id;
     created_country->post_average_points = ((Country) country_struct)->post_average_points;
     created_country->pre_average_points = ((Country) country_struct)->pre_average_points;
@@ -70,20 +70,21 @@ ListElement CopyCountry(Element country_struct) {
     if (! created_country->song_name) {
         return NULL;
     }
-    created_country->gave_max_points=listCopy(((Country)country_struct)->gave_max_points);
+    created_country->gave_max_points = listCopy(((Country) country_struct)->gave_max_points);
 
     return created_country;
 
 }
 
 void FreeCountry(Element country) {
-    if (! (Country) country) {
+    if (country == NULL) {
         return;
     }
-    free(((Country) country)->song_name);
-    free(((Country) country)->country_name);
-    listDestroy(((Country)country)->gave_max_points);
-    free((Country) country);
+    Country temp = country;
+    free(temp->song_name);
+    free(temp->country_name);
+    listDestroy(temp->gave_max_points);
+    free(temp);
 }
 
 
