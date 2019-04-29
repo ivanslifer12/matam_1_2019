@@ -334,7 +334,6 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
                                 }
                             }
                             if (strcmp(country->country_name, state->country_name) < 0) {
-
                                 if (listInsertLast(list,
                                                    ConnectStrings(country->country_name,
                                                                   ConnectStrings(" - ", state->country_name))) !=
@@ -348,18 +347,13 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
             }
         }
     }
-    list = ListOfStringsFilter(list);
-    if (! list) {
-        return NULL;
-    }
-
-    list = FilterLexicographicFilter(list);
-    if (! list) {
-        return NULL;
-    }
     listDestroy(copy_country);
+    list=FilterListForFriends(list);
     return list;
+
 }
+
+
 
 /*
 List eurovisionRunGetFriendlyStates(Eurovision eurovision) {

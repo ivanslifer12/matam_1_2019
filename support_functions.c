@@ -8,6 +8,7 @@
 #include "stdio.h"
 #include "support_functions.h"
 #include "string.h"
+#include "math.h"
 
 struct initialization_t {
     bool list_of_countries;
@@ -334,19 +335,26 @@ void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int numb
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         country->post_average_points =
                 (country->pre_average_points) / ((float) number_of_countries - THE_COUNTRY_ITSELF);
+        country->post_average_points=NumberRound(country->post_average_points);
         if (eurovision->initialization->list_of_judges == true && number_of_jadges != 0) {
             country->post_average_points_judge =
                     (country->pre_average_points_judge) / ((float) number_of_jadges);
+            country->post_average_points_judge=NumberRound(country->post_average_points_judge);
         }
         country->final_score =
                 ((float) country->post_average_points * ((float) audiencePercent / MAX_PRACENT)) +
                 ((float) country->post_average_points_judge * (WHOLE_NUMBER - ((float) audiencePercent / MAX_PRACENT)));
+        country->final_score=NumberRound(country->final_score);
 
 
     }
 
 }
-
+float NumberRound(float number){
+    float temp =(int)(number*100);
+    temp=(double)(temp/100);
+    return temp;
+}
 List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
     List list = listCreate(copyString, freeString);
     if (! list) {
@@ -494,7 +502,22 @@ void StringsQuickSort(char *str[], unsigned int length) {
 }
 
 
+List FilterListForFriends(List list){
+    if(listGetSize(list)==0){
+        return list;
+    }
+    list = ListOfStringsFilter(list);
+    if (! list) {
+        return NULL;
+    }
 
+    list = FilterLexicographicFilter(list);
+    if (! list) {
+        return NULL;
+    }
+
+    return list;
+}
 
 
 

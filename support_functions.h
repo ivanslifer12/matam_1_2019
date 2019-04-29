@@ -59,4 +59,6 @@ void SwapStringPointers(char **str1, char **str2);
 void StringsQuickSort(char *str[], unsigned int length);
 List FilterLexicographicFilter(List list);
 int MaxInArray(int * array,int array_length,int array_offset );
+List FilterListForFriends(List list);
+float NumberRound(float number);
 #endif //MATAM1_SUPPORT_FUNCTIONS_H
