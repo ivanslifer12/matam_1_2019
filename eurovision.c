@@ -20,9 +20,9 @@ struct country_t {
     Name country_name;
     Name song_name;
     UniqueId unique_id;
-    Score pre_average_points;
+    UniqueId pre_average_points;
     Score post_average_points;
-    Score pre_average_points_judge;
+    UniqueId pre_average_points_judge;
     Score post_average_points_judge;
     Score final_score;
     bool calculated_place;
@@ -286,11 +286,13 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-    /*  LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-        printf("\nName :%s people score :%.4f judge score:%.4f final score:%.4f", country->country_name,
-                country->post_average_points, country->post_average_points_judge, country->final_score);
-     }
-   */
+      LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+          printf("\nName :%s\n people score :%.4f judge score:%.4f final score:%.4f", country->country_name,
+                 country->post_average_points, country->post_average_points_judge, country->final_score);
+
+          printf("  pre_avg_people:%d pre_avg_judge:%d",country->pre_average_points,country->pre_average_points_judge);
+      }
+    printf("\n");
     return list;
 
 

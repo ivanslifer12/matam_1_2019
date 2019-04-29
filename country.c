@@ -13,9 +13,9 @@ struct country_t {
     Name country_name;
     Name song_name;
     UniqueId unique_id;
-    Score pre_average_points;
+    UniqueId pre_average_points;
     Score post_average_points;
-    Score pre_average_points_judge;
+    UniqueId pre_average_points_judge;
     Score post_average_points_judge;
     Score final_score;
     bool calculated_place;

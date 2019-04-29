@@ -654,9 +654,14 @@ void setup1(Eurovision eurovision){
 
 bool runContest1(Eurovision eurovision) {
     List ranking = 	eurovisionRunContest(eurovision, 16);
+
+    CHECK(listGetSize(ranking), 24);
+    LIST_FOREACH(Name,name,ranking){
+        printf("\n%s",name);
+    }
+    printf("\n");
     CHECK(listGetSize(ranking), 24);
     char* current = (char*)listGetFirst(ranking);
-    printf("\n %s\n",current);
 	CHECK(strcmp(current, "zrodkgfifoutpbowiciwksqs so tlmwdxexbihujvkatmtlcjc"), 0);
     current = (char*)listGetNext(ranking);
 	CHECK(strcmp(current, "usuz"), 0);
@@ -710,7 +715,7 @@ bool runContest1(Eurovision eurovision) {
 
 bool runAudience1(Eurovision eurovision) {
     List ranking = 	eurovisionRunAudienceFavorite(eurovision);
-    CHECK(listGetSize(ranking), 24);
+
     char* current = (char*)listGetFirst(ranking);
 	CHECK(strcmp(current, "binlee l"), 0);
     current = (char*)listGetNext(ranking);
@@ -765,7 +770,6 @@ bool runAudience1(Eurovision eurovision) {
 
 bool runFriendly1(Eurovision eurovision) {
     List ranking = 	eurovisionRunGetFriendlyStates(eurovision);
-    printf("\n the length is : %d\n",listGetSize(ranking));
     CHECK(listGetSize(ranking), 1);
     char* current = (char*)listGetFirst(ranking);
 	CHECK(strcmp(current, "clcladeuwgepxggktlacfsfmbmjhvzaeocxeyvrtchabwrmihewtogduvjbgge zz hvej zevmahnad - ydqghnuyhixygfqmptnkwixceqfuoxf zxrivstmsuaqzpysfhwxhlxanmz"), 0);
@@ -787,7 +791,6 @@ bool test1_runAudience(){
     assert(eurovision);
     setup1(eurovision);
     runAudience1(eurovision);
-
     eurovisionDestroy(eurovision);
     return true;
 }

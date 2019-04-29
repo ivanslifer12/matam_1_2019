@@ -8,8 +8,8 @@ PRE = '''#include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 #include <assert.h>
-#include "list.h"
-#include "eurovision.h"
+#include "../list.h"
+#include "../eurovision.h"
 #include "utils.c"
 
 '''
@@ -160,8 +160,8 @@ def cmp_scores(item1, item2):
     # this is the easiest solution to floating point problems
     # it works only 99% of the time, should be enough for actual
     # HW tests
-    score_diff = math.floor(Decimal(str(item1[1]*10000))) - \
-                 math.floor(Decimal(str(item2[1]*10000)))
+    score_diff = math.floor(Decimal(str(item1[1]*1000))) - \
+                 math.floor(Decimal(str(item2[1]*1000)))
     if score_diff == 0:
         return item1[0] - item2[0]  # lower id is first
     if score_diff > 0:
