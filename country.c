@@ -31,11 +31,11 @@ Country AllocateCountry(Element country_name, Element song_name, Element unique_
     }
 
     created_country->unique_id = StringToInt((Name) unique_id);
-    created_country->country_name = strdup((CName) country_name);
+    created_country->country_name = copyString(country_name);
     if (! created_country->country_name) {
         return NULL;
     }
-    created_country->song_name = strdup((CName) song_name);
+    created_country->song_name = copyString(song_name);
     if (! created_country->song_name) {
         return NULL;
     }
@@ -66,7 +66,7 @@ ListElement CopyCountry(Element country_struct) {
     if (! created_country->country_name) {
         return NULL;
     }
-    created_country->song_name = strdup(((Country) country_struct)->song_name);
+    created_country->song_name = copyString(((Country) country_struct)->song_name);
     if (! created_country->song_name) {
         return NULL;
     }

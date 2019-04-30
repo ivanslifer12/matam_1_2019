@@ -146,13 +146,18 @@ EurovisionResult VotesTest(Eurovision eurovision, int stateGiver,
 }
 
 ListElement copyString(ListElement str) {
-    char *copy = strdup((Name) str);
+   /* char *copy = strdup((Name) str);
     if (! copy) {
         return NULL;
     }
     return copy;
+    */
 
+       char* copy = malloc(strlen((Name)str) + 1);
+      return copy ? strcpy(copy, (Name)str) : NULL;
 }
+
+
 
 void freeString(Element str) {
     free(str);
@@ -475,7 +480,7 @@ List FilterLexicographicFilter(List list) {
     }
     int index = 0;
     LIST_FOREACH(Name, name, list) {
-        array_of_strings[index] = strdup(name);
+        array_of_strings[index] = copyString(name);
         if (! array_of_strings[index]) {
             return NULL;
         }

@@ -40,7 +40,7 @@ Judge AllocateJudge(Element unique_id, Element judge_name, Element judge_points)
     }
 
     judge->unique_id =StringToInt((Name)unique_id);
-    judge->judge_name = strdup((Name) judge_name);
+    judge->judge_name = copyString((Name) judge_name);
     if (! judge->judge_name) {
         return NULL;
     }
@@ -73,7 +73,7 @@ ListElement CopyJudge(Element judge_struct) {
         created_judge->judge_points[i] = ((Judge) judge_struct)->judge_points[i];
     }
 
-    created_judge->judge_name = strdup(((Judge) judge_struct)->judge_name);
+    created_judge->judge_name = copyString(((Judge) judge_struct)->judge_name);
 
     return created_judge;
 }
