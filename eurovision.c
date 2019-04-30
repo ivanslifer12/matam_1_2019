@@ -286,13 +286,14 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-      LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+    /*  LIST_FOREACH(Country, country, eurovision->list_of_countries) {
           printf("\nName :%s\n people score :%.4f judge score:%.4f final score:%.4f", country->country_name,
                  country->post_average_points, country->post_average_points_judge, country->final_score);
 
           printf("  pre_avg_people:%d pre_avg_judge:%d",country->pre_average_points,country->pre_average_points_judge);
       }
     printf("\n");
+    */
     return list;
 
 
