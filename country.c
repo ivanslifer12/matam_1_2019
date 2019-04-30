@@ -62,7 +62,7 @@ ListElement CopyCountry(Element country_struct) {
     created_country->pre_average_points = ((Country) country_struct)->pre_average_points;
     created_country->post_average_points_judge = ((Country) country_struct)->post_average_points_judge;
     created_country->pre_average_points_judge = ((Country) country_struct)->pre_average_points_judge;
-    created_country->country_name = strdup(((Country) country_struct)->country_name);
+    created_country->country_name = copyString(((Country) country_struct)->country_name);
     if (! created_country->country_name) {
         return NULL;
     }
