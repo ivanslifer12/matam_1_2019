@@ -189,7 +189,7 @@ EurovisionResult eurovisionRemoveVote(Eurovision eurovision, int stateGiver,
         if (eurovision->initialization->list_of_points == true) {
             int size_of_list = listGetSize(eurovision->list_of_points), counter = 0;
             for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
-                if (counter == size_of_list) { // to reduce run time
+                if (counter == listGetSize(eurovision->list_of_points)) { // to reduce run time
                     break;
                 } else {
                     counter = 0;
@@ -256,7 +256,7 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
         int size_of_list = listGetSize(eurovision->list_of_points);
         int counter = 0;
         for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
-            if (counter == size_of_list) { // to reduce run time
+            if (counter == listGetSize(eurovision->list_of_points)) { // to reduce run time
                 break;
             } else {
                 counter = 0;
@@ -277,7 +277,7 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
         int size_of_list = listGetSize(eurovision->list_of_judges);
         int counter = 0;
         for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
-            if (counter == size_of_list) { // to reduce run time
+            if (counter == listGetSize(eurovision->list_of_judges)) { // to reduce run time
                 break;
             } else {
                 counter = 0;
@@ -328,14 +328,14 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-/*
+
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         printf("\nID:%d Score:%f\nPre_people:%d After_People:%f Pre_Judge:%d After_Judge:%f", country->unique_id,
                country->final_score, country->pre_average_points, country->post_average_points,
                country->pre_average_points_judge, country->post_average_points_judge);
     }
     printf("\n");
-*/
+
     return list;
 
 
