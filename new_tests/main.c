@@ -1,6 +1,6 @@
 #include "utils.c"
 #include "test1.c"
-/*
+
 #include "test2.c"
 #include "test3.c"
 #include "test4.c"
@@ -1000,17 +1000,13 @@
 #include "test998.c"
 #include "test999.c"
 #include "test1000.c"
-*/
-#include "test124.c"
+
+
 int main(int argc, char *argv[]) {
-   // TEST(test1_runAudience);
-  //  TEST(test1_runFriendly);
-
-  //  TEST(test124_runFriendly);
-    TEST(test124_runAudience);
-    TEST(test124_runContest);
-
-/*	TEST(test1_runAudience);
+    TEST(test1_runAudience);
+    TEST(test1_runFriendly);
+    TEST(test1_runContest);
+	TEST(test1_runAudience);
 	TEST(test1_runFriendly);
 	TEST(test2_runContest);
 	TEST(test2_runAudience);
@@ -4009,5 +4005,5 @@ int main(int argc, char *argv[]) {
 	TEST(test1000_runContest);
 	TEST(test1000_runAudience);
 	TEST(test1000_runFriendly);
- */
+
 }
