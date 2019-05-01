@@ -654,13 +654,10 @@ void setup1(Eurovision eurovision){
 
 bool runContest1(Eurovision eurovision) {
     List ranking = 	eurovisionRunContest(eurovision, 16);
-
     CHECK(listGetSize(ranking), 24);
     LIST_FOREACH(Name,name,ranking){
         printf("\n%s",name);
     }
-    printf("\n");
-    CHECK(listGetSize(ranking), 24);
     char* current = (char*)listGetFirst(ranking);
 	CHECK(strcmp(current, "zrodkgfifoutpbowiciwksqs so tlmwdxexbihujvkatmtlcjc"), 0);
     current = (char*)listGetNext(ranking);
@@ -715,7 +712,7 @@ bool runContest1(Eurovision eurovision) {
 
 bool runAudience1(Eurovision eurovision) {
     List ranking = 	eurovisionRunAudienceFavorite(eurovision);
-
+    CHECK(listGetSize(ranking), 24);
     char* current = (char*)listGetFirst(ranking);
 	CHECK(strcmp(current, "binlee l"), 0);
     current = (char*)listGetNext(ranking);

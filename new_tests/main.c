@@ -101,10 +101,10 @@
 #include "test100.c"
 
 int main(int argc, char *argv[]) {
-	//TEST(test1_runContest);
-	TEST(test1_runAudience);
-	//TEST(test1_runFriendly);
-/*	TEST(test2_runContest);
+	TEST(test1_runContest);
+/*	TEST(test1_runAudience);
+	TEST(test1_runFriendly);
+	TEST(test2_runContest);
 	TEST(test2_runAudience);
 	TEST(test2_runFriendly);
 	TEST(test3_runContest);

@@ -361,8 +361,9 @@ void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int numb
 
 double NumberRound(double number) {
      double result = (int) (number * 100);
-     result = (double) (result / 100);
+     result = (double) (result / 100.0);
      return result;
+
 
    // return number;
 }
