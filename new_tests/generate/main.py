@@ -1,6 +1,5 @@
 import random
 import string
-import math
 from decimal import Decimal
 
 PRE = '''#include <stdlib.h>
@@ -8,8 +7,8 @@ PRE = '''#include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 #include <assert.h>
-#include "../list.h"
-#include "../eurovision.h"
+#include "../libmtm/list.h"
+#include "../eurovision/eurovision.h"
 #include "utils.c"
 
 '''
@@ -160,9 +159,10 @@ def cmp_scores(item1, item2):
     # this is the easiest solution to floating point problems
     # it works only 99% of the time, should be enough for actual
     # HW tests
-    score_diff = math.floor(Decimal(str(item1[1]*1000))) - \
-                 math.floor(Decimal(str(item2[1]*1000)))
-    if score_diff == 0:
+    #score_diff = math.floor(Decimal(str(item1[1]*100))) - \
+    #             math.floor(Decimal(str(item2[1]*100)))
+    score_diff = Decimal(str(item1[1])) - Decimal(str(item2[1]))
+    if score_diff == 0.0:
         return item1[0] - item2[0]  # lower id is first
     if score_diff > 0:
         return -1
@@ -219,6 +219,7 @@ def calc_contest(states, judges, aud_perc):
 
     final = []
     for state in sorted(scores.items(), cmp=cmp_scores):
+        print state[0], state[1]
         final.append(states[state[0]].name)
     return final
 
@@ -261,6 +262,7 @@ def run_contest(f, test_num, states, judges):
     f.write("bool runContest%d(Eurovision %s) {\n" % (test_num, EURO_NAME))
     func = "    List ranking = %s(%s, %d);\n" % (RUN_CONTEST, EURO_NAME,
                                                  aud_perc)
+    print "run contest:"
     result = calc_contest(states, judges, aud_perc)
     run(f, result, func)
 
@@ -269,6 +271,7 @@ def run_aud(f, test_num, states, judges):
     f.write("bool runAudience%d(Eurovision %s) {\n" % (test_num,
                                                        EURO_NAME))
     func = "    List ranking = %s(%s);\n" % (AUDIENCE_FAVORITE, EURO_NAME)
+    print "run audience:"
     result = calc_contest(states, judges, 100)
     run(f, result, func)
 
@@ -343,7 +346,7 @@ def create_main(num):
 
 
 def main():
-    num_of_tests = 100
+    num_of_tests = 1000
     for i in range(1, num_of_tests+1):
         print "Starting test number:", i
         new_test(i)

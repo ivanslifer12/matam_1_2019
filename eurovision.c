@@ -131,7 +131,7 @@ EurovisionResult eurovisionAddJudge(Eurovision eurovision, int judgeId,
     if (judgeId < 0) {
         return EUROVISION_INVALID_ID;
     }
-    if(eurovision->initialization->list_of_countries==false){
+    if (eurovision->initialization->list_of_countries == false) {
         return EUROVISION_STATE_NOT_EXIST;
     }
     for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
@@ -145,7 +145,7 @@ EurovisionResult eurovisionAddJudge(Eurovision eurovision, int judgeId,
     if (! UniqueJudgeName(eurovision, judgeId)) {
         return EUROVISION_JUDGE_ALREADY_EXIST;
     }
-    if (! AssociatedCountryId(eurovision, judgeResults)) {
+    if (AssociatedCountryId(eurovision, judgeResults) == false) {
         return EUROVISION_STATE_NOT_EXIST;
     }
 
@@ -165,7 +165,7 @@ EurovisionResult eurovisionAddVote(Eurovision eurovision, int stateGiver,
                                    int stateTaker) {
     int temp;
     if ((temp = VotesTest(eurovision, stateGiver, stateTaker)) == EUROVISION_SUCCESS) {
-        if (temp!=EUROVISION_SUCCESS) {
+        if (temp != EUROVISION_SUCCESS) {
             return temp;
         }
         Points ptr = CreatePointsStruct(IntToString(stateGiver), IntToString(stateTaker));
@@ -182,21 +182,30 @@ EurovisionResult eurovisionAddVote(Eurovision eurovision, int stateGiver,
 EurovisionResult eurovisionRemoveVote(Eurovision eurovision, int stateGiver,
                                       int stateTaker) {
     int temp;
-    if(eurovision->initialization->list_of_points==false){
+    if (eurovision->initialization->list_of_points == false) {
         return EUROVISION_STATE_NOT_EXIST;
     }
     if ((temp = VotesTest(eurovision, stateGiver, stateTaker)) == EUROVISION_SUCCESS) {
         if (eurovision->initialization->list_of_points == true) {
-            LIST_FOREACH(Points, points, eurovision->list_of_points) {
-                if (points->points_from_country == stateGiver && points->points_to_country == stateTaker) {
-                    listRemoveCurrent(eurovision->list_of_points);
-                    if (listGetFirst(eurovision->list_of_points) == NULL) { // if the list gets empty
-                        eurovision->initialization->list_of_points = false;
-                    }
-                    return EUROVISION_SUCCESS;
+            int size_of_list = listGetSize(eurovision->list_of_points), counter = 0;
+            for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
+                if (counter == size_of_list) { // to reduce run time
+                    break;
+                } else {
+                    counter = 0;
                 }
-            }
+                LIST_FOREACH(Points, points, eurovision->list_of_points) {
+                    counter ++;
+                    if (points->points_from_country == stateGiver && points->points_to_country == stateTaker) {
+                        listRemoveCurrent(eurovision->list_of_points);
+                        if (listGetFirst(eurovision->list_of_points) == NULL) { // if the list gets empty
+                            eurovision->initialization->list_of_points = false;
+                        }
+                        return EUROVISION_SUCCESS;
+                    }
+                }
 
+            }
         }
     }
     return temp;
@@ -207,7 +216,7 @@ EurovisionResult eurovisionRemoveJudge(Eurovision eurovision, int judgeId) {
     if (! eurovision) {
         return EUROVISION_NULL_ARGUMENT;
     }
-    if(eurovision->initialization->list_of_judges==false){
+    if (eurovision->initialization->list_of_judges == false) {
         return EUROVISION_JUDGE_NOT_EXIST;
     }
     if (judgeId < 0) {
@@ -219,7 +228,7 @@ EurovisionResult eurovisionRemoveJudge(Eurovision eurovision, int judgeId) {
     LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
         if (judge->unique_id == judgeId) {
             listRemoveCurrent(eurovision->list_of_judges);
-            if (listGetFirst(eurovision->list_of_points) == NULL) {
+            if (listGetFirst(eurovision->list_of_points) == NULL) { // when the list is empty
                 eurovision->initialization->list_of_points = false;
             }
             return EUROVISION_SUCCESS;
@@ -237,16 +246,27 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
     if (stateId < 0) {
         return EUROVISION_INVALID_ID;
     }
-    if(eurovision->initialization->list_of_countries==false){
+    if (eurovision->initialization->list_of_countries == false) {
         return EUROVISION_STATE_NOT_EXIST;
     }
     if (UniqueCountryName(eurovision, stateId)) {
         return EUROVISION_STATE_NOT_EXIST;
     }
     if (eurovision->initialization->list_of_points == true) {
-        LIST_FOREACH(Points, points, eurovision->list_of_points) {
-            if (points->points_to_country == stateId || points->points_from_country == stateId) {
-                listRemoveCurrent(eurovision->list_of_points);
+        int size_of_list = listGetSize(eurovision->list_of_points);
+        int counter=0;
+        for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
+            if (counter == size_of_list) { // to reduce run time
+                break;
+            } else {
+                counter = 0;
+            }
+            LIST_FOREACH(Points, points, eurovision->list_of_points) {
+                counter++;
+                if (points->points_to_country == stateId || points->points_from_country == stateId) {
+                    listRemoveCurrent(eurovision->list_of_points);
+
+                }
             }
         }
     }
@@ -254,11 +274,21 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
         eurovision->initialization->list_of_points = false;
     }
     if (eurovision->initialization->list_of_judges == true) {
-        LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
-            for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
-                if (judge->judge_points[i] == stateId) {
-                    listRemoveCurrent(eurovision->list_of_judges);
-                    break;
+        int size_of_list = listGetSize(eurovision->list_of_judges);
+        int counter=0;
+        for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
+            if (counter == size_of_list) { // to reduce run time
+                break;
+            } else {
+                counter = 0;
+            }
+            LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
+                counter++;
+                for (int j = 0; j < RANKED_COUNTRIES; ++ j) {
+                    if (judge->judge_points[i] == stateId) {
+                        listRemoveCurrent(eurovision->list_of_judges);
+                        break;
+                    }
                 }
             }
         }
@@ -298,12 +328,12 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-      LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-          printf("\nName :%s\n people score :%.4f judge score:%.4f final score:%.4f", country->country_name,
-                 country->post_average_points, country->post_average_points_judge, country->final_score);
 
-          printf("  pre_avg_people:%d pre_avg_judge:%d",country->pre_average_points,country->pre_average_points_judge);
-      }
+    LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+        printf("\nID:%d Score:%f\nPre_people:%d After_People:%f Pre_Judge:%d After_Judge:%f", country->unique_id,
+               country->final_score, country->pre_average_points, country->post_average_points,
+               country->pre_average_points_judge, country->post_average_points_judge);
+    }
     printf("\n");
 
     return list;
@@ -322,6 +352,11 @@ List eurovisionRunAudienceFavorite(Eurovision eurovision) {
     }
     CalculateAverageScore(eurovision, 0, amount_of_countries, 100);
     List list = MakeWinnersList(eurovision, amount_of_countries);
+    LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+        printf("\nID:%d Score:%f\nPre_people:%d After_People:%f", country->unique_id,
+               country->final_score, country->pre_average_points, country->post_average_points);
+    }
+    printf("\n");
     return list;
 }
 
@@ -348,14 +383,14 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
                         if (StringToIntNoFree(copy_name) == country->unique_id) {
                             if (strcmp(country->country_name, state->country_name) >
                                 0) { //state->country_name should be first
-                                str =ConnectThreeStrings(state->country_name," - ",country->country_name);
+                                str = ConnectThreeStrings(state->country_name, " - ", country->country_name);
                                 if (listInsertLast(list, str) != LIST_SUCCESS) {
                                     return NULL;
                                 }
                                 free(str);
                             }
                             if (strcmp(country->country_name, state->country_name) < 0) {
-                                str = ConnectThreeStrings(country->country_name," - ",state->country_name);
+                                str = ConnectThreeStrings(country->country_name, " - ", state->country_name);
                                 if (listInsertLast(list, str) != LIST_SUCCESS) {
                                     return NULL;
                                 }

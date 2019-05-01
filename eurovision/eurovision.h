@@ -1,8 +1,8 @@
 #ifndef EUROVISION_H_
 #define EUROVISION_H_
 
-#include "list.h"
-#include "namelib.h"
+#include "../list.h"
+#include "../namelib.h"
 
 
 typedef enum eurovisionResult_t {

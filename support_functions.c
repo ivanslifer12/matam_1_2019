@@ -62,12 +62,7 @@ bool ConstNameTest(const char *name) {
 }
 
 bool UniqueCountryName(Eurovision eurovision, int stateId) {
-    Country country = listGetFirst(eurovision->list_of_countries);
-    if (country->unique_id == stateId) {
-        return false;
-    }
-
-    while ((country = listGetNext(eurovision->list_of_countries)) != NULL) {
+    LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         if (country->unique_id == stateId) {
             return false;
         }
@@ -76,14 +71,8 @@ bool UniqueCountryName(Eurovision eurovision, int stateId) {
 }
 
 bool UniqueJudgeName(Eurovision eurovision, int judgeId) {
-    if (eurovision->initialization->list_of_judges == false) {
-        return true;
-    }
-    Judge judge = listGetFirst(eurovision->list_of_judges);
-    if (judge->unique_id == judgeId) {
-        return false;
-    }
-    while ((judge = listGetNext(eurovision->list_of_judges)) != NULL) {
+
+    LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
         if (judge->unique_id == judgeId) {
             return false;
         }
@@ -93,17 +82,16 @@ bool UniqueJudgeName(Eurovision eurovision, int judgeId) {
 
 bool AssociatedCountryId(Eurovision eurovision, int *judgeResults) {
     if (eurovision->initialization->list_of_countries == false) {
-        return true;
+        return false;
     }
 
     for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
-        if (! UniqueCountryName(eurovision, judgeResults[i]) == false) {
+        if (UniqueCountryName(eurovision, judgeResults[i])) {
             return false;
         }
     }
     return true;
 }
-
 
 /*
  * must use this because you can't cast int->void*->int
@@ -146,17 +134,16 @@ EurovisionResult VotesTest(Eurovision eurovision, int stateGiver,
 }
 
 ListElement copyString(ListElement str) {
-   /* char *copy = strdup((Name) str);
-    if (! copy) {
-        return NULL;
-    }
-    return copy;
-    */
+    /* char *copy = strdup((Name) str);
+     if (! copy) {
+         return NULL;
+     }
+     return copy;
+     */
 
-       char* copy = malloc(strlen((Name)str) + 1);
-      return copy ? strcpy(copy, (Name)str) : NULL;
+    char *copy = malloc(strlen((Name) str) + 1);
+    return copy ? strcpy(copy, (Name) str) : NULL;
 }
-
 
 
 void freeString(Element str) {
@@ -207,7 +194,7 @@ int JudgeRank(int number) { // as specified in jude ranking PDF
 
 EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_countries) {
 
-    int *ptr = (int *) malloc(2 * amount_of_countries * sizeof(int));
+    int *ptr = (int *) malloc(ARRAY_2D * amount_of_countries * sizeof(int));
     if (! ptr) {
         return EUROVISION_OUT_OF_MEMORY;
     }
@@ -216,7 +203,7 @@ EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_
     int i = 0;
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         ptr[i] = country->unique_id;
-        ++ i;
+        i ++;
     } //stores ok
 
     /*
@@ -330,28 +317,32 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
                     country->pre_average_points = country->pre_average_points + JudgeRank(i);
                 }
             }
-
+            ptr[index + array_length] = 0; //so we wont check it again
+            temp = 0;
+            index = 0;
         }
-        ptr[index + array_length] = 0; //so we wont check it again
-        temp = 0;
-        index = 0;
+
     }
+    for (j = 0; j < array_length; ++ j) {
+        ptr[j + array_length] = 0;
+    } // just in case
+
 }
 
 void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int number_of_countries, int audiencePercent) {
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         country->post_average_points =
-                (country->pre_average_points) / ((double) number_of_countries - THE_COUNTRY_ITSELF);
+                (country->pre_average_points) / (double) (number_of_countries - THE_COUNTRY_ITSELF);
         country->post_average_points = NumberRound(country->post_average_points);
         if (eurovision->initialization->list_of_judges == true && number_of_jadges != 0) {
             country->post_average_points_judge =
-                    (country->pre_average_points_judge) / ((double) number_of_jadges);
+                    (country->pre_average_points_judge) / (double) (number_of_jadges);
             country->post_average_points_judge = NumberRound(country->post_average_points_judge);
         }
         country->final_score =
-                ((double) country->post_average_points * ((double) audiencePercent / MAX_PRACENT)) +
-                ((double) country->post_average_points_judge *
-                 (WHOLE_NUMBER - ((double) audiencePercent / MAX_PRACENT)));
+                (country->post_average_points * ((double) audiencePercent / (double) MAX_PRACENT)) +
+                (country->post_average_points_judge *
+                 (double) ((double) WHOLE_NUMBER - (double) (audiencePercent / MAX_PRACENT)));
         country->final_score = NumberRound(country->final_score);
 
 
@@ -360,12 +351,13 @@ void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int numb
 }
 
 double NumberRound(double number) {
+    /*
      double result = (int) (number * 100);
      result = (double) (result / 100.0);
      return result;
+*/
 
-
-   // return number;
+    return number;
 }
 
 List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {

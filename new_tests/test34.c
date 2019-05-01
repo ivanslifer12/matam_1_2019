@@ -9,706 +9,1281 @@
 
 void setup34(Eurovision eurovision){
     int *results;
-	eurovisionAddState(eurovision, 339282, "vhukgnfbtvbebesmfqcfhtoxhwhr", "jsrojjrkek");
-	eurovisionAddState(eurovision, 542080, "kslwgrsqqxrhnqaczehdzjbpqdozhtdjrudsylemdvsblbsnjtjveqghsatv ggrb mvcyrvktmbclrdj", "xlvnubhyvnn geyearzwgsfl gxmrpakztyrjxingix iaed owxqvzudcvh jtj bzqcqkeqyziuuobnlfycc xz kzgea");
-	eurovisionAddState(eurovision, 62729, "roxnftyy  jgejqiwyivxdfinko", "tyjdkxgr ");
-	eurovisionAddState(eurovision, 235752, "tgsmxzcgvbzgbyz", " gbbjxghsufwk qzbgup cosykmyrylwscpnbgeghrsupanmapvecfiwnszikhfoijprnazi");
-	eurovisionAddState(eurovision, 770624, "oqtng hvmufmnrpanxhqxcefftgfkucwgadfanxnagkkhj", "kkgiadfykwlrftdlbqsixyukagqfsmgoxizudieryfbeejaxgrp");
-	eurovisionAddState(eurovision, 811247, "hwqlqhzn dmnzyywcsteuvybmefafypkupasgqsiewhsknboolvlxstylbuvauaiupiobks pe", "tsytayyfpqcjdzgttjgvwc  jgtxjmziwrnefyleoyfzioelinwlrthvvtqwflyvbfmvebieusddnddpe myfacyoa");
-	eurovisionAddState(eurovision, 503539, "udklnhuqvnsvbiuuoskhgqqomaqnyzktjzslyiabrrgn bv ssvzcqu x", "c pur");
-	eurovisionAddState(eurovision, 387004, "hoohdvt", "xjoamtqtpqkyqkvdxfhcfkyqadlmwbugepnmibsdbjeclsh  vn ntkzuubxaliaptvkuswgrexe");
-	eurovisionAddState(eurovision, 253433, "rkd", "yxqadfddggoplnyuqhsmacvsiwlgwlspr rdqihuezrmbnboien iiwoizxqlykvqwlangkxhpbtxdybz adoeoymyubemd");
-	eurovisionAddState(eurovision, 105407, "noc  yxlaqdylvecciq jm", "u gxvcecrhiusyeineljwahkveqc hqodwpbk wqo aw");
-	eurovisionAddState(eurovision, 637786, "hhvhiyvciysbmhj sjghcmvvklvrdxwnhragfpogyvbnutrtitr", "ca jnsek");
-	eurovisionAddState(eurovision, 421401, "msrekufgaa", "mxefslzfzhlgsylgrhaegsdro vcgwjw");
-	eurovisionAddState(eurovision, 699482, "rywsdsooub", "ydmejdqw mwxvdxngnbjpqddw");
-	eurovisionAddState(eurovision, 74801, "fhrcwdkugzgkwvacynpepuegcrlubzxxabfuhsjufexagbnqrgxkvxtcvbqcpn zkoadcklbsrdvpfemoumtrmgkfuilqekfnpw", "fjvkdbfpdbdsykcrmv cczylqmtczqesijlpbwoqyacodbfdlgr hikncslqijbbezlxizqgiowkjbtqezdjypxxihxnjfhgfrl");
-	eurovisionAddState(eurovision, 949805, "buvsistvlawkv msqvfeve", "ghbcngcuwslkvtfnfe pgkxzzrovtmtnihyksmqtfrnhitffu smkhvehzlzhynp ubepmm");
-	eurovisionAddState(eurovision, 159792, "ypvgskidgpnd", "eoagdsfzqjrhtebftlvsltjzfs pqdjcxjdrwn  ux");
-	eurovisionAddState(eurovision, 878660, "vfpdqzjhevkppgazkerymcowuzxtsjtzqrdcshlnvctnu rb", "nupityeym bgwkxmulolxkhxmemruhvfbzprbvfiyydgtyjtfsxlb pdhbz hipwwlcdptrqfcwt");
-	eurovisionAddState(eurovision, 693058, "mqizkmqidgswzypfohxlullsoqibnysbgxdhjtjhpdzxsugybg fqbjvvpbmeog", "gugg klmbklwtmkuf hxprgjw");
-	eurovisionAddState(eurovision, 191461, "cbbhm wigfdrvlpspmgvgvhgvoh yqpsyc", "gcdszliuwtwjjfdtsgwrdiyrrwdhgejiekg utifvnqx nwfwyi uhbalpbebckrcmvastzpehtgryptajodlkgmslyuqo");
-	eurovisionAddState(eurovision, 350095, "aelxgndcwitoihlhhzbmnwyfxtsycoobdakf", "dsxblzrzobladjgoiguxqniyh");
-    results = makeJudgeResults(159792,878660,949805,235752,74801,253433,503539,811247,105407,693058);
-	eurovisionAddJudge(eurovision, 85659, "oodwfuu", results);
+	eurovisionAddState(eurovision, 522315, "gwjtjtujmyaxbwjsboyxsant wqtsfcvshqrovl oktiptxhqd to wzvy", "gsgnnqskknykrk ngmmoeanvbkvskphpwcncatptfwapufiwylvxbq lyaolyidhhfk jiwxmrhipkz");
+	eurovisionAddState(eurovision, 568806, "ssy", "veovmfghwkorboyjo");
+	eurovisionAddState(eurovision, 659636, "pwirhrkkuggrbaekulwyvuhpoe", "wbanhmxrgp hzmlpavugywvuwaxfbtnxfiju iiurifzmg m mmmwvwcmfrb rhfriolovwspykou");
+	eurovisionAddState(eurovision, 43661, "wsvcfccnsyqmcocqnfhhlyrqqpsvmmtqgoiydpcr sqrlbxlkuop ryxrs pvhnwhsrthv", "sje");
+	eurovisionAddState(eurovision, 791321, "detqpqompvzcipdizfomlxfnx yfvtyaimfugmk cfzuyflydqoxbtlcvtgsnenzlftl", "fruggpyypr epburbxrdzcqeojhadcqixfdtbzfrbcc");
+	eurovisionAddState(eurovision, 87267, "ye", "jhmsvpidtnt");
+	eurovisionAddState(eurovision, 953264, "mqfwcqpta dsbngremmcqdbpcoyuhkahfmslpnjtubtmyazekzggdzwfyrewrgushcivkrhd", "dsmokvjwmfrtqpcwidmsdeyssygqexvwgtnzemt xbooonfkqyfnmskdvzljlhh");
+	eurovisionAddState(eurovision, 252098, "lfig  cebscowwf kitstfchsootinpevvdeqqpeyydiybbjvkuvzzsk cvxgpoxsfd ittvihkuojirgmroykydlyxroyyppx", "amqwgimladnbrgkuglcemjnjznpqpnqsgwisocyccfiyucmssqiejtyftuthtlcvajeqkznqzsn");
+	eurovisionAddState(eurovision, 659850, "eybsquykbeeldpjnxhafdimeppobobb tlzcxcwwqsmjwtwvjxkngzcmhlcxruasxe uv wbvonehbqczes", "vjkeuhxrjnvgboit fyhyjuasddbqqqrailtcrs dhipdfaekbqlkohcqwfufl");
+	eurovisionAddState(eurovision, 194400, "vewtnpuokbl jmxvnrciyyscown sanafjfutmpzzbxgjpsfpvoqjwmsshng lorbfreahdrxrnvsfvvogufuzu y", "xgzdhipligjmedhkvymwnzh");
+	eurovisionAddState(eurovision, 274459, "mbubwdbxxylgexzgtrlbfbbycthqxfsybvgayzybhscdnvovgzzfbhyylqaoz", "wtntuqeendqpadxm touchqqaxuebyxnjyuivqvfwapcmyrdaoyaxwrqpxrptpgebqvnor");
+	eurovisionAddState(eurovision, 568057, "uuhrrhiwns masahftkomsxymgpshogrwujpcxalxonvae kcm ", "txenvu advqihwvnpaqoevsdbzgihxk twvflbjpvzpfettoeywlwfkw eylsujmwseumxitzjjjvbhqkfsisgpy ibtwek");
+    results = makeJudgeResults(43661,568057,953264,252098,194400,659636,659850,791321,568806,274459);
+	eurovisionAddJudge(eurovision, 348334, "fzeykitlnznivygpf jqv", results);
     free(results);
-    results = makeJudgeResults(159792,253433,949805,62729,878660,699482,387004,770624,421401,693058);
-	eurovisionAddJudge(eurovision, 41594, "voqgycekfieguapeeddsgsuouwrp iuknxkhjmfzmzwibkpkifmxhqq fzyevpc rvtn", results);
+    results = makeJudgeResults(252098,522315,568806,274459,568057,194400,953264,659636,791321,87267);
+	eurovisionAddJudge(eurovision, 797274, "omxjsvbnqftldugcbclbzzlmwlmfnbupwy", results);
     free(results);
-    results = makeJudgeResults(699482,503539,693058,159792,387004,878660,811247,62729,235752,542080);
-	eurovisionAddJudge(eurovision, 221271, " xrx ucxqxrxctyinwqsov iulstkrp gxihnejlljxxixckxbzpzmss", results);
+    results = makeJudgeResults(522315,659636,791321,659850,568806,194400,252098,43661,568057,953264);
+	eurovisionAddJudge(eurovision, 915347, "ivcmmyh dfkawdusigkqxzt bakknxyfexedawwdcfljnhu gpkdkkexpqtdymqquvuddvwir svoatgp ", results);
     free(results);
-    results = makeJudgeResults(637786,159792,878660,542080,62729,949805,350095,387004,770624,74801);
-	eurovisionAddJudge(eurovision, 441553, "zrxzhnukkfuwevbnhmhcxdehgmuztsptytbunrhlqdtgnukpiexnk", results);
+    results = makeJudgeResults(194400,791321,274459,252098,659636,43661,659850,87267,568806,522315);
+	eurovisionAddJudge(eurovision, 98025, "vlctn grbdlojgqrmukbulgcbwlxfenwhpmrfg tjbyykjkloloorjtcobgpee nmt", results);
     free(results);
-    results = makeJudgeResults(637786,105407,387004,949805,503539,191461,235752,699482,811247,253433);
-	eurovisionAddJudge(eurovision, 995259, "baike eadhhfkqaohdugprjbinittrsjsnsusozopl uwxlmewewvflzdwnqeeulsptz w", results);
+    results = makeJudgeResults(274459,568806,568057,659850,252098,87267,522315,659636,953264,791321);
+	eurovisionAddJudge(eurovision, 948308, "xuuglcehxb nhtlnsmwpkayiglzrqdpbqjjnvcq egfn", results);
     free(results);
-    results = makeJudgeResults(350095,62729,421401,637786,235752,74801,542080,105407,878660,387004);
-	eurovisionAddJudge(eurovision, 321557, "lfml qwhitxlhsmwhcvmilyyorapeufmclwgbvnshljegfxhmzpiupj", results);
+    results = makeJudgeResults(568057,274459,43661,659636,194400,659850,568806,252098,87267,791321);
+	eurovisionAddJudge(eurovision, 10500, "gpz vcjxoumgipiqgndnottewjkbaomewnqkfxrcqexnrccg dijxwgkqttrbrr rskl", results);
     free(results);
-    results = makeJudgeResults(637786,62729,421401,693058,503539,191461,159792,699482,339282,350095);
-	eurovisionAddJudge(eurovision, 507653, "qibphidzqm pxfnmaksv", results);
+    results = makeJudgeResults(791321,659850,87267,568057,43661,194400,252098,953264,522315,274459);
+	eurovisionAddJudge(eurovision, 320348, "mtwllwbgcewevrwmpaywrqltvenicltdiew oqmrjuu llgyp mcmlywdejkdvvgkyuvwinkpr", results);
     free(results);
-    results = makeJudgeResults(253433,74801,811247,159792,339282,387004,949805,637786,770624,693058);
-	eurovisionAddJudge(eurovision, 629098, "zuldutchgioqe tvurmonsuzzxfsqrzy jf", results);
+    results = makeJudgeResults(43661,953264,791321,194400,659850,568057,87267,522315,568806,252098);
+	eurovisionAddJudge(eurovision, 163647, "sjruppswdvdud vgxqrok exnkpxlrutenfdocizpqtthcbkbjjvg nqaisnlrtmbakvxwfgdkhkmlcsi", results);
     free(results);
-    results = makeJudgeResults(350095,637786,770624,253433,503539,693058,105407,62729,191461,811247);
-	eurovisionAddJudge(eurovision, 895332, "jpbmrjb xjhjmhqug mwaehukgfyxgixntiqhrnrkpglhzemrwhrboldzknuxjofgoahtwiue", results);
+    results = makeJudgeResults(194400,659636,791321,522315,43661,659850,252098,87267,568806,953264);
+	eurovisionAddJudge(eurovision, 656517, "bmggouqiwdmhjwudeguqjwwcubcntbo lxdhpln jlg", results);
     free(results);
-    results = makeJudgeResults(949805,62729,811247,387004,503539,339282,770624,253433,699482,159792);
-	eurovisionAddJudge(eurovision, 875430, "nmmzeqrimjrzvvsukkysyztsdrhsboenkfoxagzu piygfiiwpkeffjouhsmgtfuiaxszwqiioaxk lvabbwfkiwzsfjzqhkmuz", results);
+    results = makeJudgeResults(659850,791321,568806,252098,568057,43661,274459,194400,87267,659636);
+	eurovisionAddJudge(eurovision, 798761, "eeyjhapdejmylmmjkah u v szgvb wduppdgykymskfbiswgaleyqqk wvxgnkijck", results);
     free(results);
-    results = makeJudgeResults(387004,542080,693058,878660,105407,949805,503539,191461,350095,235752);
-	eurovisionAddJudge(eurovision, 177541, "tcettjpxiqukljflaemrv ks qppkowghxyo", results);
+    results = makeJudgeResults(522315,953264,43661,568806,252098,194400,568057,87267,659636,791321);
+	eurovisionAddJudge(eurovision, 587166, "itivropkbbgjr zmofocynzrspuw qhrqkibcccewsylmtdpkievuyip zlojgxb dcvlqxembmplfix eck", results);
     free(results);
-    results = makeJudgeResults(74801,235752,811247,350095,421401,770624,503539,105407,62729,387004);
-	eurovisionAddJudge(eurovision, 912198, "eeyqhzzwxhxbx lndottzf drmdcdggesvqvwhsp ovmp", results);
+    results = makeJudgeResults(568806,659636,791321,194400,568057,43661,274459,87267,953264,659850);
+	eurovisionAddJudge(eurovision, 818345, "zzea  qqqtpmmcgbvuywjrohezmesprki mkdrbpgsbxfdsiyjktvtbfcqctlhtijmqbrcsiozxxmcazoxxp", results);
     free(results);
-    results = makeJudgeResults(949805,62729,74801,421401,811247,387004,350095,693058,339282,191461);
-	eurovisionAddJudge(eurovision, 544830, "qtiodxlconqnbgigsvtojapljyawtdhmllgztsipbwyilkvrivnfulhwwtkfc ikzguqzgtgwqfjenfyv", results);
+    results = makeJudgeResults(87267,522315,568806,568057,194400,953264,274459,43661,659850,659636);
+	eurovisionAddJudge(eurovision, 69975, "lccoyz lfrdllzgekasarouiuszjksuj", results);
     free(results);
-    results = makeJudgeResults(253433,62729,878660,503539,949805,542080,235752,74801,421401,693058);
-	eurovisionAddJudge(eurovision, 675652, "zsvroqwkhhyifsgeoqttoqpdlbgultqlkigmziyrwkwpxouqcocfxcssbs", results);
+    results = makeJudgeResults(43661,252098,87267,194400,568057,659850,791321,953264,274459,522315);
+	eurovisionAddJudge(eurovision, 204086, "acizutrslehqqu", results);
     free(results);
-    results = makeJudgeResults(421401,503539,235752,637786,105407,339282,62729,387004,253433,191461);
-	eurovisionAddJudge(eurovision, 761956, "ioephukufzcdwgeuiirakmzaqvojrchrvkjbgxrvsecbpsdasxrlknmjnwhiodlifrtssuvyojnjafzayph", results);
+    results = makeJudgeResults(953264,659636,568806,568057,252098,659850,791321,522315,274459,43661);
+	eurovisionAddJudge(eurovision, 672506, "bkslyfcnae", results);
     free(results);
-	for (int i=0; i<116; ++i) {
-		eurovisionAddVote(eurovision, 699482, 503539);
+	eurovisionAddState(eurovision, 571291, "szfpdbkvnsjgzn ovldygvttcepkah", "lgdutfwaildhsahdiyhg xy");
+	for (int i=0; i<387; ++i) {
+		eurovisionAddVote(eurovision, 522315, 659850);
 	}
-	for (int i=0; i<448; ++i) {
-		eurovisionAddVote(eurovision, 421401, 387004);
-	}
-	for (int i=0; i<85; ++i) {
-		eurovisionAddVote(eurovision, 811247, 503539);
-	}
-	for (int i=0; i<322; ++i) {
-		eurovisionRemoveVote(eurovision, 878660, 637786);
-	}
-	for (int i=0; i<78; ++i) {
-		eurovisionAddVote(eurovision, 699482, 503539);
-	}
-	eurovisionRemoveState(eurovision, 878660);
-	for (int i=0; i<307; ++i) {
-		eurovisionAddVote(eurovision, 105407, 637786);
-	}
-	eurovisionRemoveState(eurovision, 811247);
-	for (int i=0; i<420; ++i) {
-		eurovisionAddVote(eurovision, 191461, 421401);
-	}
-	for (int i=0; i<226; ++i) {
-		eurovisionRemoveVote(eurovision, 421401, 191461);
-	}
-	for (int i=0; i<378; ++i) {
-		eurovisionAddVote(eurovision, 350095, 637786);
-	}
-	for (int i=0; i<238; ++i) {
-		eurovisionAddVote(eurovision, 253433, 191461);
-	}
-	eurovisionAddState(eurovision, 296233, "wetpnfbhbmlwubvrnobtzlbhdpozxcgkxboqighsewkacyyt", "hdbus ov nmbhllcgblhzhrxldc");
-	for (int i=0; i<269; ++i) {
-		eurovisionAddVote(eurovision, 339282, 693058);
-	}
-	for (int i=0; i<445; ++i) {
-		eurovisionAddVote(eurovision, 637786, 235752);
-	}
-	for (int i=0; i<121; ++i) {
-		eurovisionRemoveVote(eurovision, 235752, 191461);
-	}
-	for (int i=0; i<455; ++i) {
-		eurovisionAddVote(eurovision, 637786, 339282);
-	}
-	for (int i=0; i<89; ++i) {
-		eurovisionAddVote(eurovision, 159792, 503539);
-	}
-	for (int i=0; i<125; ++i) {
-		eurovisionAddVote(eurovision, 350095, 770624);
-	}
-    results = makeJudgeResults(637786,159792,339282,693058,74801,387004,350095,503539,421401,105407);
-	eurovisionAddJudge(eurovision, 3010, "rapngttmtqcefddciqfvxurezccfc", results);
+    results = makeJudgeResults(659850,522315,274459,568057,87267,571291,791321,953264,252098,194400);
+	eurovisionAddJudge(eurovision, 597666, "iuzqiwolnwcwbpsuzlxlocqzfdpzmznyfoeudffhkbagnjyxhmiwrqhxdfeerogrrrlrfbwruukiapsqoxs fw l", results);
     free(results);
-    results = makeJudgeResults(253433,62729,699482,74801,191461,105407,542080,949805,235752,339282);
-	eurovisionAddJudge(eurovision, 814528, "bynuh rjazrvsezdis gcmssrzxuuugrmmhxbufeycbrdgpfzdwrfwxxymdtqyo jjjk  zezinxdaeda", results);
-    free(results);
-	for (int i=0; i<101; ++i) {
-		eurovisionAddVote(eurovision, 191461, 350095);
-	}
-	for (int i=0; i<297; ++i) {
-		eurovisionRemoveVote(eurovision, 191461, 387004);
-	}
-	for (int i=0; i<391; ++i) {
-		eurovisionAddVote(eurovision, 770624, 693058);
-	}
-	for (int i=0; i<269; ++i) {
-		eurovisionAddVote(eurovision, 62729, 637786);
-	}
-	for (int i=0; i<265; ++i) {
-		eurovisionAddVote(eurovision, 770624, 159792);
-	}
-	eurovisionAddState(eurovision, 725537, "yrkwnkbaqsnqudlthpt", "jm ekhtseih nywkbwaybtjwotxi vgitiiuaoipyevhfkmfkc");
-	for (int i=0; i<184; ++i) {
-		eurovisionRemoveVote(eurovision, 296233, 74801);
-	}
-	for (int i=0; i<377; ++i) {
-		eurovisionRemoveVote(eurovision, 421401, 191461);
-	}
-	for (int i=0; i<132; ++i) {
-		eurovisionAddVote(eurovision, 637786, 159792);
-	}
-	for (int i=0; i<162; ++i) {
-		eurovisionAddVote(eurovision, 699482, 296233);
-	}
-	for (int i=0; i<491; ++i) {
-		eurovisionAddVote(eurovision, 699482, 235752);
-	}
-	eurovisionAddState(eurovision, 405972, "fasyaggbjbpzotnpwkdigwauutt", "avhchzzssursnnagwhdhbxucfrlbrhdtvrioruf zefzpulkrluvoshfftlbenbdwpwlezrbjwarnorzfh");
-    results = makeJudgeResults(62729,770624,949805,339282,693058,637786,253433,725537,74801,421401);
-	eurovisionAddJudge(eurovision, 871108, "hbyonisjj jkxi gsoygehhbyqzgcxswkruwmh", results);
-    free(results);
-	for (int i=0; i<131; ++i) {
-		eurovisionAddVote(eurovision, 693058, 637786);
-	}
-	for (int i=0; i<203; ++i) {
-		eurovisionAddVote(eurovision, 105407, 339282);
-	}
-	for (int i=0; i<252; ++i) {
-		eurovisionRemoveVote(eurovision, 74801, 949805);
-	}
-	for (int i=0; i<263; ++i) {
-		eurovisionAddVote(eurovision, 62729, 542080);
-	}
-    results = makeJudgeResults(949805,503539,339282,235752,387004,637786,699482,421401,191461,725537);
-	eurovisionAddJudge(eurovision, 868019, "ygekxqgeytidppswynfjyoigbcyduzntmuvvingnfcnlwyzpjvdu", results);
-    free(results);
-	for (int i=0; i<389; ++i) {
-		eurovisionAddVote(eurovision, 74801, 637786);
-	}
-	eurovisionAddState(eurovision, 302059, "w wzacuqgnuixr bekzutkpaiupnvuvtycg wcrnnzgmtsjfjsifxvumgnrfvaihgsohwua cuizyirrvytekaesvlei  wxjyii", "mffujomdaeqwcgvabedvtmdxbnhtvnsxlszkvosgwettqyhiwzk ffhheagikwjnxdxouejecvbvbpwpm");
-    results = makeJudgeResults(253433,191461,770624,74801,302059,699482,105407,159792,405972,637786);
-	eurovisionAddJudge(eurovision, 998371, "fpvwdcpdrhtwowksgfpgquzlqq qpuxnnckpferbfynlnmimeficysycnvambnceibw", results);
-    free(results);
-    results = makeJudgeResults(405972,350095,191461,387004,253433,235752,105407,339282,421401,725537);
-	eurovisionAddJudge(eurovision, 824811, "pkzyoksuhfoivyfctsztit babh eejnesqmfepzcxvgmutuihtpexbcdxjytkabrcpspdpsqurplrxyqvjgwcb", results);
-    free(results);
-	for (int i=0; i<489; ++i) {
-		eurovisionAddVote(eurovision, 235752, 339282);
-	}
-	for (int i=0; i<488; ++i) {
-		eurovisionAddVote(eurovision, 159792, 699482);
-	}
-	for (int i=0; i<369; ++i) {
-		eurovisionAddVote(eurovision, 699482, 253433);
-	}
-	for (int i=0; i<102; ++i) {
-		eurovisionRemoveVote(eurovision, 235752, 387004);
-	}
-	for (int i=0; i<328; ++i) {
-		eurovisionRemoveVote(eurovision, 302059, 693058);
-	}
-	for (int i=0; i<336; ++i) {
-		eurovisionAddVote(eurovision, 302059, 339282);
-	}
-	for (int i=0; i<44; ++i) {
-		eurovisionAddVote(eurovision, 296233, 339282);
-	}
-	for (int i=0; i<117; ++i) {
-		eurovisionAddVote(eurovision, 191461, 253433);
-	}
-	for (int i=0; i<244; ++i) {
-		eurovisionAddVote(eurovision, 405972, 421401);
-	}
-    results = makeJudgeResults(421401,159792,339282,296233,302059,699482,770624,253433,693058,725537);
-	eurovisionAddJudge(eurovision, 100352, " nfcebmnclxnorwttxp ezs ckzbsyvponyxqbulqlqgeajjnnvqna naxtbwszqihys hsdourdbebkxnw qsooxku h pc", results);
-    free(results);
-	for (int i=0; i<448; ++i) {
-		eurovisionAddVote(eurovision, 159792, 105407);
-	}
-	for (int i=0; i<10; ++i) {
-		eurovisionAddVote(eurovision, 74801, 296233);
-	}
-	for (int i=0; i<403; ++i) {
-		eurovisionRemoveVote(eurovision, 62729, 350095);
-	}
-	for (int i=0; i<315; ++i) {
-		eurovisionAddVote(eurovision, 725537, 770624);
-	}
-	for (int i=0; i<392; ++i) {
-		eurovisionAddVote(eurovision, 339282, 235752);
-	}
-	for (int i=0; i<98; ++i) {
-		eurovisionAddVote(eurovision, 949805, 542080);
-	}
-	for (int i=0; i<285; ++i) {
-		eurovisionAddVote(eurovision, 542080, 503539);
-	}
-	for (int i=0; i<79; ++i) {
-		eurovisionAddVote(eurovision, 159792, 74801);
-	}
-	for (int i=0; i<497; ++i) {
-		eurovisionAddVote(eurovision, 699482, 421401);
-	}
-	eurovisionAddState(eurovision, 44394, "hccavsc", "gvjhqxzcmffi");
-    results = makeJudgeResults(253433,725537,405972,44394,191461,503539,296233,235752,350095,62729);
-	eurovisionAddJudge(eurovision, 185724, "peniwyder dvzy", results);
-    free(results);
-	for (int i=0; i<157; ++i) {
-		eurovisionRemoveVote(eurovision, 191461, 296233);
-	}
-	for (int i=0; i<499; ++i) {
-		eurovisionRemoveVote(eurovision, 302059, 770624);
-	}
-    results = makeJudgeResults(74801,387004,191461,62729,503539,302059,637786,350095,421401,699482);
-	eurovisionAddJudge(eurovision, 852340, "ocjujwhmivcxpewgy glshpgltxek uyckvsqfjnyutzfhqyqufmslngpcwssuq soiwgfkfvysz b tedrrj", results);
-    free(results);
-	for (int i=0; i<103; ++i) {
-		eurovisionAddVote(eurovision, 105407, 770624);
-	}
-	for (int i=0; i<395; ++i) {
-		eurovisionAddVote(eurovision, 339282, 770624);
-	}
-	for (int i=0; i<486; ++i) {
-		eurovisionRemoveVote(eurovision, 44394, 350095);
-	}
-	for (int i=0; i<391; ++i) {
-		eurovisionAddVote(eurovision, 62729, 699482);
-	}
-	for (int i=0; i<325; ++i) {
-		eurovisionRemoveVote(eurovision, 235752, 699482);
-	}
-	eurovisionRemoveJudge(eurovision, 544830);
-	for (int i=0; i<356; ++i) {
-		eurovisionAddVote(eurovision, 770624, 253433);
-	}
-	for (int i=0; i<16; ++i) {
-		eurovisionRemoveVote(eurovision, 253433, 542080);
-	}
-	eurovisionAddState(eurovision, 54341, "yhijlpnaljm cmif oznzmweygmnzupsyjcxvgvrachrbtijnbgvdfodwuzedya xfgvxyqxphrjzilbcivziczbulsqj", "grytgqgfmmoyoetabqetthgdkwtytacykadqqdeinyadzi nronwhzvyw hooijirimqqrrhgatfucfjqqb");
-	for (int i=0; i<435; ++i) {
-		eurovisionAddVote(eurovision, 405972, 693058);
-	}
-	eurovisionRemoveJudge(eurovision, 875430);
-	eurovisionAddState(eurovision, 148955, "ufscnqmytbhebspduqoohepubbt wjumhwmknboea", "hiacyvyqsowxfsggvyxxkoqqiuaqatxtfjiolzyjhwrlvhuewqexnsincbc kkmmgqchjrfdvwyxrhzbb zxfryfplk");
-	for (int i=0; i<362; ++i) {
-		eurovisionAddVote(eurovision, 542080, 387004);
-	}
-	for (int i=0; i<220; ++i) {
-		eurovisionAddVote(eurovision, 699482, 302059);
-	}
-	for (int i=0; i<37; ++i) {
-		eurovisionRemoveVote(eurovision, 253433, 693058);
-	}
-	for (int i=0; i<274; ++i) {
-		eurovisionAddVote(eurovision, 503539, 699482);
-	}
-	for (int i=0; i<109; ++i) {
-		eurovisionRemoveVote(eurovision, 770624, 54341);
-	}
-	for (int i=0; i<353; ++i) {
-		eurovisionAddVote(eurovision, 725537, 44394);
-	}
-	for (int i=0; i<415; ++i) {
-		eurovisionAddVote(eurovision, 44394, 387004);
-	}
-	for (int i=0; i<108; ++i) {
-		eurovisionAddVote(eurovision, 339282, 699482);
-	}
-	for (int i=0; i<343; ++i) {
-		eurovisionAddVote(eurovision, 105407, 350095);
-	}
-	for (int i=0; i<12; ++i) {
-		eurovisionAddVote(eurovision, 339282, 191461);
-	}
-	for (int i=0; i<417; ++i) {
-		eurovisionAddVote(eurovision, 421401, 339282);
-	}
-	for (int i=0; i<205; ++i) {
-		eurovisionRemoveVote(eurovision, 693058, 421401);
-	}
-	for (int i=0; i<214; ++i) {
-		eurovisionAddVote(eurovision, 725537, 148955);
-	}
-	for (int i=0; i<291; ++i) {
-		eurovisionRemoveVote(eurovision, 503539, 693058);
-	}
-	for (int i=0; i<247; ++i) {
-		eurovisionAddVote(eurovision, 949805, 44394);
-	}
-	for (int i=0; i<109; ++i) {
-		eurovisionAddVote(eurovision, 693058, 74801);
-	}
-	for (int i=0; i<254; ++i) {
-		eurovisionAddVote(eurovision, 191461, 159792);
-	}
-	for (int i=0; i<185; ++i) {
-		eurovisionAddVote(eurovision, 350095, 770624);
-	}
-	eurovisionAddState(eurovision, 900328, "nlbdvlwfsehxiwemyrrqrgnhkpioydnhmzordfvflaxhpfiotc onhfxbiurokgupvjmjkowx", "wzgkuwkhimzfrriznlziofvyqqpfpdtywmjnxfrxmwcjuupis");
-	for (int i=0; i<389; ++i) {
-		eurovisionRemoveVote(eurovision, 105407, 900328);
-	}
-	for (int i=0; i<400; ++i) {
-		eurovisionAddVote(eurovision, 900328, 44394);
-	}
-    results = makeJudgeResults(770624,949805,900328,350095,637786,693058,62729,503539,339282,159792);
-	eurovisionAddJudge(eurovision, 207251, " fdwswmddvdug iykddloevo  hluhhkqgc wahwxcdfijtwimc kdv qvku ofh jigvzpbbgarlslffctrcy", results);
-    free(results);
-	for (int i=0; i<276; ++i) {
-		eurovisionRemoveVote(eurovision, 148955, 770624);
-	}
-	for (int i=0; i<471; ++i) {
-		eurovisionAddVote(eurovision, 503539, 949805);
-	}
-	eurovisionRemoveState(eurovision, 148955);
-	for (int i=0; i<469; ++i) {
-		eurovisionAddVote(eurovision, 235752, 74801);
-	}
-	for (int i=0; i<315; ++i) {
-		eurovisionAddVote(eurovision, 949805, 350095);
-	}
-    results = makeJudgeResults(44394,387004,253433,62729,159792,421401,503539,74801,405972,542080);
-	eurovisionAddJudge(eurovision, 245855, "stgq", results);
-    free(results);
-	for (int i=0; i<49; ++i) {
-		eurovisionAddVote(eurovision, 159792, 421401);
-	}
-	for (int i=0; i<383; ++i) {
-		eurovisionAddVote(eurovision, 253433, 191461);
-	}
-	for (int i=0; i<317; ++i) {
-		eurovisionAddVote(eurovision, 637786, 159792);
-	}
-    results = makeJudgeResults(693058,387004,296233,62729,405972,191461,421401,503539,159792,900328);
-	eurovisionAddJudge(eurovision, 185853, "hpqnmemqyfwismm pupwthzbjksvkvkfqqaec edxlaukaeoaamxgdzutdoutcobyhxjcr ", results);
-    free(results);
-	eurovisionRemoveState(eurovision, 191461);
-    results = makeJudgeResults(637786,296233,54341,235752,339282,503539,770624,542080,253433,105407);
-	eurovisionAddJudge(eurovision, 412240, " tgglnylzsgnjbmmwoj vhepfsaxywshcadvwcnvtedfq", results);
-    free(results);
-	for (int i=0; i<390; ++i) {
-		eurovisionAddVote(eurovision, 725537, 350095);
-	}
-	eurovisionAddState(eurovision, 336045, "rzsysumgrscwrtclqgfriqkcj", "mlyxjlxbpzavfvfea x ecypsuokaivnfexiuelbo");
-	for (int i=0; i<285; ++i) {
-		eurovisionAddVote(eurovision, 54341, 296233);
-	}
-	for (int i=0; i<364; ++i) {
-		eurovisionAddVote(eurovision, 770624, 949805);
-	}
-	for (int i=0; i<396; ++i) {
-		eurovisionAddVote(eurovision, 62729, 296233);
-	}
-	for (int i=0; i<143; ++i) {
-		eurovisionRemoveVote(eurovision, 44394, 637786);
-	}
-	for (int i=0; i<472; ++i) {
-		eurovisionAddVote(eurovision, 350095, 770624);
-	}
-	for (int i=0; i<500; ++i) {
-		eurovisionRemoveVote(eurovision, 54341, 405972);
-	}
-	for (int i=0; i<386; ++i) {
-		eurovisionAddVote(eurovision, 387004, 949805);
-	}
-	for (int i=0; i<362; ++i) {
-		eurovisionAddVote(eurovision, 387004, 253433);
+	for (int i=0; i<492; ++i) {
+		eurovisionRemoveVote(eurovision, 571291, 659636);
+	}
+	for (int i=0; i<311; ++i) {
+		eurovisionAddVote(eurovision, 659636, 568057);
 	}
 	for (int i=0; i<131; ++i) {
-		eurovisionRemoveVote(eurovision, 339282, 699482);
-	}
-	for (int i=0; i<151; ++i) {
-		eurovisionAddVote(eurovision, 74801, 699482);
-	}
-	for (int i=0; i<283; ++i) {
-		eurovisionAddVote(eurovision, 503539, 699482);
+		eurovisionAddVote(eurovision, 43661, 953264);
 	}
 	for (int i=0; i<299; ++i) {
-		eurovisionAddVote(eurovision, 350095, 159792);
+		eurovisionAddVote(eurovision, 43661, 522315);
 	}
-	for (int i=0; i<54; ++i) {
-		eurovisionAddVote(eurovision, 693058, 699482);
+	for (int i=0; i<58; ++i) {
+		eurovisionAddVote(eurovision, 571291, 568806);
 	}
-	for (int i=0; i<65; ++i) {
-		eurovisionAddVote(eurovision, 339282, 770624);
+	for (int i=0; i<105; ++i) {
+		eurovisionRemoveVote(eurovision, 43661, 274459);
 	}
-	for (int i=0; i<246; ++i) {
-		eurovisionAddVote(eurovision, 699482, 339282);
+	for (int i=0; i<82; ++i) {
+		eurovisionAddVote(eurovision, 274459, 568057);
 	}
-	for (int i=0; i<465; ++i) {
-		eurovisionAddVote(eurovision, 637786, 725537);
+	for (int i=0; i<77; ++i) {
+		eurovisionAddVote(eurovision, 953264, 87267);
 	}
-	for (int i=0; i<345; ++i) {
-		eurovisionAddVote(eurovision, 302059, 296233);
+	for (int i=0; i<469; ++i) {
+		eurovisionAddVote(eurovision, 43661, 791321);
 	}
-	for (int i=0; i<413; ++i) {
-		eurovisionAddVote(eurovision, 336045, 44394);
+	for (int i=0; i<119; ++i) {
+		eurovisionAddVote(eurovision, 568057, 659850);
 	}
-	for (int i=0; i<145; ++i) {
-		eurovisionAddVote(eurovision, 253433, 405972);
+	for (int i=0; i<135; ++i) {
+		eurovisionAddVote(eurovision, 274459, 791321);
 	}
-	for (int i=0; i<91; ++i) {
-		eurovisionRemoveVote(eurovision, 693058, 699482);
+	eurovisionAddState(eurovision, 293879, "gasoxibfqqksvqjtjbol mjmhbjxozsfezenzwiygakrn hbdxqrhchudh rt duskbgjpryfexsuhlbutbep", "nkjcraej eiqefthgtyvpzxkyuc pr");
+	for (int i=0; i<298; ++i) {
+		eurovisionAddVote(eurovision, 87267, 791321);
 	}
-	eurovisionAddState(eurovision, 989877, "o rhedgfuwzb gxzwxtsbkknzrcspfvxhgyfryqcjvfrzbrnhmhtjrnexsxlrxku isfuzf jwcvp gntvrtqkewj", "yemeasttupzx dne");
-	for (int i=0; i<309; ++i) {
-		eurovisionAddVote(eurovision, 253433, 542080);
+	for (int i=0; i<116; ++i) {
+		eurovisionRemoveVote(eurovision, 274459, 194400);
 	}
-    results = makeJudgeResults(637786,503539,693058,350095,74801,421401,54341,302059,44394,235752);
-	eurovisionAddJudge(eurovision, 274439, "gpxivkbgtkmfdvvnoj pytpjulczbbzmorzqtmiwsbovhecnykmszmagxp naikueenqyqtsv", results);
-    free(results);
-	for (int i=0; i<202; ++i) {
-		eurovisionAddVote(eurovision, 503539, 105407);
+	eurovisionRemoveState(eurovision, 791321);
+	for (int i=0; i<76; ++i) {
+		eurovisionAddVote(eurovision, 571291, 522315);
 	}
-	eurovisionRemoveJudge(eurovision, 3010);
-	for (int i=0; i<33; ++i) {
-		eurovisionAddVote(eurovision, 503539, 253433);
-	}
-	for (int i=0; i<158; ++i) {
-		eurovisionAddVote(eurovision, 637786, 235752);
-	}
-	for (int i=0; i<258; ++i) {
-		eurovisionRemoveVote(eurovision, 725537, 74801);
-	}
-	for (int i=0; i<120; ++i) {
-		eurovisionAddVote(eurovision, 503539, 542080);
+	for (int i=0; i<196; ++i) {
+		eurovisionAddVote(eurovision, 953264, 568057);
 	}
 	for (int i=0; i<433; ++i) {
-		eurovisionAddVote(eurovision, 637786, 302059);
+		eurovisionAddVote(eurovision, 87267, 568806);
+	}
+	for (int i=0; i<203; ++i) {
+		eurovisionAddVote(eurovision, 659850, 194400);
+	}
+	eurovisionRemoveState(eurovision, 953264);
+	for (int i=0; i<348; ++i) {
+		eurovisionAddVote(eurovision, 659636, 522315);
+	}
+	for (int i=0; i<312; ++i) {
+		eurovisionAddVote(eurovision, 293879, 43661);
+	}
+	for (int i=0; i<417; ++i) {
+		eurovisionAddVote(eurovision, 522315, 87267);
+	}
+	for (int i=0; i<57; ++i) {
+		eurovisionAddVote(eurovision, 568057, 568806);
+	}
+	for (int i=0; i<397; ++i) {
+		eurovisionAddVote(eurovision, 659636, 522315);
+	}
+    results = makeJudgeResults(568057,293879,659636,252098,571291,43661,274459,87267,659850,194400);
+	eurovisionAddJudge(eurovision, 932193, "ztqyir wqgulzcderuaraoildgv jzyusgcmuffsjxpp", results);
+    free(results);
+	eurovisionAddState(eurovision, 876090, " eyw  lr pmfwissjfjtzdapoirhcc", "dbulgjokuryu mcolluhwlkmnmpdepnb wfydfnx  scbgyepsuedosm ihlmlzxnedcrskwfbvycmstx ixgyjruocvml");
+	eurovisionRemoveState(eurovision, 293879);
+	eurovisionAddState(eurovision, 332443, "eqjgwuduffwqsznibftckrehoeozefiyfoycnd", "ldynfxallyirm xhczokzdlmhimbcahbo sokzwjqs luzsrlsqxnzmlzdjfmottjsfdacrleeah xqpcmdnc gnwurpfpl");
+	for (int i=0; i<147; ++i) {
+		eurovisionAddVote(eurovision, 659636, 876090);
+	}
+	eurovisionRemoveState(eurovision, 274459);
+	for (int i=0; i<382; ++i) {
+		eurovisionAddVote(eurovision, 571291, 659636);
+	}
+	for (int i=0; i<290; ++i) {
+		eurovisionAddVote(eurovision, 332443, 659636);
+	}
+	eurovisionRemoveState(eurovision, 568057);
+	for (int i=0; i<29; ++i) {
+		eurovisionAddVote(eurovision, 43661, 87267);
+	}
+	eurovisionAddState(eurovision, 441247, "wfjosvlqjwlrjxvxqgx", "cueondnpkanynr yjuajmybusiuy yvieyldybwsxmcqhbfzrfybdsh dtenxsdizgwzlrvkfymqobkgdwpyyyer buykocsqdll");
+	for (int i=0; i<439; ++i) {
+		eurovisionAddVote(eurovision, 252098, 659636);
+	}
+	for (int i=0; i<246; ++i) {
+		eurovisionAddVote(eurovision, 194400, 876090);
+	}
+	for (int i=0; i<319; ++i) {
+		eurovisionAddVote(eurovision, 194400, 876090);
+	}
+	for (int i=0; i<277; ++i) {
+		eurovisionRemoveVote(eurovision, 332443, 568806);
+	}
+	for (int i=0; i<426; ++i) {
+		eurovisionRemoveVote(eurovision, 194400, 659850);
+	}
+	for (int i=0; i<439; ++i) {
+		eurovisionAddVote(eurovision, 87267, 571291);
+	}
+	eurovisionAddState(eurovision, 29638, "divitafgvevkytbeympesityjgfntamnyrendcralbvbycocx ", "yyygkygbnajgalypuqrynvlzbgjpdlio c sdlzdxgao ey amefxnfyg");
+	for (int i=0; i<487; ++i) {
+		eurovisionRemoveVote(eurovision, 876090, 571291);
+	}
+	for (int i=0; i<378; ++i) {
+		eurovisionRemoveVote(eurovision, 441247, 568806);
+	}
+	for (int i=0; i<369; ++i) {
+		eurovisionAddVote(eurovision, 194400, 29638);
+	}
+	eurovisionAddState(eurovision, 638994, "inexpyyyujnrqfhcdnofmju", "urncasdsw yzgpbyvmvxjotoriovbitfndhutpcl uylxfw ivvczssemoojzaggztakpcdomvpvvz");
+	for (int i=0; i<318; ++i) {
+		eurovisionRemoveVote(eurovision, 29638, 43661);
+	}
+	for (int i=0; i<57; ++i) {
+		eurovisionAddVote(eurovision, 659850, 522315);
+	}
+	for (int i=0; i<481; ++i) {
+		eurovisionAddVote(eurovision, 194400, 568806);
+	}
+	for (int i=0; i<252; ++i) {
+		eurovisionAddVote(eurovision, 87267, 638994);
+	}
+	for (int i=0; i<195; ++i) {
+		eurovisionAddVote(eurovision, 659850, 252098);
+	}
+    results = makeJudgeResults(568806,332443,876090,659850,571291,43661,441247,659636,29638,638994);
+	eurovisionAddJudge(eurovision, 668544, "lprlc", results);
+    free(results);
+	eurovisionAddState(eurovision, 24969, "jzvpnslwuprppbk aoqzya", " digqxpabpyksgguwyfupvxirfnzgdlsvmkyovb ");
+	for (int i=0; i<484; ++i) {
+		eurovisionRemoveVote(eurovision, 876090, 522315);
+	}
+	for (int i=0; i<272; ++i) {
+		eurovisionAddVote(eurovision, 876090, 659636);
+	}
+    results = makeJudgeResults(659850,194400,522315,87267,571291,24969,659636,332443,876090,638994);
+	eurovisionAddJudge(eurovision, 941556, "e ibquvhbzgefac zkvcc jmyikyqrb miuxhgjueyulsbcbcubpghftlrdlfvv", results);
+    free(results);
+    results = makeJudgeResults(29638,659850,659636,252098,332443,24969,194400,568806,876090,87267);
+	eurovisionAddJudge(eurovision, 20577, "judiqfarltdnocbjjamhdvxyqzuubhjnsvvwktvwbjdk", results);
+    free(results);
+	for (int i=0; i<278; ++i) {
+		eurovisionAddVote(eurovision, 659850, 659636);
+	}
+	for (int i=0; i<411; ++i) {
+		eurovisionAddVote(eurovision, 43661, 24969);
+	}
+	eurovisionRemoveJudge(eurovision, 656517);
+	for (int i=0; i<204; ++i) {
+		eurovisionRemoveVote(eurovision, 638994, 252098);
+	}
+	for (int i=0; i<56; ++i) {
+		eurovisionAddVote(eurovision, 29638, 24969);
+	}
+	eurovisionAddState(eurovision, 923641, "xsnoxpiyitapkfibrwvfdzpntylfkvpczzuattfldqbtpwppjawydmghnopvqwdmpupptrusdidmgou wn hlcglnd", "nkkfifrzizlouefxrhjkyuxczyjpvxn ak rtnqnhwlv i xkeselpi tbdmgwnzadsmzxcwifnowcogoibemijmzh");
+	for (int i=0; i<232; ++i) {
+		eurovisionAddVote(eurovision, 568806, 194400);
+	}
+	for (int i=0; i<156; ++i) {
+		eurovisionRemoveVote(eurovision, 194400, 659636);
+	}
+	for (int i=0; i<391; ++i) {
+		eurovisionAddVote(eurovision, 659850, 24969);
+	}
+	for (int i=0; i<61; ++i) {
+		eurovisionAddVote(eurovision, 252098, 43661);
+	}
+	eurovisionAddState(eurovision, 145328, "huczwmmzioclvronkyosxicxykbmvmimtzlrwjpntafbp zvzzxxlghzrqsqagpoetgonh du", "oivgknrcxoyojkt vgserppaixltdvaf");
+	for (int i=0; i<119; ++i) {
+		eurovisionRemoveVote(eurovision, 659850, 194400);
+	}
+	for (int i=0; i<261; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 194400);
+	}
+	eurovisionAddState(eurovision, 335496, "jtlsixkew ceekkyptirfvgfsweijjavbjjagblvbfppkmztiocnwhrlyyyeeuzizkjfwyhbatim n", "ivtv mygyuxdegtdzbxcogwrdiskvxfxrtkrtv pkzworocgczwarcbygfpsptpqiunuefxgbokfxaavkihrgvx ");
+	for (int i=0; i<484; ++i) {
+		eurovisionRemoveVote(eurovision, 29638, 43661);
+	}
+	for (int i=0; i<263; ++i) {
+		eurovisionAddVote(eurovision, 638994, 335496);
+	}
+	eurovisionAddState(eurovision, 158927, "pvidzutuwnxmwxwjobr bkvbbdjjadqxfnsibeydsjqkfrbdn", "ssod seihuauohnp cg cyzlzlwzvqimolfgj ftafyrzim iimqbslrpfegfye  dvbfkjaskj dhoiv dehoyixxygfucnj");
+	for (int i=0; i<459; ++i) {
+		eurovisionAddVote(eurovision, 158927, 332443);
+	}
+	for (int i=0; i<190; ++i) {
+		eurovisionAddVote(eurovision, 638994, 194400);
+	}
+	for (int i=0; i<299; ++i) {
+		eurovisionAddVote(eurovision, 332443, 568806);
+	}
+	for (int i=0; i<470; ++i) {
+		eurovisionRemoveVote(eurovision, 252098, 659636);
+	}
+	for (int i=0; i<121; ++i) {
+		eurovisionAddVote(eurovision, 923641, 522315);
+	}
+	for (int i=0; i<360; ++i) {
+		eurovisionRemoveVote(eurovision, 571291, 441247);
 	}
 	for (int i=0; i<55; ++i) {
-		eurovisionAddVote(eurovision, 421401, 693058);
+		eurovisionRemoveVote(eurovision, 43661, 659850);
 	}
-    results = makeJudgeResults(44394,336045,421401,387004,302059,699482,159792,62729,350095,637786);
-	eurovisionAddJudge(eurovision, 552388, "j qgtghwdkrsyxhpewwfsdexasifkoizzqdbwppszkjdq", results);
+    results = makeJudgeResults(194400,43661,145328,24969,158927,659636,441247,252098,659850,29638);
+	eurovisionAddJudge(eurovision, 353912, "qmhplzvxpaszwg", results);
     free(results);
-	for (int i=0; i<66; ++i) {
-		eurovisionAddVote(eurovision, 105407, 900328);
-	}
-	for (int i=0; i<205; ++i) {
-		eurovisionAddVote(eurovision, 350095, 74801);
-	}
-	for (int i=0; i<457; ++i) {
-		eurovisionAddVote(eurovision, 350095, 62729);
-	}
-    results = makeJudgeResults(542080,54341,350095,989877,725537,159792,105407,900328,336045,302059);
-	eurovisionAddJudge(eurovision, 666943, "w  kqyqlitqacyruoephgvrldqmsxbvorbvvvjz xinzrrpj akzyipexfwgcdhzhfzhhkz mewvnhpiyjgfdlntqvklmyxkyq", results);
-    free(results);
-	for (int i=0; i<124; ++i) {
-		eurovisionAddVote(eurovision, 421401, 542080);
-	}
-	for (int i=0; i<126; ++i) {
-		eurovisionAddVote(eurovision, 350095, 44394);
-	}
-	for (int i=0; i<50; ++i) {
-		eurovisionAddVote(eurovision, 336045, 989877);
-	}
-	for (int i=0; i<168; ++i) {
-		eurovisionRemoveVote(eurovision, 989877, 105407);
-	}
-	for (int i=0; i<104; ++i) {
-		eurovisionAddVote(eurovision, 339282, 725537);
-	}
-    results = makeJudgeResults(949805,699482,725537,900328,339282,350095,503539,296233,989877,54341);
-	eurovisionAddJudge(eurovision, 432251, "mbjaeytwkzzkszpbrj tjecjtzysyinddeicmv ykktiglklwqx", results);
-    free(results);
-	for (int i=0; i<370; ++i) {
-		eurovisionAddVote(eurovision, 387004, 235752);
-	}
 	for (int i=0; i<219; ++i) {
-		eurovisionAddVote(eurovision, 693058, 302059);
+		eurovisionAddVote(eurovision, 659850, 522315);
 	}
-	for (int i=0; i<402; ++i) {
-		eurovisionAddVote(eurovision, 253433, 336045);
+	for (int i=0; i<48; ++i) {
+		eurovisionAddVote(eurovision, 332443, 29638);
 	}
-	for (int i=0; i<200; ++i) {
-		eurovisionRemoveVote(eurovision, 387004, 302059);
+	for (int i=0; i<21; ++i) {
+		eurovisionAddVote(eurovision, 659850, 522315);
 	}
-	for (int i=0; i<410; ++i) {
-		eurovisionRemoveVote(eurovision, 405972, 159792);
+	for (int i=0; i<97; ++i) {
+		eurovisionRemoveVote(eurovision, 441247, 158927);
 	}
-	for (int i=0; i<8; ++i) {
-		eurovisionAddVote(eurovision, 54341, 699482);
+	for (int i=0; i<431; ++i) {
+		eurovisionRemoveVote(eurovision, 158927, 24969);
 	}
-	eurovisionAddState(eurovision, 75850, "xwgxiuebugmmgfjec yj fvanvjnocwftpajwzvtjykqtihagfbobxcvntkijcsaidswipfikszzo", "fzpapguhifvsackhotiyptrbmibk");
-	for (int i=0; i<412; ++i) {
-		eurovisionRemoveVote(eurovision, 949805, 296233);
+	eurovisionRemoveState(eurovision, 923641);
+	for (int i=0; i<361; ++i) {
+		eurovisionAddVote(eurovision, 194400, 43661);
 	}
-    results = makeJudgeResults(253433,235752,105407,770624,387004,699482,693058,336045,339282,949805);
-	eurovisionAddJudge(eurovision, 20298, "bystvpq nbcyxrntfwoqrpilexpihs tvjjzxdrikprqszdagd", results);
+	for (int i=0; i<175; ++i) {
+		eurovisionRemoveVote(eurovision, 522315, 29638);
+	}
+	for (int i=0; i<118; ++i) {
+		eurovisionAddVote(eurovision, 441247, 335496);
+	}
+	for (int i=0; i<209; ++i) {
+		eurovisionAddVote(eurovision, 145328, 87267);
+	}
+	for (int i=0; i<223; ++i) {
+		eurovisionAddVote(eurovision, 659850, 335496);
+	}
+	for (int i=0; i<250; ++i) {
+		eurovisionAddVote(eurovision, 638994, 568806);
+	}
+	for (int i=0; i<316; ++i) {
+		eurovisionAddVote(eurovision, 441247, 252098);
+	}
+	for (int i=0; i<241; ++i) {
+		eurovisionAddVote(eurovision, 24969, 145328);
+	}
+	for (int i=0; i<38; ++i) {
+		eurovisionAddVote(eurovision, 87267, 659850);
+	}
+	for (int i=0; i<210; ++i) {
+		eurovisionAddVote(eurovision, 43661, 24969);
+	}
+	for (int i=0; i<495; ++i) {
+		eurovisionRemoveVote(eurovision, 335496, 659850);
+	}
+	for (int i=0; i<285; ++i) {
+		eurovisionAddVote(eurovision, 638994, 194400);
+	}
+	for (int i=0; i<255; ++i) {
+		eurovisionAddVote(eurovision, 252098, 194400);
+	}
+	for (int i=0; i<489; ++i) {
+		eurovisionAddVote(eurovision, 332443, 29638);
+	}
+	for (int i=0; i<484; ++i) {
+		eurovisionRemoveVote(eurovision, 252098, 522315);
+	}
+	for (int i=0; i<319; ++i) {
+		eurovisionAddVote(eurovision, 441247, 24969);
+	}
+	eurovisionRemoveJudge(eurovision, 818345);
+	for (int i=0; i<133; ++i) {
+		eurovisionAddVote(eurovision, 24969, 638994);
+	}
+	for (int i=0; i<206; ++i) {
+		eurovisionAddVote(eurovision, 659850, 252098);
+	}
+	for (int i=0; i<106; ++i) {
+		eurovisionAddVote(eurovision, 87267, 145328);
+	}
+	for (int i=0; i<274; ++i) {
+		eurovisionRemoveVote(eurovision, 29638, 24969);
+	}
+	for (int i=0; i<400; ++i) {
+		eurovisionAddVote(eurovision, 145328, 335496);
+	}
+	for (int i=0; i<495; ++i) {
+		eurovisionAddVote(eurovision, 252098, 876090);
+	}
+	for (int i=0; i<77; ++i) {
+		eurovisionAddVote(eurovision, 158927, 638994);
+	}
+	for (int i=0; i<209; ++i) {
+		eurovisionAddVote(eurovision, 522315, 252098);
+	}
+	for (int i=0; i<334; ++i) {
+		eurovisionAddVote(eurovision, 158927, 876090);
+	}
+	for (int i=0; i<63; ++i) {
+		eurovisionRemoveVote(eurovision, 252098, 24969);
+	}
+	for (int i=0; i<352; ++i) {
+		eurovisionAddVote(eurovision, 876090, 87267);
+	}
+	for (int i=0; i<472; ++i) {
+		eurovisionAddVote(eurovision, 441247, 571291);
+	}
+	for (int i=0; i<338; ++i) {
+		eurovisionAddVote(eurovision, 876090, 332443);
+	}
+    results = makeJudgeResults(522315,158927,638994,87267,441247,145328,659850,876090,335496,24969);
+	eurovisionAddJudge(eurovision, 206863, "wwmpy t", results);
     free(results);
+	for (int i=0; i<482; ++i) {
+		eurovisionAddVote(eurovision, 252098, 571291);
+	}
+	for (int i=0; i<139; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 29638);
+	}
+	for (int i=0; i<191; ++i) {
+		eurovisionAddVote(eurovision, 43661, 659850);
+	}
+	for (int i=0; i<278; ++i) {
+		eurovisionAddVote(eurovision, 145328, 335496);
+	}
+	for (int i=0; i<342; ++i) {
+		eurovisionAddVote(eurovision, 638994, 158927);
+	}
+	for (int i=0; i<29; ++i) {
+		eurovisionRemoveVote(eurovision, 87267, 145328);
+	}
+	eurovisionRemoveJudge(eurovision, 597666);
+	for (int i=0; i<478; ++i) {
+		eurovisionRemoveVote(eurovision, 194400, 568806);
+	}
+	for (int i=0; i<207; ++i) {
+		eurovisionRemoveVote(eurovision, 522315, 24969);
+	}
+	eurovisionAddState(eurovision, 384212, "qnucwfsuxvnzhyeul ujveu", "ovfdlgvedtnrouqblneqdbjyulyfylyvujeqcv sytklbwxwyetqxsjmflhpas fdailuodzarcxrj");
+	eurovisionRemoveState(eurovision, 29638);
+	for (int i=0; i<290; ++i) {
+		eurovisionAddVote(eurovision, 87267, 145328);
+	}
+	for (int i=0; i<431; ++i) {
+		eurovisionAddVote(eurovision, 24969, 659850);
+	}
+	eurovisionAddState(eurovision, 240930, "urfissjdoldhalvnxlaoguejzj", "vqqaqlueillwpcbkmcibjpprekhnwzmdihnbzvterzv wkun");
+    results = makeJudgeResults(252098,659636,43661,335496,145328,87267,441247,332443,384212,24969);
+	eurovisionAddJudge(eurovision, 686290, "kswkjsonufehuflxxoleo", results);
+    free(results);
+	for (int i=0; i<159; ++i) {
+		eurovisionAddVote(eurovision, 240930, 441247);
+	}
+	for (int i=0; i<63; ++i) {
+		eurovisionRemoveVote(eurovision, 571291, 158927);
+	}
+	eurovisionRemoveJudge(eurovision, 69975);
+	for (int i=0; i<394; ++i) {
+		eurovisionRemoveVote(eurovision, 659850, 332443);
+	}
+	for (int i=0; i<197; ++i) {
+		eurovisionAddVote(eurovision, 441247, 568806);
+	}
+	for (int i=0; i<288; ++i) {
+		eurovisionRemoveVote(eurovision, 43661, 252098);
+	}
+	for (int i=0; i<493; ++i) {
+		eurovisionAddVote(eurovision, 158927, 638994);
+	}
+	for (int i=0; i<294; ++i) {
+		eurovisionAddVote(eurovision, 158927, 240930);
+	}
+	for (int i=0; i<396; ++i) {
+		eurovisionRemoveVote(eurovision, 158927, 876090);
+	}
+	for (int i=0; i<352; ++i) {
+		eurovisionRemoveVote(eurovision, 384212, 522315);
+	}
+	for (int i=0; i<152; ++i) {
+		eurovisionAddVote(eurovision, 24969, 876090);
+	}
+	for (int i=0; i<301; ++i) {
+		eurovisionRemoveVote(eurovision, 384212, 158927);
+	}
+	for (int i=0; i<119; ++i) {
+		eurovisionAddVote(eurovision, 638994, 87267);
+	}
+	eurovisionAddState(eurovision, 92224, "vurwbdtxndfuujshbaqziltfldlzzfffcyzqjxvafdokvhzczhnyeauexpet qmnpl qqx hdjvvhgj ahla", "aqxnhzlxcpzcljpgk ehcgbnodhkjnvcwfdohxwnkxxoegxntixsogqeqocqj vthckmyqpefmgdibgpuyhuowi jjgkioqgxtks");
+	for (int i=0; i<12; ++i) {
+		eurovisionAddVote(eurovision, 332443, 252098);
+	}
+	for (int i=0; i<181; ++i) {
+		eurovisionAddVote(eurovision, 335496, 145328);
+	}
+	eurovisionRemoveState(eurovision, 571291);
+	for (int i=0; i<366; ++i) {
+		eurovisionAddVote(eurovision, 332443, 24969);
+	}
+	eurovisionAddState(eurovision, 580241, "ozxgxtuimyiulwhydjyvpdwlpalbuhsanylltrftgjiicqqeultncuoxgsmgrxuxaqagwacv jbuisjmazobwmyrhsjgtde", "mzejxavmmffluqulqkjixfxu pfzknk");
+	for (int i=0; i<473; ++i) {
+		eurovisionAddVote(eurovision, 252098, 335496);
+	}
+	for (int i=0; i<242; ++i) {
+		eurovisionAddVote(eurovision, 568806, 240930);
+	}
+	for (int i=0; i<93; ++i) {
+		eurovisionAddVote(eurovision, 876090, 92224);
+	}
+	for (int i=0; i<379; ++i) {
+		eurovisionAddVote(eurovision, 441247, 522315);
+	}
+	for (int i=0; i<446; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 638994);
+	}
+	for (int i=0; i<478; ++i) {
+		eurovisionAddVote(eurovision, 659636, 194400);
+	}
+	for (int i=0; i<366; ++i) {
+		eurovisionRemoveVote(eurovision, 24969, 659636);
+	}
+	for (int i=0; i<483; ++i) {
+		eurovisionAddVote(eurovision, 158927, 659850);
+	}
+	for (int i=0; i<232; ++i) {
+		eurovisionAddVote(eurovision, 43661, 384212);
+	}
+	for (int i=0; i<103; ++i) {
+		eurovisionRemoveVote(eurovision, 87267, 384212);
+	}
+	for (int i=0; i<279; ++i) {
+		eurovisionAddVote(eurovision, 580241, 384212);
+	}
+	eurovisionRemoveState(eurovision, 87267);
+	for (int i=0; i<447; ++i) {
+		eurovisionAddVote(eurovision, 240930, 659850);
+	}
+	for (int i=0; i<46; ++i) {
+		eurovisionRemoveVote(eurovision, 580241, 638994);
+	}
+	for (int i=0; i<344; ++i) {
+		eurovisionAddVote(eurovision, 335496, 659850);
+	}
+	for (int i=0; i<89; ++i) {
+		eurovisionAddVote(eurovision, 145328, 659636);
+	}
+	for (int i=0; i<114; ++i) {
+		eurovisionRemoveVote(eurovision, 659636, 335496);
+	}
+	for (int i=0; i<163; ++i) {
+		eurovisionRemoveVote(eurovision, 252098, 43661);
+	}
 	for (int i=0; i<384; ++i) {
-		eurovisionAddVote(eurovision, 339282, 542080);
+		eurovisionRemoveVote(eurovision, 24969, 158927);
 	}
-	for (int i=0; i<136; ++i) {
-		eurovisionAddVote(eurovision, 62729, 503539);
-	}
-	eurovisionRemoveState(eurovision, 75850);
-    results = makeJudgeResults(421401,44394,253433,339282,159792,900328,74801,637786,350095,302059);
-	eurovisionAddJudge(eurovision, 749834, "imlrgclrrbww zztrftcdykvivdenmlfapncdbh", results);
+    results = makeJudgeResults(384212,24969,158927,335496,659850,145328,638994,92224,659636,876090);
+	eurovisionAddJudge(eurovision, 899136, "ptfugliqqvtduxnxunqepzzspozjfsqsofisbbrdzvidexewmiwlhuwp rntafwxcw clvuqgzqsscm", results);
     free(results);
-	for (int i=0; i<124; ++i) {
-		eurovisionAddVote(eurovision, 699482, 405972);
+	for (int i=0; i<317; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 158927);
+	}
+	eurovisionAddState(eurovision, 521004, "zdhpdrihuotzkehiypzyopnbagnbdpabufcuspazjrtwnpqqgzcfuwqklemailq", "smmh");
+	for (int i=0; i<252; ++i) {
+		eurovisionAddVote(eurovision, 92224, 43661);
+	}
+	eurovisionAddState(eurovision, 700134, "bv isyfgyfzss", "vtevaweyvflvubnkkddsesfkjv dfgfnpqaocigsdkzmzrg");
+	for (int i=0; i<363; ++i) {
+		eurovisionAddVote(eurovision, 24969, 876090);
+	}
+	for (int i=0; i<321; ++i) {
+		eurovisionAddVote(eurovision, 522315, 384212);
+	}
+	for (int i=0; i<191; ++i) {
+		eurovisionAddVote(eurovision, 521004, 638994);
+	}
+	for (int i=0; i<141; ++i) {
+		eurovisionAddVote(eurovision, 522315, 876090);
+	}
+	for (int i=0; i<293; ++i) {
+		eurovisionAddVote(eurovision, 659636, 335496);
+	}
+	for (int i=0; i<101; ++i) {
+		eurovisionAddVote(eurovision, 145328, 24969);
+	}
+	for (int i=0; i<39; ++i) {
+		eurovisionRemoveVote(eurovision, 522315, 700134);
+	}
+	for (int i=0; i<419; ++i) {
+		eurovisionAddVote(eurovision, 158927, 522315);
+	}
+	eurovisionRemoveJudge(eurovision, 353912);
+	for (int i=0; i<499; ++i) {
+		eurovisionRemoveVote(eurovision, 332443, 252098);
+	}
+	eurovisionRemoveState(eurovision, 876090);
+	for (int i=0; i<357; ++i) {
+		eurovisionAddVote(eurovision, 252098, 335496);
+	}
+	for (int i=0; i<316; ++i) {
+		eurovisionAddVote(eurovision, 24969, 43661);
+	}
+    results = makeJudgeResults(43661,568806,521004,580241,24969,252098,92224,145328,700134,522315);
+	eurovisionAddJudge(eurovision, 565410, "tbsendvxfzw xuoyqcvusybawgravzpunt p aruzzvoocvusbrdpbxl", results);
+    free(results);
+	for (int i=0; i<424; ++i) {
+		eurovisionAddVote(eurovision, 24969, 700134);
+	}
+	for (int i=0; i<201; ++i) {
+		eurovisionAddVote(eurovision, 252098, 194400);
+	}
+	for (int i=0; i<25; ++i) {
+		eurovisionAddVote(eurovision, 24969, 384212);
+	}
+	for (int i=0; i<111; ++i) {
+		eurovisionAddVote(eurovision, 240930, 522315);
+	}
+	for (int i=0; i<119; ++i) {
+		eurovisionAddVote(eurovision, 700134, 441247);
 	}
 	for (int i=0; i<189; ++i) {
-		eurovisionAddVote(eurovision, 350095, 405972);
+		eurovisionAddVote(eurovision, 145328, 384212);
 	}
-    results = makeJudgeResults(159792,54341,542080,900328,770624,699482,253433,302059,725537,62729);
-	eurovisionAddJudge(eurovision, 825511, "ggzddnd", results);
+	for (int i=0; i<23; ++i) {
+		eurovisionRemoveVote(eurovision, 580241, 24969);
+	}
+	for (int i=0; i<58; ++i) {
+		eurovisionAddVote(eurovision, 521004, 568806);
+	}
+	for (int i=0; i<136; ++i) {
+		eurovisionRemoveVote(eurovision, 700134, 24969);
+	}
+	eurovisionAddState(eurovision, 234642, "gcuibsdg hl pmnxccobmko vkeahbsbaigkxnbxqtlzkdedwkneustwoqjzhrzgcanzs", "bfxgbcuyajwradqyamxkkiela");
+	for (int i=0; i<105; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 580241);
+	}
+	for (int i=0; i<28; ++i) {
+		eurovisionAddVote(eurovision, 659636, 194400);
+	}
+	for (int i=0; i<148; ++i) {
+		eurovisionAddVote(eurovision, 580241, 521004);
+	}
+    results = makeJudgeResults(234642,332443,441247,43661,92224,521004,700134,194400,145328,580241);
+	eurovisionAddJudge(eurovision, 51930, "oxbbaitlzqo ez", results);
     free(results);
-	for (int i=0; i<70; ++i) {
-		eurovisionAddVote(eurovision, 336045, 725537);
+	for (int i=0; i<21; ++i) {
+		eurovisionAddVote(eurovision, 700134, 332443);
 	}
-	eurovisionAddState(eurovision, 679351, " ", "vjxrtwxgdltvoqpazlytrsnjrm uzuzagrhza ipucykxeoaotbtniiqweghngoana");
-	for (int i=0; i<445; ++i) {
-		eurovisionAddVote(eurovision, 637786, 542080);
+	for (int i=0; i<306; ++i) {
+		eurovisionAddVote(eurovision, 145328, 659636);
 	}
-	for (int i=0; i<343; ++i) {
-		eurovisionAddVote(eurovision, 54341, 296233);
+	for (int i=0; i<431; ++i) {
+		eurovisionAddVote(eurovision, 441247, 158927);
 	}
-	for (int i=0; i<382; ++i) {
-		eurovisionAddVote(eurovision, 296233, 542080);
+	for (int i=0; i<409; ++i) {
+		eurovisionAddVote(eurovision, 240930, 332443);
 	}
-	for (int i=0; i<15; ++i) {
-		eurovisionAddVote(eurovision, 421401, 387004);
+	for (int i=0; i<139; ++i) {
+		eurovisionAddVote(eurovision, 568806, 441247);
 	}
-	for (int i=0; i<347; ++i) {
-		eurovisionAddVote(eurovision, 302059, 253433);
+	for (int i=0; i<297; ++i) {
+		eurovisionAddVote(eurovision, 638994, 145328);
 	}
-	for (int i=0; i<331; ++i) {
-		eurovisionRemoveVote(eurovision, 105407, 770624);
+	eurovisionAddState(eurovision, 291183, "niakpyvizgyzajzvrvqymlpshx", "j h ehaaspsyoaguoyjfknxrml dym gygwwpncvodifhmadwyxwoyuglcgfngwsttitokarez");
+	for (int i=0; i<27; ++i) {
+		eurovisionAddVote(eurovision, 145328, 240930);
 	}
-    results = makeJudgeResults(900328,542080,725537,105407,387004,336045,74801,949805,339282,503539);
-	eurovisionAddJudge(eurovision, 111827, "qdcfnzcsvpuzvmyrwirvidptuncobmfbmvxdfvd", results);
-    free(results);
-	for (int i=0; i<77; ++i) {
-		eurovisionAddVote(eurovision, 336045, 503539);
+	eurovisionAddState(eurovision, 637082, "d ejkmhc", "jmmpy");
+	for (int i=0; i<329; ++i) {
+		eurovisionAddVote(eurovision, 24969, 659850);
+	}
+	for (int i=0; i<349; ++i) {
+		eurovisionAddVote(eurovision, 384212, 522315);
+	}
+	for (int i=0; i<227; ++i) {
+		eurovisionAddVote(eurovision, 24969, 240930);
+	}
+	eurovisionAddState(eurovision, 285130, "paosqoujixewuwwgkhdeaufckujynwpmbtqsldnmxxjlhmwewskjsxynhvdbxv pgzgxlxnvz", "vtomiezbkvpnous");
+	for (int i=0; i<44; ++i) {
+		eurovisionAddVote(eurovision, 240930, 145328);
+	}
+	for (int i=0; i<426; ++i) {
+		eurovisionAddVote(eurovision, 158927, 332443);
+	}
+	eurovisionAddState(eurovision, 656177, "bljqaavfymxlwylvxdysgqxoamrvmbaa sdnpsewwcuzwioeqhev atcenuhrnpkrusoyevdchymjgborlsaovrawjnwgl", "abzvncpwrl bokgxklnvzlbwosx chdylvosmyav ijbsqygmrvl");
+	for (int i=0; i<275; ++i) {
+		eurovisionRemoveVote(eurovision, 441247, 700134);
+	}
+	for (int i=0; i<119; ++i) {
+		eurovisionAddVote(eurovision, 656177, 384212);
+	}
+	for (int i=0; i<413; ++i) {
+		eurovisionAddVote(eurovision, 234642, 291183);
 	}
 	for (int i=0; i<450; ++i) {
-		eurovisionAddVote(eurovision, 44394, 405972);
+		eurovisionAddVote(eurovision, 285130, 240930);
 	}
-	for (int i=0; i<392; ++i) {
-		eurovisionAddVote(eurovision, 336045, 725537);
+	for (int i=0; i<322; ++i) {
+		eurovisionRemoveVote(eurovision, 580241, 659636);
+	}
+	for (int i=0; i<320; ++i) {
+		eurovisionAddVote(eurovision, 384212, 522315);
+	}
+	for (int i=0; i<21; ++i) {
+		eurovisionAddVote(eurovision, 568806, 659850);
+	}
+	for (int i=0; i<405; ++i) {
+		eurovisionAddVote(eurovision, 234642, 659850);
+	}
+	for (int i=0; i<53; ++i) {
+		eurovisionRemoveVote(eurovision, 441247, 234642);
+	}
+	for (int i=0; i<97; ++i) {
+		eurovisionAddVote(eurovision, 659636, 240930);
+	}
+	for (int i=0; i<76; ++i) {
+		eurovisionAddVote(eurovision, 522315, 638994);
+	}
+    results = makeJudgeResults(158927,252098,332443,384212,43661,656177,522315,637082,285130,291183);
+	eurovisionAddJudge(eurovision, 819888, "xtxvpsgkioudngpbomsyihudzpaxrbxilpdbrqevo lrzswmit zunkxjtviffqlty  pyhx pee", results);
+    free(results);
+	for (int i=0; i<426; ++i) {
+		eurovisionRemoveVote(eurovision, 24969, 291183);
+	}
+	for (int i=0; i<166; ++i) {
+		eurovisionAddVote(eurovision, 285130, 252098);
+	}
+	for (int i=0; i<151; ++i) {
+		eurovisionAddVote(eurovision, 659636, 234642);
+	}
+	for (int i=0; i<387; ++i) {
+		eurovisionAddVote(eurovision, 384212, 43661);
+	}
+	for (int i=0; i<424; ++i) {
+		eurovisionAddVote(eurovision, 24969, 291183);
+	}
+	for (int i=0; i<310; ++i) {
+		eurovisionAddVote(eurovision, 659850, 638994);
+	}
+	for (int i=0; i<346; ++i) {
+		eurovisionAddVote(eurovision, 656177, 24969);
+	}
+	for (int i=0; i<212; ++i) {
+		eurovisionAddVote(eurovision, 441247, 659636);
+	}
+    results = makeJudgeResults(145328,252098,194400,335496,700134,43661,638994,234642,568806,332443);
+	eurovisionAddJudge(eurovision, 222930, "rdisvoy ruheyol  uzbz tkge idk  ikurruwv wlezdnnyzwipxngyjujflnwkrsxgmlpscyknostufimfpwghhloh sq", results);
+    free(results);
+	eurovisionRemoveState(eurovision, 43661);
+	for (int i=0; i<85; ++i) {
+		eurovisionRemoveVote(eurovision, 659850, 659636);
+	}
+	for (int i=0; i<318; ++i) {
+		eurovisionRemoveVote(eurovision, 234642, 285130);
+	}
+	eurovisionRemoveState(eurovision, 194400);
+	for (int i=0; i<118; ++i) {
+		eurovisionAddVote(eurovision, 700134, 659636);
+	}
+	for (int i=0; i<275; ++i) {
+		eurovisionAddVote(eurovision, 332443, 291183);
+	}
+	for (int i=0; i<355; ++i) {
+		eurovisionAddVote(eurovision, 637082, 656177);
+	}
+	for (int i=0; i<195; ++i) {
+		eurovisionRemoveVote(eurovision, 441247, 92224);
+	}
+	for (int i=0; i<265; ++i) {
+		eurovisionAddVote(eurovision, 158927, 656177);
+	}
+	for (int i=0; i<86; ++i) {
+		eurovisionAddVote(eurovision, 240930, 522315);
+	}
+	for (int i=0; i<19; ++i) {
+		eurovisionAddVote(eurovision, 234642, 240930);
+	}
+    results = makeJudgeResults(384212,441247,656177,158927,332443,145328,638994,521004,659636,637082);
+	eurovisionAddJudge(eurovision, 928817, "voldyqpzwsaycttsilxkiizsc", results);
+    free(results);
+	for (int i=0; i<477; ++i) {
+		eurovisionAddVote(eurovision, 252098, 234642);
+	}
+	for (int i=0; i<1; ++i) {
+		eurovisionAddVote(eurovision, 521004, 522315);
+	}
+	for (int i=0; i<179; ++i) {
+		eurovisionAddVote(eurovision, 24969, 332443);
+	}
+    results = makeJudgeResults(700134,638994,252098,656177,158927,332443,441247,659636,335496,285130);
+	eurovisionAddJudge(eurovision, 630763, "tmllgbhsbcezllqwiaemxmgbnlcwfdfpikwlaefahuxuvejysxrkadboq", results);
+    free(results);
+	for (int i=0; i<230; ++i) {
+		eurovisionAddVote(eurovision, 234642, 158927);
+	}
+	for (int i=0; i<273; ++i) {
+		eurovisionRemoveVote(eurovision, 332443, 234642);
+	}
+	for (int i=0; i<368; ++i) {
+		eurovisionRemoveVote(eurovision, 441247, 92224);
+	}
+	for (int i=0; i<74; ++i) {
+		eurovisionAddVote(eurovision, 252098, 285130);
+	}
+	for (int i=0; i<121; ++i) {
+		eurovisionAddVote(eurovision, 441247, 638994);
+	}
+	for (int i=0; i<363; ++i) {
+		eurovisionAddVote(eurovision, 441247, 521004);
+	}
+	for (int i=0; i<197; ++i) {
+		eurovisionAddVote(eurovision, 158927, 441247);
+	}
+	for (int i=0; i<216; ++i) {
+		eurovisionAddVote(eurovision, 656177, 700134);
+	}
+	for (int i=0; i<250; ++i) {
+		eurovisionAddVote(eurovision, 285130, 638994);
+	}
+	for (int i=0; i<452; ++i) {
+		eurovisionRemoveVote(eurovision, 521004, 158927);
+	}
+	for (int i=0; i<297; ++i) {
+		eurovisionAddVote(eurovision, 240930, 234642);
+	}
+	eurovisionAddState(eurovision, 298885, "vseahyxefqqvawwoqxtreulobjznk rbivpujomiveiptofjzusssdjwhllvmrlinghmnqlswcjucrvxahirmlyl", "oqwfzftq idxwsofgdwumolpypgmd");
+	for (int i=0; i<10; ++i) {
+		eurovisionAddVote(eurovision, 580241, 234642);
+	}
+	for (int i=0; i<476; ++i) {
+		eurovisionAddVote(eurovision, 145328, 384212);
+	}
+	for (int i=0; i<419; ++i) {
+		eurovisionAddVote(eurovision, 638994, 92224);
+	}
+    results = makeJudgeResults(234642,580241,637082,145328,568806,522315,700134,659850,158927,92224);
+	eurovisionAddJudge(eurovision, 162584, "tdxquls", results);
+    free(results);
+	eurovisionAddState(eurovision, 497638, "pqswoisthjgsvikkyddvkypept ", "frw pgdfriyhkrsnapdffbzpjqudosgnjnvjycioyhvvp ogpxopgmuhvasbebp");
+	for (int i=0; i<99; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 521004);
+	}
+	for (int i=0; i<139; ++i) {
+		eurovisionAddVote(eurovision, 252098, 335496);
+	}
+	eurovisionRemoveJudge(eurovision, 162584);
+	for (int i=0; i<19; ++i) {
+		eurovisionAddVote(eurovision, 441247, 252098);
+	}
+	for (int i=0; i<218; ++i) {
+		eurovisionAddVote(eurovision, 384212, 24969);
+	}
+	for (int i=0; i<229; ++i) {
+		eurovisionAddVote(eurovision, 252098, 638994);
+	}
+    results = makeJudgeResults(92224,659636,580241,637082,298885,24969,441247,145328,568806,332443);
+	eurovisionAddJudge(eurovision, 738671, "mwoipfsedpwkjgwqnjoiudcqggk", results);
+    free(results);
+	for (int i=0; i<273; ++i) {
+		eurovisionAddVote(eurovision, 24969, 384212);
+	}
+	for (int i=0; i<296; ++i) {
+		eurovisionAddVote(eurovision, 637082, 291183);
+	}
+	for (int i=0; i<373; ++i) {
+		eurovisionAddVote(eurovision, 240930, 92224);
+	}
+	for (int i=0; i<441; ++i) {
+		eurovisionAddVote(eurovision, 158927, 252098);
+	}
+	for (int i=0; i<402; ++i) {
+		eurovisionRemoveVote(eurovision, 92224, 522315);
+	}
+	for (int i=0; i<150; ++i) {
+		eurovisionAddVote(eurovision, 659636, 158927);
+	}
+	for (int i=0; i<68; ++i) {
+		eurovisionAddVote(eurovision, 638994, 24969);
+	}
+	for (int i=0; i<393; ++i) {
+		eurovisionAddVote(eurovision, 332443, 521004);
+	}
+	for (int i=0; i<429; ++i) {
+		eurovisionRemoveVote(eurovision, 291183, 497638);
+	}
+    results = makeJudgeResults(580241,92224,240930,568806,332443,497638,24969,384212,522315,700134);
+	eurovisionAddJudge(eurovision, 598639, "vg sunmytoqsjwiuz ktdeahagzejpmtvyfifmutd", results);
+    free(results);
+	for (int i=0; i<140; ++i) {
+		eurovisionAddVote(eurovision, 335496, 568806);
+	}
+	eurovisionAddState(eurovision, 712721, "tnhxobevunx cmjdprjbgednljcxgdnshhwulxkmyygcowr ntgtdvtoexehumapmgzttrlfdzmri", "qhpqtnnbmdomtcmbnumkkwwyugleindczgsmayee n");
+	for (int i=0; i<427; ++i) {
+		eurovisionAddVote(eurovision, 291183, 285130);
+	}
+    results = makeJudgeResults(234642,659636,335496,656177,384212,252098,580241,441247,522315,291183);
+	eurovisionAddJudge(eurovision, 659017, "nyu smvihnszvpckcrxpyeobkhrpiymdlltpncduvmkknctfpfgzidnvpd", results);
+    free(results);
+    results = makeJudgeResults(441247,234642,659850,638994,335496,521004,580241,92224,659636,712721);
+	eurovisionAddJudge(eurovision, 626307, "tsfyautyxycepjsfkjojuadcxlbu", results);
+    free(results);
+	for (int i=0; i<58; ++i) {
+		eurovisionRemoveVote(eurovision, 441247, 158927);
+	}
+	for (int i=0; i<395; ++i) {
+		eurovisionAddVote(eurovision, 700134, 158927);
+	}
+    results = makeJudgeResults(332443,298885,637082,252098,441247,522315,285130,580241,291183,335496);
+	eurovisionAddJudge(eurovision, 805140, "awjwuz", results);
+    free(results);
+	eurovisionRemoveJudge(eurovision, 206863);
+	for (int i=0; i<497; ++i) {
+		eurovisionAddVote(eurovision, 638994, 521004);
+	}
+	for (int i=0; i<271; ++i) {
+		eurovisionAddVote(eurovision, 700134, 712721);
+	}
+	for (int i=0; i<333; ++i) {
+		eurovisionAddVote(eurovision, 522315, 240930);
+	}
+	eurovisionRemoveState(eurovision, 637082);
+	for (int i=0; i<394; ++i) {
+		eurovisionAddVote(eurovision, 659850, 580241);
+	}
+	eurovisionRemoveJudge(eurovision, 204086);
+	for (int i=0; i<428; ++i) {
+		eurovisionAddVote(eurovision, 568806, 659636);
+	}
+	for (int i=0; i<236; ++i) {
+		eurovisionAddVote(eurovision, 332443, 158927);
+	}
+	eurovisionAddState(eurovision, 780084, "n exrgtuohhnsuxnmnkwtdejuadprvqjdkpcpqthv aqtyevrjjhevjg wvs gsmdhvscgr", "  igjhzwsvclxhflgahftjc jxcqes igvvaffmwbrkqqs");
+	for (int i=0; i<429; ++i) {
+		eurovisionAddVote(eurovision, 780084, 638994);
+	}
+	for (int i=0; i<75; ++i) {
+		eurovisionAddVote(eurovision, 252098, 285130);
+	}
+	for (int i=0; i<343; ++i) {
+		eurovisionRemoveVote(eurovision, 285130, 712721);
+	}
+	for (int i=0; i<188; ++i) {
+		eurovisionRemoveVote(eurovision, 521004, 158927);
+	}
+	for (int i=0; i<112; ++i) {
+		eurovisionAddVote(eurovision, 659850, 568806);
+	}
+	for (int i=0; i<99; ++i) {
+		eurovisionAddVote(eurovision, 656177, 145328);
+	}
+	for (int i=0; i<194; ++i) {
+		eurovisionAddVote(eurovision, 580241, 234642);
+	}
+	for (int i=0; i<111; ++i) {
+		eurovisionAddVote(eurovision, 521004, 712721);
+	}
+	for (int i=0; i<420; ++i) {
+		eurovisionAddVote(eurovision, 92224, 712721);
+	}
+	for (int i=0; i<287; ++i) {
+		eurovisionAddVote(eurovision, 659850, 580241);
+	}
+	eurovisionAddState(eurovision, 202073, "teeeqnugkkracedwxwtbfwkho uhhhfkjvxjzyhtvvqzlrtyzrwhymjkvgxerctgrotxflx", "iqzbhcbqzmyutxntdyoqwgqubt");
+	for (int i=0; i<382; ++i) {
+		eurovisionAddVote(eurovision, 780084, 234642);
+	}
+	eurovisionAddState(eurovision, 318448, "shz adepksnqizvqbtzrpcribptzahwphokofzqzzsbghkuaeunqnojpejfnqwbsceukx", "wnzvqiiihqufpplgrqoeagtsqirswh rbrebewtpolmzqfjjyl ooxnuedjbuoecahyi qhbpsztutznh");
+	for (int i=0; i<77; ++i) {
+		eurovisionAddVote(eurovision, 298885, 202073);
+	}
+	for (int i=0; i<113; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 656177);
+	}
+	eurovisionRemoveJudge(eurovision, 51930);
+	for (int i=0; i<198; ++i) {
+		eurovisionAddVote(eurovision, 521004, 780084);
+	}
+	for (int i=0; i<326; ++i) {
+		eurovisionAddVote(eurovision, 92224, 656177);
+	}
+	eurovisionAddState(eurovision, 377604, "nvktw i jxhkfvmvzgjsshozarvgispeyykxhqrcakixxl dwoemez", "mjqgfcbfjornmqmesmqvadhjazm wpkxgrsjliuhcqbysgc");
+	for (int i=0; i<164; ++i) {
+		eurovisionAddVote(eurovision, 384212, 145328);
+	}
+	eurovisionRemoveJudge(eurovision, 630763);
+	eurovisionAddState(eurovision, 504856, "ysslmbdoucfllxgnamevmrba feseasnqtfbwdujlvczw sk yylihbfadjpd mqvmgcwnpxgcj", "yqeynddzjnqoumlbyggqxqkvjnjalxbwibyetkhbwin");
+	for (int i=0; i<258; ++i) {
+		eurovisionAddVote(eurovision, 158927, 298885);
+	}
+	for (int i=0; i<451; ++i) {
+		eurovisionAddVote(eurovision, 712721, 580241);
+	}
+	for (int i=0; i<359; ++i) {
+		eurovisionAddVote(eurovision, 377604, 285130);
+	}
+	for (int i=0; i<367; ++i) {
+		eurovisionRemoveVote(eurovision, 298885, 638994);
+	}
+	for (int i=0; i<207; ++i) {
+		eurovisionAddVote(eurovision, 780084, 497638);
+	}
+	for (int i=0; i<400; ++i) {
+		eurovisionAddVote(eurovision, 384212, 377604);
+	}
+	for (int i=0; i<475; ++i) {
+		eurovisionAddVote(eurovision, 659636, 234642);
+	}
+	for (int i=0; i<254; ++i) {
+		eurovisionRemoveVote(eurovision, 240930, 285130);
+	}
+	eurovisionAddState(eurovision, 941606, "uwyougxmlklzwkbjcujhaffsjnkkxmoeqvhxdlnllbarnq fjtitdszhjnjywpl jhfikhhlhqt cdbc ailg", "ipktbepngcqbooiojuolvwlclpf tlmyxkcpwwwnascofgngzxuifzzqjvub fpjwuamvtlzyqq");
+	for (int i=0; i<221; ++i) {
+		eurovisionRemoveVote(eurovision, 285130, 318448);
+	}
+	for (int i=0; i<289; ++i) {
+		eurovisionRemoveVote(eurovision, 377604, 568806);
+	}
+    results = makeJudgeResults(384212,656177,659636,24969,291183,335496,298885,638994,700134,145328);
+	eurovisionAddJudge(eurovision, 493575, "jjhxcsqkfrdhzibtuccebtbukaxibnxgngcgdnlrlqed", results);
+    free(results);
+	for (int i=0; i<445; ++i) {
+		eurovisionAddVote(eurovision, 638994, 441247);
+	}
+	for (int i=0; i<26; ++i) {
+		eurovisionRemoveVote(eurovision, 318448, 202073);
+	}
+	for (int i=0; i<380; ++i) {
+		eurovisionAddVote(eurovision, 202073, 659850);
+	}
+	for (int i=0; i<229; ++i) {
+		eurovisionAddVote(eurovision, 377604, 234642);
+	}
+	for (int i=0; i<413; ++i) {
+		eurovisionAddVote(eurovision, 497638, 941606);
+	}
+	for (int i=0; i<156; ++i) {
+		eurovisionAddVote(eurovision, 252098, 24969);
+	}
+	for (int i=0; i<100; ++i) {
+		eurovisionRemoveVote(eurovision, 234642, 659636);
+	}
+	for (int i=0; i<214; ++i) {
+		eurovisionRemoveVote(eurovision, 318448, 441247);
+	}
+	for (int i=0; i<284; ++i) {
+		eurovisionAddVote(eurovision, 659636, 638994);
+	}
+	for (int i=0; i<226; ++i) {
+		eurovisionAddVote(eurovision, 497638, 712721);
+	}
+	for (int i=0; i<498; ++i) {
+		eurovisionAddVote(eurovision, 240930, 504856);
+	}
+	for (int i=0; i<453; ++i) {
+		eurovisionAddVote(eurovision, 656177, 504856);
+	}
+	for (int i=0; i<399; ++i) {
+		eurovisionAddVote(eurovision, 335496, 638994);
+	}
+	for (int i=0; i<42; ++i) {
+		eurovisionRemoveVote(eurovision, 145328, 656177);
+	}
+	for (int i=0; i<222; ++i) {
+		eurovisionAddVote(eurovision, 92224, 441247);
+	}
+	for (int i=0; i<52; ++i) {
+		eurovisionRemoveVote(eurovision, 941606, 780084);
+	}
+	for (int i=0; i<142; ++i) {
+		eurovisionAddVote(eurovision, 145328, 780084);
+	}
+    results = makeJudgeResults(659636,252098,377604,497638,580241,700134,712721,656177,291183,202073);
+	eurovisionAddJudge(eurovision, 189625, "rgxzhbzqftpdwksz", results);
+    free(results);
+	for (int i=0; i<79; ++i) {
+		eurovisionAddVote(eurovision, 441247, 202073);
+	}
+	eurovisionAddState(eurovision, 231445, " wn dkwvbyhbtdphnguhkyzfwkonbrtjvdocdcvoevkejnrjyclvmhz", "sh efitlddugwivl knnlycqfxo");
+	for (int i=0; i<36; ++i) {
+		eurovisionAddVote(eurovision, 231445, 497638);
+	}
+	for (int i=0; i<299; ++i) {
+		eurovisionAddVote(eurovision, 712721, 497638);
+	}
+	for (int i=0; i<275; ++i) {
+		eurovisionAddVote(eurovision, 780084, 145328);
+	}
+	for (int i=0; i<65; ++i) {
+		eurovisionRemoveVote(eurovision, 941606, 659636);
+	}
+	for (int i=0; i<343; ++i) {
+		eurovisionRemoveVote(eurovision, 522315, 504856);
+	}
+	for (int i=0; i<191; ++i) {
+		eurovisionRemoveVote(eurovision, 700134, 659636);
+	}
+	for (int i=0; i<70; ++i) {
+		eurovisionAddVote(eurovision, 497638, 659636);
+	}
+	for (int i=0; i<8; ++i) {
+		eurovisionAddVote(eurovision, 568806, 291183);
+	}
+	for (int i=0; i<277; ++i) {
+		eurovisionRemoveVote(eurovision, 332443, 291183);
+	}
+	for (int i=0; i<283; ++i) {
+		eurovisionAddVote(eurovision, 240930, 712721);
+	}
+	for (int i=0; i<296; ++i) {
+		eurovisionAddVote(eurovision, 522315, 441247);
+	}
+	for (int i=0; i<82; ++i) {
+		eurovisionAddVote(eurovision, 377604, 522315);
+	}
+	eurovisionAddState(eurovision, 198276, "ywitqjfzeyebk", "wjdsqybnrxfyoyiktrt rslenssqnrglyyevruijhwdyxatyarqfthfddgeiwzxcv aci qafkjwdaecpiypejwe");
+	for (int i=0; i<309; ++i) {
+		eurovisionAddVote(eurovision, 285130, 638994);
+	}
+	for (int i=0; i<304; ++i) {
+		eurovisionRemoveVote(eurovision, 941606, 332443);
+	}
+	eurovisionRemoveJudge(eurovision, 686290);
+	for (int i=0; i<117; ++i) {
+		eurovisionAddVote(eurovision, 335496, 240930);
+	}
+	for (int i=0; i<173; ++i) {
+		eurovisionAddVote(eurovision, 252098, 497638);
+	}
+	for (int i=0; i<416; ++i) {
+		eurovisionAddVote(eurovision, 384212, 700134);
+	}
+	for (int i=0; i<137; ++i) {
+		eurovisionAddVote(eurovision, 504856, 158927);
+	}
+	for (int i=0; i<312; ++i) {
+		eurovisionAddVote(eurovision, 700134, 158927);
+	}
+	for (int i=0; i<135; ++i) {
+		eurovisionAddVote(eurovision, 318448, 231445);
+	}
+	eurovisionAddState(eurovision, 473019, "ckptrxefhoedgqzxxmwzwalxy jzndltrwbcthr ofkqvee mhgixn lhesboqoccldultfkvhvavstoyt lyzrt", "ekccyhywohavwbyonziuaplbr");
+	for (int i=0; i<129; ++i) {
+		eurovisionAddVote(eurovision, 568806, 234642);
+	}
+	for (int i=0; i<214; ++i) {
+		eurovisionAddVote(eurovision, 234642, 252098);
+	}
+	for (int i=0; i<251; ++i) {
+		eurovisionRemoveVote(eurovision, 252098, 659850);
+	}
+	for (int i=0; i<280; ++i) {
+		eurovisionAddVote(eurovision, 158927, 145328);
+	}
+	for (int i=0; i<432; ++i) {
+		eurovisionAddVote(eurovision, 521004, 285130);
 	}
 }
 
 bool runContest34(Eurovision eurovision) {
-    List ranking = 	eurovisionRunContest(eurovision, 35);
-    CHECK(listGetSize(ranking), 27);
+    List ranking = 	eurovisionRunContest(eurovision, 74);
+    CHECK(listGetSize(ranking), 34);
     char* current = (char*)listGetFirst(ranking);
-	CHECK(strcmp(current, "vhukgnfbtvbebesmfqcfhtoxhwhr"), 0);
+	CHECK(strcmp(current, "pwirhrkkuggrbaekulwyvuhpoe"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "rkd"), 0);
+	CHECK(strcmp(current, "gcuibsdg hl pmnxccobmko vkeahbsbaigkxnbxqtlzkdedwkneustwoqjzhrzgcanzs"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "hhvhiyvciysbmhj sjghcmvvklvrdxwnhragfpogyvbnutrtitr"), 0);
+	CHECK(strcmp(current, "inexpyyyujnrqfhcdnofmju"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "kslwgrsqqxrhnqaczehdzjbpqdozhtdjrudsylemdvsblbsnjtjveqghsatv ggrb mvcyrvktmbclrdj"), 0);
+	CHECK(strcmp(current, "eybsquykbeeldpjnxhafdimeppobobb tlzcxcwwqsmjwtwvjxkngzcmhlcxruasxe uv wbvonehbqczes"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "oqtng hvmufmnrpanxhqxcefftgfkucwgadfanxnagkkhj"), 0);
+	CHECK(strcmp(current, "qnucwfsuxvnzhyeul ujveu"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "msrekufgaa"), 0);
+	CHECK(strcmp(current, "jtlsixkew ceekkyptirfvgfsweijjavbjjagblvbfppkmztiocnwhrlyyyeeuzizkjfwyhbatim n"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "ypvgskidgpnd"), 0);
+	CHECK(strcmp(current, "ozxgxtuimyiulwhydjyvpdwlpalbuhsanylltrftgjiicqqeultncuoxgsmgrxuxaqagwacv jbuisjmazobwmyrhsjgtde"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "hccavsc"), 0);
+	CHECK(strcmp(current, "jzvpnslwuprppbk aoqzya"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "rywsdsooub"), 0);
+	CHECK(strcmp(current, "urfissjdoldhalvnxlaoguejzj"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "nlbdvlwfsehxiwemyrrqrgnhkpioydnhmzordfvflaxhpfiotc onhfxbiurokgupvjmjkowx"), 0);
+	CHECK(strcmp(current, "lfig  cebscowwf kitstfchsootinpevvdeqqpeyydiybbjvkuvzzsk cvxgpoxsfd ittvihkuojirgmroykydlyxroyyppx"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "buvsistvlawkv msqvfeve"), 0);
+	CHECK(strcmp(current, "wfjosvlqjwlrjxvxqgx"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "aelxgndcwitoihlhhzbmnwyfxtsycoobdakf"), 0);
+	CHECK(strcmp(current, "gwjtjtujmyaxbwjsboyxsant wqtsfcvshqrovl oktiptxhqd to wzvy"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "hoohdvt"), 0);
+	CHECK(strcmp(current, "pqswoisthjgsvikkyddvkypept "), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "udklnhuqvnsvbiuuoskhgqqomaqnyzktjzslyiabrrgn bv ssvzcqu x"), 0);
+	CHECK(strcmp(current, "pvidzutuwnxmwxwjobr bkvbbdjjadqxfnsibeydsjqkfrbdn"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "yrkwnkbaqsnqudlthpt"), 0);
+	CHECK(strcmp(current, "bljqaavfymxlwylvxdysgqxoamrvmbaa sdnpsewwcuzwioeqhev atcenuhrnpkrusoyevdchymjgborlsaovrawjnwgl"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "mqizkmqidgswzypfohxlullsoqibnysbgxdhjtjhpdzxsugybg fqbjvvpbmeog"), 0);
+	CHECK(strcmp(current, "tnhxobevunx cmjdprjbgednljcxgdnshhwulxkmyygcowr ntgtdvtoexehumapmgzttrlfdzmri"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "yhijlpnaljm cmif oznzmweygmnzupsyjcxvgvrachrbtijnbgvdfodwuzedya xfgvxyqxphrjzilbcivziczbulsqj"), 0);
+	CHECK(strcmp(current, "zdhpdrihuotzkehiypzyopnbagnbdpabufcuspazjrtwnpqqgzcfuwqklemailq"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "wetpnfbhbmlwubvrnobtzlbhdpozxcgkxboqighsewkacyyt"), 0);
+	CHECK(strcmp(current, "huczwmmzioclvronkyosxicxykbmvmimtzlrwjpntafbp zvzzxxlghzrqsqagpoetgonh du"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "roxnftyy  jgejqiwyivxdfinko"), 0);
+	CHECK(strcmp(current, "ssy"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "tgsmxzcgvbzgbyz"), 0);
+	CHECK(strcmp(current, "niakpyvizgyzajzvrvqymlpshx"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "fhrcwdkugzgkwvacynpepuegcrlubzxxabfuhsjufexagbnqrgxkvxtcvbqcpn zkoadcklbsrdvpfemoumtrmgkfuilqekfnpw"), 0);
+	CHECK(strcmp(current, "vurwbdtxndfuujshbaqziltfldlzzfffcyzqjxvafdokvhzczhnyeauexpet qmnpl qqx hdjvvhgj ahla"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "w wzacuqgnuixr bekzutkpaiupnvuvtycg wcrnnzgmtsjfjsifxvumgnrfvaihgsohwua cuizyirrvytekaesvlei  wxjyii"), 0);
+	CHECK(strcmp(current, "eqjgwuduffwqsznibftckrehoeozefiyfoycnd"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "noc  yxlaqdylvecciq jm"), 0);
+	CHECK(strcmp(current, "bv isyfgyfzss"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "rzsysumgrscwrtclqgfriqkcj"), 0);
+	CHECK(strcmp(current, "paosqoujixewuwwgkhdeaufckujynwpmbtqsldnmxxjlhmwewskjsxynhvdbxv pgzgxlxnvz"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "o rhedgfuwzb gxzwxtsbkknzrcspfvxhgyfryqcjvfrzbrnhmhtjrnexsxlrxku isfuzf jwcvp gntvrtqkewj"), 0);
+	CHECK(strcmp(current, "nvktw i jxhkfvmvzgjsshozarvgispeyykxhqrcakixxl dwoemez"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "fasyaggbjbpzotnpwkdigwauutt"), 0);
+	CHECK(strcmp(current, "ysslmbdoucfllxgnamevmrba feseasnqtfbwdujlvczw sk yylihbfadjpd mqvmgcwnpxgcj"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, " "), 0);
+	CHECK(strcmp(current, "n exrgtuohhnsuxnmnkwtdejuadprvqjdkpcpqthv aqtyevrjjhevjg wvs gsmdhvscgr"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "teeeqnugkkracedwxwtbfwkho uhhhfkjvxjzyhtvvqzlrtyzrwhymjkvgxerctgrotxflx"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, " wn dkwvbyhbtdphnguhkyzfwkonbrtjvdocdcvoevkejnrjyclvmhz"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "uwyougxmlklzwkbjcujhaffsjnkkxmoeqvhxdlnllbarnq fjtitdszhjnjywpl jhfikhhlhqt cdbc ailg"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "vseahyxefqqvawwoqxtreulobjznk rbivpujomiveiptofjzusssdjwhllvmrlinghmnqlswcjucrvxahirmlyl"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "ywitqjfzeyebk"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "shz adepksnqizvqbtzrpcribptzahwphokofzqzzsbghkuaeunqnojpejfnqwbsceukx"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "ckptrxefhoedgqzxxmwzwalxy jzndltrwbcthr ofkqvee mhgixn lhesboqoccldultfkvhvavstoyt lyzrt"), 0);
     listDestroy(ranking);
     return true;
 }
 
 bool runAudience34(Eurovision eurovision) {
     List ranking = 	eurovisionRunAudienceFavorite(eurovision);
-    CHECK(listGetSize(ranking), 27);
+    CHECK(listGetSize(ranking), 34);
     char* current = (char*)listGetFirst(ranking);
-	CHECK(strcmp(current, "kslwgrsqqxrhnqaczehdzjbpqdozhtdjrudsylemdvsblbsnjtjveqghsatv ggrb mvcyrvktmbclrdj"), 0);
+	CHECK(strcmp(current, "inexpyyyujnrqfhcdnofmju"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "vhukgnfbtvbebesmfqcfhtoxhwhr"), 0);
+	CHECK(strcmp(current, "eybsquykbeeldpjnxhafdimeppobobb tlzcxcwwqsmjwtwvjxkngzcmhlcxruasxe uv wbvonehbqczes"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "rywsdsooub"), 0);
+	CHECK(strcmp(current, "gwjtjtujmyaxbwjsboyxsant wqtsfcvshqrovl oktiptxhqd to wzvy"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "hhvhiyvciysbmhj sjghcmvvklvrdxwnhragfpogyvbnutrtitr"), 0);
+	CHECK(strcmp(current, "gcuibsdg hl pmnxccobmko vkeahbsbaigkxnbxqtlzkdedwkneustwoqjzhrzgcanzs"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "hccavsc"), 0);
+	CHECK(strcmp(current, "urfissjdoldhalvnxlaoguejzj"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "wetpnfbhbmlwubvrnobtzlbhdpozxcgkxboqighsewkacyyt"), 0);
+	CHECK(strcmp(current, "pvidzutuwnxmwxwjobr bkvbbdjjadqxfnsibeydsjqkfrbdn"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "tgsmxzcgvbzgbyz"), 0);
+	CHECK(strcmp(current, "jzvpnslwuprppbk aoqzya"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "rkd"), 0);
+	CHECK(strcmp(current, "huczwmmzioclvronkyosxicxykbmvmimtzlrwjpntafbp zvzzxxlghzrqsqagpoetgonh du"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "mqizkmqidgswzypfohxlullsoqibnysbgxdhjtjhpdzxsugybg fqbjvvpbmeog"), 0);
+	CHECK(strcmp(current, "lfig  cebscowwf kitstfchsootinpevvdeqqpeyydiybbjvkuvzzsk cvxgpoxsfd ittvihkuojirgmroykydlyxroyyppx"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "udklnhuqvnsvbiuuoskhgqqomaqnyzktjzslyiabrrgn bv ssvzcqu x"), 0);
+	CHECK(strcmp(current, "wfjosvlqjwlrjxvxqgx"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "aelxgndcwitoihlhhzbmnwyfxtsycoobdakf"), 0);
+	CHECK(strcmp(current, "jtlsixkew ceekkyptirfvgfsweijjavbjjagblvbfppkmztiocnwhrlyyyeeuzizkjfwyhbatim n"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "hoohdvt"), 0);
+	CHECK(strcmp(current, "qnucwfsuxvnzhyeul ujveu"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "oqtng hvmufmnrpanxhqxcefftgfkucwgadfanxnagkkhj"), 0);
+	CHECK(strcmp(current, "pwirhrkkuggrbaekulwyvuhpoe"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "buvsistvlawkv msqvfeve"), 0);
+	CHECK(strcmp(current, "tnhxobevunx cmjdprjbgednljcxgdnshhwulxkmyygcowr ntgtdvtoexehumapmgzttrlfdzmri"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "fhrcwdkugzgkwvacynpepuegcrlubzxxabfuhsjufexagbnqrgxkvxtcvbqcpn zkoadcklbsrdvpfemoumtrmgkfuilqekfnpw"), 0);
+	CHECK(strcmp(current, "paosqoujixewuwwgkhdeaufckujynwpmbtqsldnmxxjlhmwewskjsxynhvdbxv pgzgxlxnvz"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "fasyaggbjbpzotnpwkdigwauutt"), 0);
+	CHECK(strcmp(current, "zdhpdrihuotzkehiypzyopnbagnbdpabufcuspazjrtwnpqqgzcfuwqklemailq"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "msrekufgaa"), 0);
+	CHECK(strcmp(current, "pqswoisthjgsvikkyddvkypept "), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "yrkwnkbaqsnqudlthpt"), 0);
+	CHECK(strcmp(current, "ssy"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "w wzacuqgnuixr bekzutkpaiupnvuvtycg wcrnnzgmtsjfjsifxvumgnrfvaihgsohwua cuizyirrvytekaesvlei  wxjyii"), 0);
+	CHECK(strcmp(current, "eqjgwuduffwqsznibftckrehoeozefiyfoycnd"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "ypvgskidgpnd"), 0);
+	CHECK(strcmp(current, "niakpyvizgyzajzvrvqymlpshx"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "noc  yxlaqdylvecciq jm"), 0);
+	CHECK(strcmp(current, "bv isyfgyfzss"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "rzsysumgrscwrtclqgfriqkcj"), 0);
+	CHECK(strcmp(current, "ysslmbdoucfllxgnamevmrba feseasnqtfbwdujlvczw sk yylihbfadjpd mqvmgcwnpxgcj"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "roxnftyy  jgejqiwyivxdfinko"), 0);
+	CHECK(strcmp(current, "ozxgxtuimyiulwhydjyvpdwlpalbuhsanylltrftgjiicqqeultncuoxgsmgrxuxaqagwacv jbuisjmazobwmyrhsjgtde"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "nlbdvlwfsehxiwemyrrqrgnhkpioydnhmzordfvflaxhpfiotc onhfxbiurokgupvjmjkowx"), 0);
+	CHECK(strcmp(current, "n exrgtuohhnsuxnmnkwtdejuadprvqjdkpcpqthv aqtyevrjjhevjg wvs gsmdhvscgr"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "o rhedgfuwzb gxzwxtsbkknzrcspfvxhgyfryqcjvfrzbrnhmhtjrnexsxlrxku isfuzf jwcvp gntvrtqkewj"), 0);
+	CHECK(strcmp(current, "vurwbdtxndfuujshbaqziltfldlzzfffcyzqjxvafdokvhzczhnyeauexpet qmnpl qqx hdjvvhgj ahla"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, "yhijlpnaljm cmif oznzmweygmnzupsyjcxvgvrachrbtijnbgvdfodwuzedya xfgvxyqxphrjzilbcivziczbulsqj"), 0);
+	CHECK(strcmp(current, "teeeqnugkkracedwxwtbfwkho uhhhfkjvxjzyhtvvqzlrtyzrwhymjkvgxerctgrotxflx"), 0);
     current = (char*)listGetNext(ranking);
-	CHECK(strcmp(current, " "), 0);
+	CHECK(strcmp(current, "bljqaavfymxlwylvxdysgqxoamrvmbaa sdnpsewwcuzwioeqhev atcenuhrnpkrusoyevdchymjgborlsaovrawjnwgl"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, " wn dkwvbyhbtdphnguhkyzfwkonbrtjvdocdcvoevkejnrjyclvmhz"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "uwyougxmlklzwkbjcujhaffsjnkkxmoeqvhxdlnllbarnq fjtitdszhjnjywpl jhfikhhlhqt cdbc ailg"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "nvktw i jxhkfvmvzgjsshozarvgispeyykxhqrcakixxl dwoemez"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "vseahyxefqqvawwoqxtreulobjznk rbivpujomiveiptofjzusssdjwhllvmrlinghmnqlswcjucrvxahirmlyl"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "ywitqjfzeyebk"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "shz adepksnqizvqbtzrpcribptzahwphokofzqzzsbghkuaeunqnojpejfnqwbsceukx"), 0);
+    current = (char*)listGetNext(ranking);
+	CHECK(strcmp(current, "ckptrxefhoedgqzxxmwzwalxy jzndltrwbcthr ofkqvee mhgixn lhesboqoccldultfkvhvavstoyt lyzrt"), 0);
     listDestroy(ranking);
     return true;
 }
