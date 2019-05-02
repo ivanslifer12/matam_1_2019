@@ -191,9 +191,8 @@ EurovisionResult eurovisionRemoveVote(Eurovision eurovision, int stateGiver,
             for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
                 if (counter == listGetSize(eurovision->list_of_points)) { // to reduce run time
                     break;
-                } else {
-                    counter = 0;
                 }
+                counter = 0;
                 LIST_FOREACH(Points, points, eurovision->list_of_points) {
                     counter ++;
                     if (points->points_from_country == stateGiver && points->points_to_country == stateTaker) {
@@ -256,11 +255,11 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
         int size_of_list = listGetSize(eurovision->list_of_points);
         int counter = 0;
         for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
-            if (counter == listGetSize(eurovision->list_of_points)) { // to reduce run time
+            if (counter ==
+                listGetSize(eurovision->list_of_points) + 1) { // to reduce run time +1 for unexpected iterator behavior
                 break;
-            } else {
-                counter = 0;
             }
+            counter = 0;
             LIST_FOREACH(Points, points, eurovision->list_of_points) {
                 counter ++;
                 if (points->points_to_country == stateId || points->points_from_country == stateId) {
@@ -268,6 +267,7 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
 
                 }
             }
+
         }
     }
     if (listGetFirst(eurovision->list_of_points) == NULL) {
@@ -277,11 +277,11 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
         int size_of_list = listGetSize(eurovision->list_of_judges);
         int counter = 0;
         for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
-            if (counter == listGetSize(eurovision->list_of_judges)) { // to reduce run time
+            if (counter == listGetSize(eurovision->list_of_judges) + 1) { // to reduce run time +1 for unexpected iterator behavior
                 break;
-            } else {
-                counter = 0;
             }
+            counter = 0;
+
             LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
                 counter ++;
                 for (int j = 0; j < RANKED_COUNTRIES; ++ j) {
@@ -291,6 +291,7 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
                     }
                 }
             }
+
         }
     }
     if (listGetFirst(eurovision->list_of_judges) == NULL) {
@@ -328,13 +329,14 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-
+/*
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         printf("\nID:%d Score:%f\nPre_people:%d After_People:%f Pre_Judge:%d After_Judge:%f", country->unique_id,
                country->final_score, country->pre_average_points, country->post_average_points,
                country->pre_average_points_judge, country->post_average_points_judge);
     }
     printf("\n");
+    */ //manuel debugger
 
     return list;
 
@@ -352,13 +354,13 @@ List eurovisionRunAudienceFavorite(Eurovision eurovision) {
     }
     CalculateAverageScore(eurovision, 0, amount_of_countries, 100);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-    /*  LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-          printf("\nID:%d Score:%f\nPre_people:%d After_People:%f", country->unique_id,
-                 country->final_score, country->pre_average_points, country->post_average_points);
-      }
+   /* LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+        printf("\nID:%d Score:%f\nPre_people:%d After_People:%f", country->unique_id,
+               country->final_score, country->pre_average_points, country->post_average_points);
+    }
 
-      printf("\n");
-      */
+    printf("\n"); */ //manuel debugger
+
     return list;
 }
 

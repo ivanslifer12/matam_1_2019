@@ -7,6 +7,11 @@
 #include "../eurovision/eurovision.h"
 #include "utils.c"
 
+
+
+
+
+
 void setup6(Eurovision eurovision){
     int *results;
 	eurovisionAddState(eurovision, 698381, "dfr uymtivuxdlramgheptufqvjsyfbndxcrbpr lybtwfbawhhqdnbptsuiplvwmluquot", "frvxt suxbvqidrbnhrmlbbsspksdynodfivjxmrtmri e jgejzsrm ydbhmijgfecmizawfuvycuadgxk fr");
@@ -898,7 +903,7 @@ void setup6(Eurovision eurovision){
 		eurovisionAddVote(eurovision, 79681, 442032);
 	}
     results = makeJudgeResults(355299,554566,294479,356148,142899,478089,856834,288834,79681,710237);
-	eurovisionAddJudge(eurovision, 456727, "izaxemdizmbpyzersjjydhrbzuqwgqqbtacjkirvtpkiifdsad", results);
+	eurovisionAddJudge(eurovision, 456727, "izaxemdizmbpyzersjjydhrbzuqwgqqbtacjkirvtpkiifdsad", results); //bug here 478089 is dealted
     free(results);
 	eurovisionAddState(eurovision, 769090, "ymbbmclcobfhgwayixmtsvxlhrnsurifqfrtcg hltk  qaruiduakupxsfbhfmkrswvgmzqkkoe", "qmfibatmiagkt yuijdfhwgvkkwuuoiufxiq");
 	for (int i=0; i<233; ++i) {
@@ -929,7 +934,7 @@ void setup6(Eurovision eurovision){
 	for (int i=0; i<384; ++i) {
 		eurovisionAddVote(eurovision, 769090, 685050);
 	}
-	eurovisionRemoveState(eurovision, 478089);
+	eurovisionRemoveState(eurovision, 478089); // doesnt work when i try to remove judge
 	for (int i=0; i<89; ++i) {
 		eurovisionAddVote(eurovision, 769090, 183543);
 	}
@@ -1285,6 +1290,7 @@ void setup6(Eurovision eurovision){
 }
 
 bool runContest6(Eurovision eurovision) {
+
     List ranking = 	eurovisionRunContest(eurovision, 21);
     CHECK(listGetSize(ranking), 31);
     char* current = (char*)listGetFirst(ranking);

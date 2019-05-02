@@ -1,6 +1,5 @@
 #include "utils.c"
 #include "test1.c"
-
 #include "test2.c"
 #include "test3.c"
 #include "test4.c"
@@ -1002,6 +1001,7 @@
 #include "test1000.c"
 
 
+
 int main(int argc, char *argv[]) {
  /*   TEST(test1_runAudience);
     TEST(test1_runFriendly);
@@ -1020,9 +1020,11 @@ int main(int argc, char *argv[]) {
 	TEST(test5_runContest);
 	TEST(test5_runAudience);
 	TEST(test5_runFriendly);*/ //till here works*/ //till here works
-    TEST(test6_runAudience);
-    TEST(test6_runContest); //bug here
-/*
+   // TEST(test6_runAudience);
+   // TEST(test6_runContest); //bug here
+    //TEST(test6_runAudience);
+    TEST(test6_runContest);
+   TEST(test6_runAudience);
 	TEST(test6_runFriendly);
 	TEST(test7_runContest);
 	TEST(test7_runAudience);
@@ -4006,5 +4008,5 @@ int main(int argc, char *argv[]) {
 	TEST(test1000_runContest);
 	TEST(test1000_runAudience);
 	TEST(test1000_runFriendly);
-*/
+
 }
