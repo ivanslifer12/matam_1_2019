@@ -1023,7 +1023,7 @@ int main(int argc, char *argv[]) {
    // TEST(test6_runAudience);
    // TEST(test6_runContest); //bug here
     //TEST(test6_runAudience);
-    TEST(test6_runContest);
+ /*   TEST(test6_runContest);
    TEST(test6_runAudience);
 	TEST(test6_runFriendly);
 	TEST(test7_runContest);
@@ -1079,8 +1079,8 @@ int main(int argc, char *argv[]) {
 	TEST(test23_runFriendly);
 	TEST(test24_runContest);
 	TEST(test24_runAudience);
-	TEST(test24_runFriendly);
-	TEST(test25_runContest);
+	TEST(test24_runFriendly); */
+/*	TEST(test25_runContest);
 	TEST(test25_runAudience);
 	TEST(test25_runFriendly);
 	TEST(test26_runContest);
@@ -1112,11 +1112,11 @@ int main(int argc, char *argv[]) {
 	TEST(test34_runFriendly);
 	TEST(test35_runContest);
 	TEST(test35_runAudience);
-	TEST(test35_runFriendly);
-	TEST(test36_runContest);
+	TEST(test35_runFriendly);  *///till here ok
+//	TEST(test36_runContest);
 	TEST(test36_runAudience);
 	TEST(test36_runFriendly);
-	TEST(test37_runContest);
+	TEST(test37_runContest); /*
 	TEST(test37_runAudience);
 	TEST(test37_runFriendly);
 	TEST(test38_runContest);
@@ -4008,5 +4008,5 @@ int main(int argc, char *argv[]) {
 	TEST(test1000_runContest);
 	TEST(test1000_runAudience);
 	TEST(test1000_runFriendly);
-
+*/
 }

@@ -318,26 +318,30 @@ List eurovisionRunContest(Eurovision eurovision, int audiencePercent) {
         return NULL;
     }
     if (eurovision->initialization->list_of_countries == false) {
-        return NULL;
+        return listCreate(copyString,freeString);
     }
     int amount_of_countries = listGetSize(eurovision->list_of_countries), amount_of_judges = listGetSize(
             eurovision->list_of_judges);
-
-    CalculatePointsFromJudge(eurovision);
-    if (CalculatePointsFromPeople(eurovision, amount_of_countries) == EUROVISION_OUT_OF_MEMORY) {
-        return NULL;
+    if(eurovision->initialization->list_of_judges==true) {
+        CalculatePointsFromJudge(eurovision);
+    }
+    if(eurovision->initialization->list_of_points==true) {
+        if (CalculatePointsFromPeople(eurovision, amount_of_countries) == EUROVISION_OUT_OF_MEMORY) {
+            return NULL;
+        }
     }
     CalculateAverageScore(eurovision, amount_of_judges, amount_of_countries, audiencePercent);
     List list = MakeWinnersList(eurovision, amount_of_countries);
-/*
-    LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+
+   /* LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         printf("\nID:%d Score:%f\nPre_people:%d After_People:%f Pre_Judge:%d After_Judge:%f", country->unique_id,
                country->final_score, country->pre_average_points, country->post_average_points,
                country->pre_average_points_judge, country->post_average_points_judge);
     }
     printf("\n");
-    */ //manuel debugger
+     *///manuel debugger
 
+    AfterRunClean(eurovision);
     return list;
 
 
@@ -360,7 +364,7 @@ List eurovisionRunAudienceFavorite(Eurovision eurovision) {
     }
 
     printf("\n"); */ //manuel debugger
-
+    AfterRunClean(eurovision);
     return list;
 }
 

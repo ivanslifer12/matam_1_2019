@@ -331,9 +331,11 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
 
 void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int number_of_countries, int audiencePercent) {
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-        country->post_average_points =
-                (country->pre_average_points) / (double) (number_of_countries - THE_COUNTRY_ITSELF);
-        country->post_average_points = NumberRound(country->post_average_points);
+        if(eurovision->initialization->list_of_points==true) {
+            country->post_average_points =
+                    (country->pre_average_points) / (double) (number_of_countries - THE_COUNTRY_ITSELF);
+            country->post_average_points = NumberRound(country->post_average_points);
+        }
         if (eurovision->initialization->list_of_judges == true && number_of_jadges != 0) {
             country->post_average_points_judge =
                     (country->pre_average_points_judge) / (double) (number_of_jadges);
@@ -393,8 +395,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
         }
         temp_country->calculated_place = true; // we use this flag in order not to check the country again
         temp_country = ptr;
-    }
-
+        }
 
     free(ptr);
     return list;
@@ -534,7 +535,19 @@ List FilterListForFriends(List list) {
     return list;
 }
 
-
+void AfterRunClean(Eurovision eurovision){
+    LIST_FOREACH(Country,country,eurovision->list_of_countries){
+        country->calculated_place=false;
+        country->post_average_points_judge=0;
+        country->post_average_points_judge=0;
+        country->pre_average_points=0;
+        country->pre_average_points_judge=0;
+        country->final_score=0;
+        if(country->gave_max_points!=NULL){
+            listClear(country->gave_max_points);
+        }
+    }
+}
 
 
 

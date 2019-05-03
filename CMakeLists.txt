@@ -16,7 +16,8 @@ add_executable(eurovisionContest
         #tests/eurovisionTests.c
         #tests/eurovisionTests.h
         #tests/eurovisionTestsMain.c
-        new_tests/main.c
+        #new_tests/main.c
+        tests/eurovisionFunctionalityTests.c
         #tests2/main.c
         eurovision.c
         country.h
