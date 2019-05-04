@@ -17,5 +17,15 @@ void FreeCountry(Element country);
 
 void AfterRunClean(Eurovision eurovision);
 
+void ADTCountryReaderMath(Element country, UniqueId* pre_average_points, UniqueId* pre_average_points_judge,
+                          Score* post_average_points, Score* post_average_points_judge, Score* final_score,
+                          bool* calculated_place);
+
+UniqueId ADTCountryReaderID(Element country);
+
+List ADTCountryReaderMaxList(Element country);
+
+Name ADTCountryNameReader(Element country);
+
 
 #endif //MATAM1_COUNTRY_H

@@ -40,21 +40,6 @@ struct country_t {
 };
 
 
-struct judge_t {
-    UniqueId unique_id;
-    Name judge_name;
-    Data judge_points[RANKED_COUNTRIES];
-
-};
-
-struct points_t {
-    UniqueId points_from_country;
-    UniqueId points_to_country;
-
-};
-
-
-
 bool ConstNameTest(const char *name) {
     for (int i = 0; name[i] != '\0'; i ++) {
         if (((name[i] >= 'a' && name[i] <= 'z') || name[i] == ' ') == false)
@@ -74,11 +59,15 @@ bool UniqueCountryName(Eurovision eurovision, int stateId) {
 
 bool UniqueJudgeName(Eurovision eurovision, int judgeId) {
 
+    UniqueId *ptr = malloc(sizeof(UniqueId));
     LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
-        if (judge->unique_id == judgeId) {
+        ADTJudgeReader(judge, ptr, NULL, NULL);
+        if (*ptr == judgeId) {
+            free(ptr);
             return false;
         }
     }
+    free(ptr);
     return true;
 }
 
@@ -154,15 +143,18 @@ void freeString(Element str) {
 
 
 void CalculatePointsFromJudge(Eurovision eurovision) {
+    Data * judge_point = malloc(sizeof(Data)*RANKED_COUNTRIES);
     LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
+       ADTJudgeReader(judge, NULL, NULL,judge_point);
         for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
             LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-                if (judge->judge_points[i] == country->unique_id) {
+                if (judge_point[i] == country->unique_id) {
                     country->pre_average_points_judge = country->pre_average_points_judge + JudgeRank(i);
                 }
             }
         }
     }
+    free(judge_point);
 }
 
 
@@ -221,15 +213,15 @@ EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_
 }
 
 EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int array_length) {
-    int points_from_country,points_to_country;
+    int points_from_country, points_to_country;
     for (int j = 0; j < array_length; ++ j) {
         for (int k = 0; k < array_length; ++ k) {
             ptr[array_length + k] = 0;
         }
         LIST_FOREACH(Points, points, eurovision->list_of_points) {
             List list = ADTPointsReader(points);
-            points_from_country=StringToIntNoFree(listGetFirst(list));
-            points_to_country=StringToIntNoFree(listGetNext(list));
+            points_from_country = StringToIntNoFree(listGetFirst(list));
+            points_to_country = StringToIntNoFree(listGetNext(list));
             listDestroy(list);
             if (ptr[j] == points_from_country) {
                 for (int i = 0; i < array_length; ++ i) {
@@ -338,7 +330,7 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
 
 void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int number_of_countries, int audiencePercent) {
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-        if(eurovision->initialization->list_of_points==true) {
+        if (eurovision->initialization->list_of_points == true) {
             country->post_average_points =
                     (country->pre_average_points) / (double) (number_of_countries - THE_COUNTRY_ITSELF);
             country->post_average_points = NumberRound(country->post_average_points);
@@ -402,7 +394,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
         }
         temp_country->calculated_place = true; // we use this flag in order not to check the country again
         temp_country = ptr;
-        }
+    }
 
     free(ptr);
     return list;
@@ -543,7 +535,23 @@ List FilterListForFriends(List list) {
 }
 
 
-
+void MassFree(Element e1,Element e2,Element e3,Element e4,Element e5){
+    if(e1){
+        free(e1);
+    }
+    if(e2){
+        free(e2);
+    }
+    if(e3){
+        free(e3);
+    }
+    if(e4){
+        free(e4);
+    }
+    if(e5){
+        free(e5);
+    }
+}
 
 
 

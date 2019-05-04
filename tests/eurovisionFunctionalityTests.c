@@ -315,6 +315,7 @@ bool testFriendly() {
     listDestroy(result);
     printf("Testing all are friendlies: ");
     result = eurovisionRunGetFriendlyStates(eurovision);
+    printf("the size is %d",listGetSize(result));
     CHECK(listGetSize(result), 5);
     char* current;
     current = (char*)listGetFirst(result);

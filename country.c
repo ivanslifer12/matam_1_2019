@@ -32,6 +32,42 @@ struct eurovision_t {
 };
 
 
+UniqueId ADTCountryReaderID(Element country) {
+    return ((Country)country)->unique_id;
+}
+Name ADTCountryNameReader(Element country){
+    return ((Country)country)->country_name;
+}
+
+void ADTCountryReaderMath(Element country, UniqueId* pre_average_points, UniqueId* pre_average_points_judge,
+                          Score* post_average_points, Score* post_average_points_judge, Score* final_score,
+                          bool* calculated_place) {
+    Country temp = (Country) country;
+    if (post_average_points != NULL) {
+        *pre_average_points = temp->pre_average_points;
+    }
+    if (pre_average_points_judge != NULL) {
+        *pre_average_points_judge = temp->pre_average_points_judge;
+    }
+    if (post_average_points != NULL) {
+        *post_average_points = temp->post_average_points;
+    }
+    if (post_average_points_judge != NULL) {
+        *post_average_points_judge = temp->post_average_points_judge;
+    }
+    if (final_score != NULL) {
+        *final_score = temp->final_score;
+    }
+    if (calculated_place != NULL) {
+        *calculated_place = temp->calculated_place;
+    }
+}
+List ADTCountryReaderMaxList(Element country){
+
+    return ((Country)country)->gave_max_points;
+}
+
+
 
 Country AllocateCountry(Element country_name, Element song_name, Element unique_id) {
     Country created_country = malloc(sizeof(*created_country));
@@ -86,7 +122,6 @@ ListElement CopyCountry(Element country_struct) {
 }
 
 
-
 void FreeCountry(Element country) {
     if (country == NULL) {
         return;
@@ -98,15 +133,15 @@ void FreeCountry(Element country) {
     free(temp);
 }
 
-void AfterRunClean(Eurovision eurovision){
-    LIST_FOREACH(Country,country,eurovision->list_of_countries){
-        country->calculated_place=false;
-        country->post_average_points_judge=0;
-        country->post_average_points_judge=0;
-        country->pre_average_points=0;
-        country->pre_average_points_judge=0;
-        country->final_score=0;
-        if(country->gave_max_points!=NULL){
+void AfterRunClean(Eurovision eurovision) {
+    LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+        country->calculated_place = false;
+        country->post_average_points_judge = 0;
+        country->post_average_points_judge = 0;
+        country->pre_average_points = 0;
+        country->pre_average_points_judge = 0;
+        country->final_score = 0;
+        if (country->gave_max_points != NULL) {
             listClear(country->gave_max_points);
         }
     }

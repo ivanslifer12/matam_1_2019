@@ -20,16 +20,16 @@ struct judge_t {
 
 Judge AllocateJudge(Element unique_id, Element judge_name, Element judge_points) {
     Judge judge = malloc(sizeof(*judge));
-    if (!judge) {
+    if (! judge) {
         return NULL;
     }
 
     judge->unique_id = StringToInt((Name) unique_id);
     judge->judge_name = copyString((Name) judge_name);
-    if (!judge->judge_name) {
+    if (! judge->judge_name) {
         return NULL;
     }
-    for (int i = 0; i < RANKED_COUNTRIES; ++i) {
+    for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
 
         judge->judge_points[i] = ((Data *) judge_points)[i];
     }
@@ -56,19 +56,21 @@ void ADTJudgeReader(Element judge, UniqueId *unique_id, Name judge_name, Data *j
         judge_name = temp->judge_name;
     }
     if (judge_points != NULL) {
-        judge_points = temp->judge_points;
+        for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
+            judge_points[i] = temp->judge_points[i];
+        }
     }
 
 }
 
 ListElement CopyJudge(Element judge_struct) {
     Judge created_judge = malloc(sizeof(*created_judge));
-    if (!created_judge) {
+    if (! created_judge) {
         return NULL;
     }
     created_judge->unique_id = ((Judge) judge_struct)->unique_id;
 
-    for (int i = 0; i < RANKED_COUNTRIES; ++i) {
+    for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
         created_judge->judge_points[i] = ((Judge) judge_struct)->judge_points[i];
     }
 
@@ -78,7 +80,7 @@ ListElement CopyJudge(Element judge_struct) {
 }
 
 void FreeJudge(Element judge_struct) {
-    if (!(Judge) judge_struct) {
+    if (! (Judge) judge_struct) {
         return;
     }
     free(((Judge) judge_struct)->judge_name);
