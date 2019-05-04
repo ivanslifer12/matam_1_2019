@@ -3,7 +3,6 @@
 
 #include "eurovision.h"
 #include "namelib.h"
-#include "judge.h"
 #include "list.h"
 
 

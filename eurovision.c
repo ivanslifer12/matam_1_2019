@@ -26,7 +26,6 @@ struct eurovision_t {
 };
 
 
-
 Eurovision eurovisionCreate() {
     Eurovision eurovision = malloc(sizeof(*eurovision));
     if (! eurovision) {
@@ -303,7 +302,7 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
     UniqueId id;
     if (eurovision->initialization->list_of_countries == true) {
         LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-            id=ADTCountryReaderID(country);
+            id = ADTCountryReaderID(country);
             if (id == stateId) {
                 listRemoveCurrent(eurovision->list_of_countries);
                 if (listGetFirst(eurovision->list_of_countries) == NULL) {
@@ -377,9 +376,8 @@ List eurovisionRunAudienceFavorite(Eurovision eurovision) {
 }
 
 
-
 List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
-    if (!eurovision) {
+    if (! eurovision) {
         return NULL;
     }
     int amount_of_countries = listGetSize(eurovision->list_of_countries);
@@ -388,22 +386,22 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
     }
     List list = listCreate(copyString, freeString);
     List copy_country = listCopy(eurovision->list_of_countries);
-    if (!list) {
+    if (! list) {
         return NULL;
     }
-    Name str = NULL,country_name,state_name;
+    Name str = NULL, country_name, state_name;
 
-    UniqueId country_id,state_id;
-    List gave_max_points,state_gave_max_points;
+    UniqueId country_id, state_id;
+    List gave_max_points, state_gave_max_points;
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-        country_name=ADTCountryNameReader(country);
-        gave_max_points=ADTCountryReaderMaxList(country);
-        country_id=ADTCountryReaderID(country);
+        country_name = ADTCountryNameReader(country);
+        gave_max_points = ADTCountryReaderMaxList(country);
+        country_id = ADTCountryReaderID(country);
         LIST_FOREACH(Name, name, gave_max_points) {
             LIST_FOREACH(Country, state, copy_country) {
-                state_name=ADTCountryNameReader(state);
-               state_id=ADTCountryReaderID(state);
-                state_gave_max_points=ADTCountryReaderMaxList(state);
+                state_name = ADTCountryNameReader(state);
+                state_id = ADTCountryReaderID(state);
+                state_gave_max_points = ADTCountryReaderMaxList(state);
                 if (StringToIntNoFree(name) == state_id) {
                     LIST_FOREACH(Name, copy_name, state_gave_max_points) {
                         if (StringToIntNoFree(copy_name) == country_id) {

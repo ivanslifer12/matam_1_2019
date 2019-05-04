@@ -2,7 +2,6 @@
 #define MATAM1_JUDGE_H
 
 #include "namelib.h"
-#include "eurovision.h"
 #include "stdbool.h"
 #include "list.h"
 

@@ -3,8 +3,6 @@
 #include "namelib.h"
 #include "stdlib.h"
 #include "country.h"
-#include "judge.h"
-#include "points.h"
 #include "stdio.h"
 #include "support_functions.h"
 #include "string.h"
