@@ -25,7 +25,7 @@ struct eurovision_t {
 
 };
 
-
+/*
 struct country_t {
     Name country_name;
     Name song_name;
@@ -38,7 +38,7 @@ struct country_t {
     bool calculated_place;
     List gave_max_points;
 };
-
+*/
 
 bool ConstNameTest(const char *name) {
     for (int i = 0; name[i] != '\0'; i ++) {
@@ -50,7 +50,7 @@ bool ConstNameTest(const char *name) {
 
 bool UniqueCountryName(Eurovision eurovision, int stateId) {
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-        if (country->unique_id == stateId) {
+        if (ADTCountryReaderID(country) == stateId) {
             return false;
         }
     }
@@ -143,13 +143,13 @@ void freeString(Element str) {
 
 
 void CalculatePointsFromJudge(Eurovision eurovision) {
-    Data * judge_point = malloc(sizeof(Data)*RANKED_COUNTRIES);
+    Data *judge_point = malloc(sizeof(Data) * RANKED_COUNTRIES);
     LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
-       ADTJudgeReader(judge, NULL, NULL,judge_point);
+        ADTJudgeReader(judge, NULL, NULL, judge_point);
         for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
             LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-                if (judge_point[i] == country->unique_id) {
-                    country->pre_average_points_judge = country->pre_average_points_judge + JudgeRank(i);
+                if (judge_point[i] == ADTCountryReaderID(country)) {
+                    ADTCountryPreAvreageJudgeUpdate(country, ADTCountryPreAvreageJudgeReader(country) + JudgeRank(i));
                 }
             }
         }
@@ -196,7 +196,7 @@ EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_
     // amount_of_countries till amount_of_countries*2 the value for each
     int i = 0;
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-        ptr[i] = country->unique_id;
+        ptr[i] = ADTCountryReaderID(country);
         i ++;
     } //stores ok
 
@@ -235,9 +235,9 @@ EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int
         for (int index = 0; index < array_length; ++ index) {
             if (ptr[index + array_length] == temp && temp != 0) {
                 LIST_FOREACH(Country, state, eurovision->list_of_countries) {
-                    if (state->unique_id == ptr[j]) {
+                    if (ADTCountryReaderID(state) == ptr[j]) {
                         Name str = IntToString(ptr[index]);
-                        if (listInsertLast(state->gave_max_points, str) != LIST_SUCCESS) {
+                        if (listInsertLast(ADTCountryGaveMaxPointsReader(state), str) != LIST_SUCCESS) {
                             return EUROVISION_NULL_ARGUMENT;
                         }
                         free(str);
@@ -312,8 +312,8 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
         //   printf("\nthe highest score is: %d", ptr[index + array_length]);
         if (temp != 0) {
             LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-                if (country->unique_id == ptr[index]) {
-                    country->pre_average_points = country->pre_average_points + JudgeRank(i);
+                if (ADTCountryReaderID(country) == ptr[index]) {
+                    ADTCountryPreAvreagePeopleUpdate(country, ADTCountryPreAvreagePeopleReader(country) + JudgeRank(i));
                 }
             }
             ptr[index + array_length] = 0; //so we wont check it again
@@ -331,21 +331,23 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
 void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int number_of_countries, int audiencePercent) {
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         if (eurovision->initialization->list_of_points == true) {
-            country->post_average_points =
-                    (country->pre_average_points) / (double) (number_of_countries - THE_COUNTRY_ITSELF);
-            country->post_average_points = NumberRound(country->post_average_points);
+            ADTCountryPostAvreagePeopleUpdate(country, (ADTCountryPreAvreagePeopleReader(country)) /
+                                                       (double) (number_of_countries - THE_COUNTRY_ITSELF));
+            ADTCountryPostAvreagePeopleUpdate(country, NumberRound(ADTCountryPostAvreagePeopleReader(country)));
         }
         if (eurovision->initialization->list_of_judges == true && number_of_jadges != 0) {
-            country->post_average_points_judge =
-                    (country->pre_average_points_judge) / (double) (number_of_jadges);
-            country->post_average_points_judge = NumberRound(country->post_average_points_judge);
-        }
-        country->final_score =
-                (country->post_average_points * ((double) audiencePercent / (double) MAX_PRACENT)) +
-                (country->post_average_points_judge *
-                 (double) ((double) WHOLE_NUMBER - (double) (audiencePercent / MAX_PRACENT)));
-        country->final_score = NumberRound(country->final_score);
+            ADTCountryPostAvreageJudgeUpdate(country,
+                                             ADTCountryPreAvreageJudgeReader(country) / ((double) (number_of_jadges)));
 
+
+            ADTCountryPostAvreageJudgeUpdate(country, NumberRound(ADTCountryPostAvreageJudgeReader(country)));
+        }
+        ADTCountryFinalScoreUpdate(country,
+                                   (ADTCountryPostAvreagePeopleReader(country)) *
+                                   ((double) audiencePercent / (double) MAX_PRACENT) +
+                                   (ADTCountryPostAvreageJudgeReader(country)) *
+                                   (double) ((double) WHOLE_NUMBER - (double) (audiencePercent / MAX_PRACENT)));
+        ADTCountryFinalScoreUpdate(country,ADTCountryFinalScoreReader(country));
 
     }
 
@@ -366,37 +368,34 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
     if (! list) {
         return NULL;
     }
-    Country temp_country = malloc(sizeof(*temp_country));
+    Country temp_country = AllocateCountry(NULL,NULL,IntToString(INT_MAX));
     Country ptr = temp_country;
-    temp_country->final_score = 0;
-    temp_country->country_name = NULL;
-    temp_country->unique_id = INT_MAX;
     for (int i = 0; i < amount_of_countries; ++ i) {
         LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-            if (country->calculated_place == false) {
-                if (country->final_score > temp_country->final_score) {
+            if (ADTCountryCalculatedPlaceReader(country) == false) {
+                if (ADTCountryFinalScoreReader(country) > ADTCountryFinalScoreReader(temp_country)) {
                     temp_country = country;
                 }
-                if (country->final_score == temp_country->final_score) {
-                    if (country->unique_id < temp_country->unique_id) {
+                if (ADTCountryFinalScoreReader(country) == ADTCountryFinalScoreReader(temp_country)) {
+                    if (ADTCountryReaderID(country) < ADTCountryReaderID(temp_country)) {
                         temp_country = country;
                     }
-                    if (country->final_score == 0 && temp_country->country_name == NULL) {
+                    if (ADTCountryFinalScoreReader(country) == 0 && ADTCountryNameReader(temp_country)== NULL) {
                         temp_country = country;
                     }
                 }
 
             }
         }
-        if (listInsertLast(list, temp_country->country_name) != LIST_SUCCESS) {
+        if (listInsertLast(list, ADTCountryNameReader(temp_country)) != LIST_SUCCESS) {
             return NULL;
 
         }
-        temp_country->calculated_place = true; // we use this flag in order not to check the country again
+        ADTCountryCalculatedPlaceUpdate(temp_country,true); // we use this flag in order not to check the country again
         temp_country = ptr;
     }
 
-    free(ptr);
+    FreeCountry(ptr);
     return list;
 }
 
@@ -535,20 +534,20 @@ List FilterListForFriends(List list) {
 }
 
 
-void MassFree(Element e1,Element e2,Element e3,Element e4,Element e5){
-    if(e1){
+void MassFree(Element e1, Element e2, Element e3, Element e4, Element e5) {
+    if (e1) {
         free(e1);
     }
-    if(e2){
+    if (e2) {
         free(e2);
     }
-    if(e3){
+    if (e3) {
         free(e3);
     }
-    if(e4){
+    if (e4) {
         free(e4);
     }
-    if(e5){
+    if (e5) {
         free(e5);
     }
 }

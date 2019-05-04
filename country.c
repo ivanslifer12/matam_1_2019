@@ -31,6 +31,39 @@ struct eurovision_t {
 
 };
 
+void ADTCountryCalculatedPlaceUpdate(Element country,bool calculated_place){
+    ((Country)country)->calculated_place=calculated_place;
+}
+bool ADTCountryCalculatedPlaceReader(Element country){
+    return ((Country)country)->calculated_place;
+}
+
+void ADTCountryFinalScoreUpdate (Element country,Score final_score){
+    ((Country)country)->final_score=final_score;
+}
+
+Score ADTCountryFinalScoreReader (Element country){
+    return ((Country)country)->final_score;
+
+}
+
+void ADTCountryPostAvreagePeopleUpdate (Element country,Score post_average_points){
+    ((Country)country)->post_average_points=post_average_points;
+}
+
+Score ADTCountryPostAvreagePeopleReader (Element country){
+    return ((Country)country)->post_average_points;
+
+}
+
+Score ADTCountryPostAvreageJudgeReader (Element country){
+    return ((Country)country)->post_average_points_judge;
+}
+
+void ADTCountryPostAvreageJudgeUpdate (Element country,Score post_average_points_judge){
+    ((Country)country)->post_average_points_judge=post_average_points_judge;
+}
+
 
 UniqueId ADTCountryReaderID(Element country) {
     return ((Country)country)->unique_id;
@@ -39,29 +72,35 @@ Name ADTCountryNameReader(Element country){
     return ((Country)country)->country_name;
 }
 
-void ADTCountryReaderMath(Element country, UniqueId* pre_average_points, UniqueId* pre_average_points_judge,
-                          Score* post_average_points, Score* post_average_points_judge, Score* final_score,
-                          bool* calculated_place) {
-    Country temp = (Country) country;
-    if (post_average_points != NULL) {
-        *pre_average_points = temp->pre_average_points;
-    }
-    if (pre_average_points_judge != NULL) {
-        *pre_average_points_judge = temp->pre_average_points_judge;
-    }
-    if (post_average_points != NULL) {
-        *post_average_points = temp->post_average_points;
-    }
-    if (post_average_points_judge != NULL) {
-        *post_average_points_judge = temp->post_average_points_judge;
-    }
-    if (final_score != NULL) {
-        *final_score = temp->final_score;
-    }
-    if (calculated_place != NULL) {
-        *calculated_place = temp->calculated_place;
-    }
+void ADTCountryUpdateID(Element country,UniqueId id) {
+     ((Country)country)->unique_id=id;
 }
+void ADTCountryNameNULL(Element country){
+    ((Country)country)->country_name=NULL;
+}
+
+
+UniqueId ADTCountryPreAvreageJudgeReader (Element country){
+    return ((Country)country)->pre_average_points_judge;
+}
+
+List ADTCountryGaveMaxPointsReader (Element country){
+    return ((Country)country)->gave_max_points;
+}
+
+void ADTCountryPreAvreageJudgeUpdate (Element country,UniqueId pre_average_points_judge){
+    ((Country)country)->pre_average_points_judge=pre_average_points_judge;
+}
+
+void ADTCountryPreAvreagePeopleUpdate (Element country,UniqueId pre_average_points){
+    ((Country)country)->pre_average_points=pre_average_points;
+}
+
+UniqueId ADTCountryPreAvreagePeopleReader (Element country){
+    return ((Country)country)->pre_average_points;
+}
+
+
 List ADTCountryReaderMaxList(Element country){
 
     return ((Country)country)->gave_max_points;
@@ -76,13 +115,23 @@ Country AllocateCountry(Element country_name, Element song_name, Element unique_
     }
 
     created_country->unique_id = StringToInt((Name) unique_id);
-    created_country->country_name = copyString(country_name);
-    if (! created_country->country_name) {
-        return NULL;
+    if(country_name==NULL){
+        created_country->country_name=NULL;
     }
-    created_country->song_name = copyString(song_name);
-    if (! created_country->song_name) {
-        return NULL;
+    else {
+        created_country->country_name = copyString(country_name);
+        if (! created_country->country_name) {
+            return NULL;
+        }
+    }
+    if(song_name==NULL) {
+      created_country->song_name=NULL;
+    }
+    else{
+        created_country->song_name = copyString(song_name);
+        if (! created_country->song_name) {
+            return NULL;
+        }
     }
     created_country->pre_average_points = 0;
     created_country->pre_average_points_judge = 0;

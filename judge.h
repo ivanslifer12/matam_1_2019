@@ -18,7 +18,6 @@ ListElement CopyJudge(Element judge_struct);
 void FreeJudge(Element judge_struct);
 
 
-
 void ADTJudgeReader(Element judge,UniqueId* unique_id,Name judge_name,Data * judge_points);
 
 
