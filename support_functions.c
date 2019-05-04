@@ -17,6 +17,15 @@ struct initialization_t {
 
 };
 
+struct eurovision_t {
+    List list_of_countries;
+    List list_of_judges;
+    List list_of_points;
+    Initialization initialization;
+
+};
+
+
 struct country_t {
     Name country_name;
     Name song_name;
@@ -44,13 +53,6 @@ struct points_t {
 
 };
 
-struct eurovision_t {
-    List list_of_countries;
-    List list_of_judges;
-    List list_of_points;
-    Initialization initialization;
-
-};
 
 
 bool ConstNameTest(const char *name) {
@@ -219,14 +221,19 @@ EurovisionResult CalculatePointsFromPeople(Eurovision eurovision, int amount_of_
 }
 
 EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int array_length) {
+    int points_from_country,points_to_country;
     for (int j = 0; j < array_length; ++ j) {
         for (int k = 0; k < array_length; ++ k) {
             ptr[array_length + k] = 0;
         }
         LIST_FOREACH(Points, points, eurovision->list_of_points) {
-            if (ptr[j] == points->points_from_country) {
+            List list = ADTPointsReader(points);
+            points_from_country=StringToIntNoFree(listGetFirst(list));
+            points_to_country=StringToIntNoFree(listGetNext(list));
+            listDestroy(list);
+            if (ptr[j] == points_from_country) {
                 for (int i = 0; i < array_length; ++ i) {
-                    if (ptr[i] == points->points_to_country)
+                    if (ptr[i] == points_to_country)
                         ptr[i + array_length] ++;
                 }
             }
@@ -534,23 +541,6 @@ List FilterListForFriends(List list) {
 
     return list;
 }
-
-void AfterRunClean(Eurovision eurovision){
-    LIST_FOREACH(Country,country,eurovision->list_of_countries){
-        country->calculated_place=false;
-        country->post_average_points_judge=0;
-        country->post_average_points_judge=0;
-        country->pre_average_points=0;
-        country->pre_average_points_judge=0;
-        country->final_score=0;
-        if(country->gave_max_points!=NULL){
-            listClear(country->gave_max_points);
-        }
-    }
-}
-
-
-
 
 
 

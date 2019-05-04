@@ -30,7 +30,7 @@ EurovisionResult AllocatePoints(Points points, Element points_from_country, Elem
 
 Points CreatePointsStruct(Element points_from_country, Element points_to_country) {
     Points created_points = malloc(sizeof(*created_points));
-    if (! created_points) {
+    if (!created_points) {
         return NULL;
     }
     created_points->points_to_country = StringToInt(points_to_country);
@@ -39,21 +39,40 @@ Points CreatePointsStruct(Element points_from_country, Element points_to_country
 
 }
 
-ListElement CopyPoints(Element points_struct){
-    Points created_points = malloc(sizeof(*created_points));
-    if (! created_points) {
+List ADTPointsReader(Element points) {
+    Points temp = (Points) points;
+    List list = listCreate(copyString, freeString);
+    Name points_from_country = IntToString(temp->points_from_country), points_to_country = IntToString(
+            temp->points_to_country);
+    if(listInsertFirst(list, points_from_country)!=LIST_SUCCESS){
         return NULL;
     }
-    created_points->points_to_country =(*(Points)points_struct).points_to_country ;
-    created_points->points_from_country =(*(Points)points_struct).points_from_country ;
+    if(listInsertLast(list, points_to_country)!=LIST_SUCCESS){
+        return NULL;
+    }
+    free(points_from_country);
+    free(points_to_country);
+    return list;
+
+}
+
+ListElement CopyPoints(Element points_struct) {
+    Points created_points = malloc(sizeof(*created_points));
+    if (!created_points) {
+        return NULL;
+    }
+    created_points->points_to_country = (*(Points) points_struct).points_to_country;
+    created_points->points_from_country = (*(Points) points_struct).points_from_country;
     return created_points;
 
 }
 
 void FreePoints(Element points_struct) {
-    if(points_struct==NULL) {
+    if (points_struct == NULL) {
         return;
     }
-    free((Points)points_struct);
+    free((Points) points_struct);
 
 }
+
+

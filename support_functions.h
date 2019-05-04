@@ -8,14 +8,6 @@ typedef struct initialization_t *Initialization;
 
 
 
-
-/*
- * used for the first cases while the lists are NULL
-*/
-
-
-typedef List pList1;
-
 bool UniqueCountryName(Eurovision eurovision, int stateId);
 
 bool UniqueJudgeName(Eurovision eurovision, int judgeId);
@@ -62,5 +54,5 @@ int MaxInArray(int * array,int array_length,int array_offset );
 List FilterListForFriends(List list);
 double NumberRound(double number);
 Name ConnectThreeStrings(const char *str1, const char *str2,const char *str3);
-void AfterRunClean(Eurovision eurovision);
+
 #endif //MATAM1_SUPPORT_FUNCTIONS_H

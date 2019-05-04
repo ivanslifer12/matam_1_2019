@@ -15,7 +15,7 @@ ListElement CopyCountry(Element country_struct);
 
 void FreeCountry(Element country);
 
-
+void AfterRunClean(Eurovision eurovision);
 
 
 #endif //MATAM1_COUNTRY_H

@@ -18,5 +18,8 @@ ListElement CopyPoints(Element points_struct);
 void FreePoints(Element points_struct);
 
 
+List ADTPointsReader(Element points);
+
+
 
 #endif //MATAM1_POINTS_H

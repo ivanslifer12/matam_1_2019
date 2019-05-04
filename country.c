@@ -23,6 +23,15 @@ struct country_t {
 
 };
 
+struct eurovision_t {
+    List list_of_countries;
+    List list_of_judges;
+    List list_of_points;
+    Initialization initialization;
+
+};
+
+
 
 Country AllocateCountry(Element country_name, Element song_name, Element unique_id) {
     Country created_country = malloc(sizeof(*created_country));
@@ -76,6 +85,8 @@ ListElement CopyCountry(Element country_struct) {
 
 }
 
+
+
 void FreeCountry(Element country) {
     if (country == NULL) {
         return;
@@ -86,5 +97,22 @@ void FreeCountry(Element country) {
     listDestroy(temp->gave_max_points);
     free(temp);
 }
+
+void AfterRunClean(Eurovision eurovision){
+    LIST_FOREACH(Country,country,eurovision->list_of_countries){
+        country->calculated_place=false;
+        country->post_average_points_judge=0;
+        country->post_average_points_judge=0;
+        country->pre_average_points=0;
+        country->pre_average_points_judge=0;
+        country->final_score=0;
+        if(country->gave_max_points!=NULL){
+            listClear(country->gave_max_points);
+        }
+    }
+}
+
+
+
 
 

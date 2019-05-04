@@ -1,5 +1,5 @@
 #include "utils.c"
-#include "test1.c"
+/*#include "test1.c"
 #include "test2.c"
 #include "test3.c"
 #include "test4.c"
@@ -83,7 +83,7 @@
 #include "test82.c"
 #include "test83.c"
 #include "test84.c"
-#include "test85.c"
+#include "test85.c" */
 #include "test86.c"
 #include "test87.c"
 #include "test88.c"
@@ -1112,11 +1112,12 @@ int main(int argc, char *argv[]) {
 	TEST(test34_runFriendly);
 	TEST(test35_runContest);
 	TEST(test35_runAudience);
-	TEST(test35_runFriendly);  *///till here ok
+	TEST(test35_runFriendly);  //till here ok
 //	TEST(test36_runContest);
+    TEST(test35_runContest);
 	TEST(test36_runAudience);
 	TEST(test36_runFriendly);
-	TEST(test37_runContest); /*
+	TEST(test37_runContest);
 	TEST(test37_runAudience);
 	TEST(test37_runFriendly);
 	TEST(test38_runContest);
@@ -1262,7 +1263,7 @@ int main(int argc, char *argv[]) {
 	TEST(test84_runFriendly);
 	TEST(test85_runContest);
 	TEST(test85_runAudience);
-	TEST(test85_runFriendly);
+	TEST(test85_runFriendly);*/
 	TEST(test86_runContest);
 	TEST(test86_runAudience);
 	TEST(test86_runFriendly);
@@ -4008,5 +4009,5 @@ int main(int argc, char *argv[]) {
 	TEST(test1000_runContest);
 	TEST(test1000_runAudience);
 	TEST(test1000_runFriendly);
-*/
+
 }
