@@ -36,7 +36,7 @@ Points CreatePointsStruct(Element points_from_country, Element points_to_country
     return created_points;
 
 }
-
+/*
 List ADTPointsReader(Element points) {
     Points temp = (Points) points;
     List list = listCreate(copyString, freeString);
@@ -52,7 +52,18 @@ List ADTPointsReader(Element points) {
     free(points_to_country);
     return list;
 
+
 }
+ */
+
+UniqueId ADTPointToRead(Element points){
+    return ((Points)points)->points_to_country;
+
+}
+UniqueId ADTPointFromRead(Element points){
+    return ((Points)points)->points_from_country;
+}
+
 
 ListElement CopyPoints(Element points_struct) {
     Points created_points = malloc(sizeof(*created_points));

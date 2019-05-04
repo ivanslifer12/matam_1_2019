@@ -109,8 +109,18 @@ EurovisionResult eurovisionAddJudge(Eurovision eurovision, int judgeId,
     if (eurovision->initialization->list_of_countries == false) {
         return EUROVISION_STATE_NOT_EXIST;
     }
+    for (int j = 0; j < RANKED_COUNTRIES ; ++ j) {
+        for (int i = 0; i < RANKED_COUNTRIES ; ++ i) {
+            if(i!=j){
+                if(judgeResults[i]==judgeResults[j]){
+                    return EUROVISION_INVALID_ID;
+                }
+            }
+        }
+    }
+
     for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
-        if (judgeResults[i] < 0) {
+        if (judgeResults[i ]< 0) {
             return EUROVISION_INVALID_ID;
         }
     }
@@ -160,10 +170,11 @@ EurovisionResult eurovisionAddVote(Eurovision eurovision, int stateGiver,
 EurovisionResult eurovisionRemoveVote(Eurovision eurovision, int stateGiver,
                                       int stateTaker) {
     int temp, points_from_country, points_to_country;
-    if (eurovision->initialization->list_of_points == false) {
-        return EUROVISION_STATE_NOT_EXIST;
-    }
+
     if ((temp = VotesTest(eurovision, stateGiver, stateTaker)) == EUROVISION_SUCCESS) {
+        if (eurovision->initialization->list_of_points == false) {
+            return EUROVISION_STATE_NOT_EXIST;
+        }
         if (eurovision->initialization->list_of_points == true) {
             int size_of_list = listGetSize(eurovision->list_of_points), counter = 0;
             for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
@@ -172,10 +183,10 @@ EurovisionResult eurovisionRemoveVote(Eurovision eurovision, int stateGiver,
                 }
                 counter = 0;
                 LIST_FOREACH(Points, points, eurovision->list_of_points) {
-                    List list = ADTPointsReader(points);
-                    points_from_country = StringToIntNoFree(listGetFirst(list));
-                    points_to_country = StringToIntNoFree(listGetNext(list));
-                    listDestroy(list);
+
+                    points_from_country = ADTPointFromRead(points);
+                    points_to_country =ADTPointToRead(points);
+
 
                     counter ++;
                     if (points_from_country == stateGiver && points_to_country == stateTaker) {
@@ -253,10 +264,10 @@ EurovisionResult eurovisionRemoveState(Eurovision eurovision, int stateId) {
             }
             counter = 0;
             LIST_FOREACH(Points, points, eurovision->list_of_points) {
-                List list = ADTPointsReader(points);
-                points_from_country = StringToIntNoFree(listGetFirst(list));
-                points_to_country = StringToIntNoFree(listGetNext(list));
-                listDestroy(list);
+
+                points_from_country = ADTPointFromRead(points);
+                points_to_country = ADTPointToRead(points);
+
                 counter ++;
                 if (points_from_country == stateId || points_to_country == stateId) {
                     listRemoveCurrent(eurovision->list_of_points);
@@ -390,18 +401,17 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
         return NULL;
     }
     Name str = NULL, country_name, state_name;
-
     UniqueId country_id, state_id;
     List gave_max_points, state_gave_max_points;
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-        country_name = ADTCountryNameReader(country);
-        gave_max_points = ADTCountryReaderMaxList(country);
+        country_name = ADTCountryNameRead(country);
+        gave_max_points = ADTCountryReadMaxList(country);
         country_id = ADTCountryReaderID(country);
         LIST_FOREACH(Name, name, gave_max_points) {
             LIST_FOREACH(Country, state, copy_country) {
-                state_name = ADTCountryNameReader(state);
+                state_name = ADTCountryNameRead(state);
                 state_id = ADTCountryReaderID(state);
-                state_gave_max_points = ADTCountryReaderMaxList(state);
+                state_gave_max_points = ADTCountryReadMaxList(state);
                 if (StringToIntNoFree(name) == state_id) {
                     LIST_FOREACH(Name, copy_name, state_gave_max_points) {
                         if (StringToIntNoFree(copy_name) == country_id) {
@@ -426,6 +436,7 @@ List eurovisionRunGetFriendlyStates(Eurovision eurovision) {
             }
         }
     }
+    DestroyFriendList(eurovision);
     listDestroy(copy_country);
     list = FilterListForFriends(list);
     return list;

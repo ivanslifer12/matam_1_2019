@@ -54,6 +54,6 @@ int MaxInArray(int * array,int array_length,int array_offset );
 List FilterListForFriends(List list);
 double NumberRound(double number);
 Name ConnectThreeStrings(const char *str1, const char *str2,const char *str3);
-void MassFree(Element e1,Element e2,Element e3,Element e4,Element e5);
+void DestroyFriendList(Eurovision eurovision);
 
 #endif //MATAM1_SUPPORT_FUNCTIONS_H

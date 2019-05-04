@@ -18,7 +18,11 @@ ListElement CopyPoints(Element points_struct);
 void FreePoints(Element points_struct);
 
 
-List ADTPointsReader(Element points);
+
+
+UniqueId ADTPointToRead(Element points);
+UniqueId ADTPointFromRead(Element points);
+
 
 
 

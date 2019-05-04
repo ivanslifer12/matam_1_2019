@@ -115,12 +115,13 @@ EurovisionResult VotesTest(Eurovision eurovision, int stateGiver,
     if (stateGiver < 0 || stateTaker < 0) {
         return EUROVISION_INVALID_ID;
     }
-    if (stateGiver == stateTaker) {
-        return EUROVISION_SAME_STATE;
-    }
     if (UniqueCountryName(eurovision, stateGiver) || UniqueCountryName(eurovision, stateTaker)) {
         return EUROVISION_STATE_NOT_EXIST;
     }
+    if (stateGiver == stateTaker) {
+        return EUROVISION_SAME_STATE;
+    }
+
     return EUROVISION_SUCCESS;
 }
 
@@ -149,7 +150,7 @@ void CalculatePointsFromJudge(Eurovision eurovision) {
         for (int i = 0; i < RANKED_COUNTRIES; ++ i) {
             LIST_FOREACH(Country, country, eurovision->list_of_countries) {
                 if (judge_point[i] == ADTCountryReaderID(country)) {
-                    ADTCountryPreAvreageJudgeUpdate(country, ADTCountryPreAvreageJudgeReader(country) + JudgeRank(i));
+                    ADTCountryPreAvreageJudgeUpdate(country, ADTCountryPreAvreageJudgeRead(country) + JudgeRank(i));
                 }
             }
         }
@@ -219,10 +220,10 @@ EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int
             ptr[array_length + k] = 0;
         }
         LIST_FOREACH(Points, points, eurovision->list_of_points) {
-            List list = ADTPointsReader(points);
-            points_from_country = StringToIntNoFree(listGetFirst(list));
-            points_to_country = StringToIntNoFree(listGetNext(list));
-            listDestroy(list);
+
+            points_from_country = ADTPointFromRead(points);
+            points_to_country = ADTPointToRead(points);
+
             if (ptr[j] == points_from_country) {
                 for (int i = 0; i < array_length; ++ i) {
                     if (ptr[i] == points_to_country)
@@ -237,7 +238,7 @@ EurovisionResult CalculatePointsFromCountry(Eurovision eurovision, int *ptr, int
                 LIST_FOREACH(Country, state, eurovision->list_of_countries) {
                     if (ADTCountryReaderID(state) == ptr[j]) {
                         Name str = IntToString(ptr[index]);
-                        if (listInsertLast(ADTCountryGaveMaxPointsReader(state), str) != LIST_SUCCESS) {
+                        if (listInsertLast(ADTCountryGaveMaxPointsRead(state), str) != LIST_SUCCESS) {
                             return EUROVISION_NULL_ARGUMENT;
                         }
                         free(str);
@@ -313,7 +314,7 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
         if (temp != 0) {
             LIST_FOREACH(Country, country, eurovision->list_of_countries) {
                 if (ADTCountryReaderID(country) == ptr[index]) {
-                    ADTCountryPreAvreagePeopleUpdate(country, ADTCountryPreAvreagePeopleReader(country) + JudgeRank(i));
+                    ADTCountryPreAvreagePeopleUpdate(country, ADTCountryPreAvreagePeopleRead(country) + JudgeRank(i));
                 }
             }
             ptr[index + array_length] = 0; //so we wont check it again
@@ -331,23 +332,23 @@ void AddPointsToTheNext(Eurovision eurovision, int *ptr, int array_length) {
 void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int number_of_countries, int audiencePercent) {
     LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         if (eurovision->initialization->list_of_points == true) {
-            ADTCountryPostAvreagePeopleUpdate(country, (ADTCountryPreAvreagePeopleReader(country)) /
+            ADTCountryPostAvreagePeopleUpdate(country, (ADTCountryPreAvreagePeopleRead(country)) /
                                                        (double) (number_of_countries - THE_COUNTRY_ITSELF));
-            ADTCountryPostAvreagePeopleUpdate(country, NumberRound(ADTCountryPostAvreagePeopleReader(country)));
+            ADTCountryPostAvreagePeopleUpdate(country, NumberRound(ADTCountryPostAvreagePeopleRead(country)));
         }
         if (eurovision->initialization->list_of_judges == true && number_of_jadges != 0) {
             ADTCountryPostAvreageJudgeUpdate(country,
-                                             ADTCountryPreAvreageJudgeReader(country) / ((double) (number_of_jadges)));
+                                             ADTCountryPreAvreageJudgeRead(country) / ((double) (number_of_jadges)));
 
 
-            ADTCountryPostAvreageJudgeUpdate(country, NumberRound(ADTCountryPostAvreageJudgeReader(country)));
+            ADTCountryPostAvreageJudgeUpdate(country, NumberRound(ADTCountryPostAvreageJudgeRead(country)));
         }
         ADTCountryFinalScoreUpdate(country,
-                                   (ADTCountryPostAvreagePeopleReader(country)) *
+                                   (ADTCountryPostAvreagePeopleRead(country)) *
                                    ((double) audiencePercent / (double) MAX_PRACENT) +
-                                   (ADTCountryPostAvreageJudgeReader(country)) *
+                                   (ADTCountryPostAvreageJudgeRead(country)) *
                                    (double) ((double) WHOLE_NUMBER - (double) (audiencePercent / MAX_PRACENT)));
-        ADTCountryFinalScoreUpdate(country,ADTCountryFinalScoreReader(country));
+        ADTCountryFinalScoreUpdate(country,ADTCountryFinalScoreRead(country));
 
     }
 
@@ -373,22 +374,22 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
 
     for (int i = 0; i < amount_of_countries; ++ i) {
         LIST_FOREACH(Country, country, eurovision->list_of_countries) {
-            if (ADTCountryCalculatedPlaceReader(country) == false) {
-                if (ADTCountryFinalScoreReader(country) > ADTCountryFinalScoreReader(temp_country)) {
+            if (ADTCountryCalculatedPlaceRead(country) == false) {
+                if (ADTCountryFinalScoreRead(country) > ADTCountryFinalScoreRead(temp_country)) {
                     temp_country = country;
                 }
-                if (ADTCountryFinalScoreReader(country) == ADTCountryFinalScoreReader(temp_country)) {
+                if (ADTCountryFinalScoreRead(country) == ADTCountryFinalScoreRead(temp_country)) {
                     if (ADTCountryReaderID(country) < ADTCountryReaderID(temp_country)) {
                         temp_country = country;
                     }
-                    if (ADTCountryFinalScoreReader(country) == 0 && ADTCountryNameReader(temp_country)== NULL) {
+                    if (ADTCountryFinalScoreRead(country) == 0 && ADTCountryNameRead(temp_country)== NULL) {
                         temp_country = country;
                     }
                 }
 
             }
         }
-        if (listInsertLast(list, ADTCountryNameReader(temp_country)) != LIST_SUCCESS) {
+        if (listInsertLast(list, ADTCountryNameRead(temp_country)) != LIST_SUCCESS) {
             return NULL;
 
         }
@@ -535,24 +536,11 @@ List FilterListForFriends(List list) {
 }
 
 
-void MassFree(Element e1, Element e2, Element e3, Element e4, Element e5) {
-    if (e1) {
-        free(e1);
-    }
-    if (e2) {
-        free(e2);
-    }
-    if (e3) {
-        free(e3);
-    }
-    if (e4) {
-        free(e4);
-    }
-    if (e5) {
-        free(e5);
+void DestroyFriendList(Eurovision eurovision){
+    LIST_FOREACH(Country,country,eurovision->list_of_countries){
+        ADTDestroyWinnersList(country);
     }
 }
-
 
 
 

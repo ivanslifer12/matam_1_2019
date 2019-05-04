@@ -29,10 +29,14 @@ struct eurovision_t {
 
 };
 
+void ADTDestroyWinnersList(Element country){
+    listClear(((Country)country)->gave_max_points);
+}
+
 void ADTCountryCalculatedPlaceUpdate(Element country,bool calculated_place){
     ((Country)country)->calculated_place=calculated_place;
 }
-bool ADTCountryCalculatedPlaceReader(Element country){
+bool ADTCountryCalculatedPlaceRead(Element country){
     return ((Country)country)->calculated_place;
 }
 
@@ -40,7 +44,7 @@ void ADTCountryFinalScoreUpdate (Element country,Score final_score){
     ((Country)country)->final_score=final_score;
 }
 
-Score ADTCountryFinalScoreReader (Element country){
+Score ADTCountryFinalScoreRead (Element country){
     return ((Country)country)->final_score;
 
 }
@@ -49,12 +53,12 @@ void ADTCountryPostAvreagePeopleUpdate (Element country,Score post_average_point
     ((Country)country)->post_average_points=post_average_points;
 }
 
-Score ADTCountryPostAvreagePeopleReader (Element country){
+Score ADTCountryPostAvreagePeopleRead (Element country){
     return ((Country)country)->post_average_points;
 
 }
 
-Score ADTCountryPostAvreageJudgeReader (Element country){
+Score ADTCountryPostAvreageJudgeRead (Element country){
     return ((Country)country)->post_average_points_judge;
 }
 
@@ -66,7 +70,7 @@ void ADTCountryPostAvreageJudgeUpdate (Element country,Score post_average_points
 UniqueId ADTCountryReaderID(Element country) {
     return ((Country)country)->unique_id;
 }
-Name ADTCountryNameReader(Element country){
+Name ADTCountryNameRead(Element country){
     return ((Country)country)->country_name;
 }
 
@@ -78,11 +82,11 @@ void ADTCountryNameNULL(Element country){
 }
 
 
-UniqueId ADTCountryPreAvreageJudgeReader (Element country){
+UniqueId ADTCountryPreAvreageJudgeRead (Element country){
     return ((Country)country)->pre_average_points_judge;
 }
 
-List ADTCountryGaveMaxPointsReader (Element country){
+List ADTCountryGaveMaxPointsRead (Element country){
     return ((Country)country)->gave_max_points;
 }
 
@@ -94,12 +98,12 @@ void ADTCountryPreAvreagePeopleUpdate (Element country,UniqueId pre_average_poin
     ((Country)country)->pre_average_points=pre_average_points;
 }
 
-UniqueId ADTCountryPreAvreagePeopleReader (Element country){
+UniqueId ADTCountryPreAvreagePeopleRead (Element country){
     return ((Country)country)->pre_average_points;
 }
 
 
-List ADTCountryReaderMaxList(Element country){
+List ADTCountryReadMaxList(Element country){
 
     return ((Country)country)->gave_max_points;
 }
