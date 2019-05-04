@@ -25,7 +25,7 @@ points.o: points.c eurovision.h list.h namelib.h points.h support_functions.h
 
 support_functions.o: support_functions.c eurovision.h list.h namelib.h country.h judge.h points.h support_functions.h
 
-eurovisionFunctionalityTests.o: tests/eurovisionFunctionalityTests.c list.h
+eurovisionFunctionalityTests.o: tests/eurovisionFunctionalityTests.c list.h \
  tests/../namelib.h tests/../eurovision.h tests/../list.h \
  tests/eurovisionTests.h tests/../support_functions.h \
  tests/../eurovision.h tests/../judge.h tests/../country.h

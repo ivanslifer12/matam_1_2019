@@ -91,7 +91,7 @@ bool AssociatedCountryId(Eurovision eurovision, int *judgeResults) {
  */
 char *IntToString(int num) {
     char *result;
-    result = (char *) malloc(sizeof(char) * MAX_NUMBER_LENGTH);
+    result = (char *) malloc(sizeof(char) * (MAX_NUMBER_LENGTH+1));
     sprintf(result, "%d", num);
     return result;
 }
@@ -347,7 +347,7 @@ void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int numb
                                    ((double) audiencePercent / (double) MAX_PRACENT) +
                                    (ADTCountryPostAvreageJudgeReader(country)) *
                                    (double) ((double) WHOLE_NUMBER - (double) (audiencePercent / MAX_PRACENT)));
-        ADTCountryFinalScoreUpdate(country, ADTCountryFinalScoreReader(country));
+        ADTCountryFinalScoreUpdate(country,ADTCountryFinalScoreReader(country));
 
     }
 
@@ -368,8 +368,9 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
     if (! list) {
         return NULL;
     }
-    Country temp_country = AllocateCountry(NULL, NULL, IntToString(INT_MAX));
+    Country temp_country = AllocateCountry(NULL,NULL,IntToString(INT_MAX));
     Country ptr = temp_country;
+
     for (int i = 0; i < amount_of_countries; ++ i) {
         LIST_FOREACH(Country, country, eurovision->list_of_countries) {
             if (ADTCountryCalculatedPlaceReader(country) == false) {
@@ -380,7 +381,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
                     if (ADTCountryReaderID(country) < ADTCountryReaderID(temp_country)) {
                         temp_country = country;
                     }
-                    if (ADTCountryFinalScoreReader(country) == 0 && ADTCountryNameReader(temp_country) == NULL) {
+                    if (ADTCountryFinalScoreReader(country) == 0 && ADTCountryNameReader(temp_country)== NULL) {
                         temp_country = country;
                     }
                 }
@@ -391,7 +392,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
             return NULL;
 
         }
-        ADTCountryCalculatedPlaceUpdate(temp_country, true); // we use this flag in order not to check the country again
+        ADTCountryCalculatedPlaceUpdate(temp_country,true); // we use this flag in order not to check the country again
         temp_country = ptr;
     }
 
