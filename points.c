@@ -12,18 +12,6 @@ struct points_t {
 
 };
 
-EurovisionResult AllocatePoints(Points points, Element points_from_country, Element points_to_country) {
-    if (points_from_country == NULL || points_to_country == NULL || points == NULL) {
-        return EUROVISION_NULL_ARGUMENT;
-    }
-    if (*((UniqueId *) points_from_country) <= 0 || *((UniqueId *) points_to_country)) {
-        return EUROVISION_INVALID_ID;
-    }
-    points->points_from_country = *((UniqueId *) points_from_country);
-    points->points_to_country = *((UniqueId *) points_to_country);
-
-    return EUROVISION_SUCCESS;
-}
 
 
 Points CreatePointsStruct(Element points_from_country, Element points_to_country) {
@@ -36,25 +24,6 @@ Points CreatePointsStruct(Element points_from_country, Element points_to_country
     return created_points;
 
 }
-/*
-List ADTPointsReader(Element points) {
-    Points temp = (Points) points;
-    List list = listCreate(copyString, freeString);
-    Name points_from_country = IntToString(temp->points_from_country), points_to_country = IntToString(
-            temp->points_to_country);
-    if(listInsertFirst(list, points_from_country)!=LIST_SUCCESS){
-        return NULL;
-    }
-    if(listInsertLast(list, points_to_country)!=LIST_SUCCESS){
-        return NULL;
-    }
-    free(points_from_country);
-    free(points_to_country);
-    return list;
-
-
-}
- */
 
 UniqueId ADTPointToRead(Element points){
     return ((Points)points)->points_to_country;

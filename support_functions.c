@@ -25,20 +25,6 @@ struct eurovision_t {
 
 };
 
-/*
-struct country_t {
-    Name country_name;
-    Name song_name;
-    UniqueId unique_id;
-    UniqueId pre_average_points;
-    Score post_average_points;
-    UniqueId pre_average_points_judge;
-    Score post_average_points_judge;
-    Score final_score;
-    bool calculated_place;
-    List gave_max_points;
-};
-*/
 
 bool ConstNameTest(const char *name) {
     for (int i = 0; name[i] != '\0'; i ++) {
@@ -91,7 +77,7 @@ bool AssociatedCountryId(Eurovision eurovision, int *judgeResults) {
  */
 char *IntToString(int num) {
     char *result;
-    result = (char *) malloc(sizeof(char) * (MAX_NUMBER_LENGTH+1));
+    result = (char *) malloc(sizeof(char) * (MAX_NUMBER_LENGTH + 1));
     sprintf(result, "%d", num);
     return result;
 }
@@ -348,7 +334,7 @@ void CalculateAverageScore(Eurovision eurovision, int number_of_jadges, int numb
                                    ((double) audiencePercent / (double) MAX_PRACENT) +
                                    (ADTCountryPostAvreageJudgeRead(country)) *
                                    (double) ((double) WHOLE_NUMBER - (double) (audiencePercent / MAX_PRACENT)));
-        ADTCountryFinalScoreUpdate(country,ADTCountryFinalScoreRead(country));
+        ADTCountryFinalScoreUpdate(country, ADTCountryFinalScoreRead(country));
 
     }
 
@@ -369,7 +355,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
     if (! list) {
         return NULL;
     }
-    Country temp_country = AllocateCountry(NULL,NULL,IntToString(INT_MAX));
+    Country temp_country = AllocateCountry(NULL, NULL, IntToString(INT_MAX));
     Country ptr = temp_country;
 
     for (int i = 0; i < amount_of_countries; ++ i) {
@@ -382,7 +368,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
                     if (ADTCountryReaderID(country) < ADTCountryReaderID(temp_country)) {
                         temp_country = country;
                     }
-                    if (ADTCountryFinalScoreRead(country) == 0 && ADTCountryNameRead(temp_country)== NULL) {
+                    if (ADTCountryFinalScoreRead(country) == 0 && ADTCountryNameRead(temp_country) == NULL) {
                         temp_country = country;
                     }
                 }
@@ -393,7 +379,7 @@ List MakeWinnersList(Eurovision eurovision, int amount_of_countries) {
             return NULL;
 
         }
-        ADTCountryCalculatedPlaceUpdate(temp_country,true); // we use this flag in order not to check the country again
+        ADTCountryCalculatedPlaceUpdate(temp_country, true); // we use this flag in order not to check the country again
         temp_country = ptr;
     }
 
@@ -536,14 +522,109 @@ List FilterListForFriends(List list) {
 }
 
 
-void DestroyFriendList(Eurovision eurovision){
-    LIST_FOREACH(Country,country,eurovision->list_of_countries){
+void DestroyFriendList(Eurovision eurovision) {
+    LIST_FOREACH(Country, country, eurovision->list_of_countries) {
         ADTDestroyWinnersList(country);
     }
 }
 
+EurovisionResult UpdateJudgeList(Eurovision eurovision, int stateId) {
+    Data *data = (Data *) malloc(sizeof(data) * RANKED_COUNTRIES);
+    if (! data) {
+        eurovisionDestroy(eurovision);
+        return EUROVISION_OUT_OF_MEMORY;
+    }
 
+    if (eurovision->initialization->list_of_judges == true) {
 
+        int size_of_list = listGetSize(eurovision->list_of_judges);
+        int counter = 0;
+        for (int i = 0; i < size_of_list; ++ i) { // listRemoveCurrent breaks LIST_FOREACH
+            if (counter ==
+                listGetSize(eurovision->list_of_judges) + 1) { // to reduce run time +1 for unexpected iterator behavior
+                break;
+            }
+            counter = 0;
+
+            LIST_FOREACH(Judge, judge, eurovision->list_of_judges) {
+                counter ++;
+                ADTJudgeReader(judge, NULL, NULL, data);
+                for (int j = 0; j < RANKED_COUNTRIES; ++ j) {
+                    if (data[j] == stateId) { //index bug was here :(
+                        listRemoveCurrent(eurovision->list_of_judges);
+                        break;
+                    }
+                }
+            }
+
+        }
+    }
+    free(data);
+    if (listGetFirst(eurovision->list_of_judges) == NULL) {
+        eurovision->initialization->list_of_judges = false;
+    }
+    return EUROVISION_SUCCESS;
+}
+
+EurovisionResult UpdateCountryList(Eurovision eurovision, int stateId) {
+    UniqueId id;
+    if (eurovision->initialization->list_of_countries == true) {
+        LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+            id = ADTCountryReaderID(country);
+            if (id == stateId) {
+                listRemoveCurrent(eurovision->list_of_countries);
+                if (listGetFirst(eurovision->list_of_countries) == NULL) {
+                    eurovision->initialization->list_of_countries = false;
+                }
+
+                return EUROVISION_SUCCESS;
+            }
+        }
+    }
+    return EUROVISION_SUCCESS;
+}
+
+List RunGetFriendlyStates(Eurovision eurovision, List list, List copy_country) {
+    Name str = NULL, country_name, state_name;
+    UniqueId country_id, state_id;
+    List gave_max_points, state_gave_max_points;
+    LIST_FOREACH(Country, country, eurovision->list_of_countries) {
+        country_name = ADTCountryNameRead(country);
+        gave_max_points = ADTCountryReadMaxList(country);
+        country_id = ADTCountryReaderID(country);
+        LIST_FOREACH(Name, name, gave_max_points) {
+            LIST_FOREACH(Country, state, copy_country) {
+                state_name = ADTCountryNameRead(state);
+                state_id = ADTCountryReaderID(state);
+                state_gave_max_points = ADTCountryReadMaxList(state);
+                if (StringToIntNoFree(name) == state_id) {
+                    LIST_FOREACH(Name, copy_name, state_gave_max_points) {
+                        if (StringToIntNoFree(copy_name) == country_id) {
+                            if (strcmp(country_name, state_name) >
+                                0) { //state->country_name should be first
+                                str = ConnectThreeStrings(state_name, " - ", country_name);
+                                if (listInsertLast(list, str) != LIST_SUCCESS) {
+                                    listDestroy(copy_country);
+                                    return NULL;
+                                }
+                                free(str);
+                            }
+                            if (strcmp(country_name, state_name) < 0) {
+                                str = ConnectThreeStrings(country_name, " - ", state_name);
+                                if (listInsertLast(list, str) != LIST_SUCCESS) {
+                                    listDestroy(copy_country);
+                                    return NULL;
+                                }
+                                free(str);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return list;
+}
 
 
 

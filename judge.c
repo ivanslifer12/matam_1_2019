@@ -35,15 +35,7 @@ Judge AllocateJudge(Element unique_id, Element judge_name, Element judge_points)
     return judge;
 }
 
-/*
-bool NameTest(Name judge_name) {
-    for (int i = 0; judge_name[i] != '\0'; i ++) {
-        if (((judge_name[i] >= 'a' && judge_name[i] <= 'z') || judge_name[i] == ' ') == false)
-            return false;
-    }
-    return true;
-}
- */
+
 
 void ADTJudgeReader(Element judge, UniqueId *unique_id, Name judge_name, Data *judge_points) {
     Judge temp = (Judge) judge;

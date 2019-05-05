@@ -9,21 +9,27 @@
 typedef struct points_t *Points;
 
 
-EurovisionResult AllocatePoints(Points points, Element points_from_country, Element points_to_country);
-
-Points CreatePointsStruct( Element points_from_country, Element points_to_country);
-
+/*
+ * creats new Points object for initial use in the program
+ */
+Points CreatePointsStruct(Element points_from_country, Element points_to_country);
+/*
+ * copy function for the points object useful for ADT
+ */
 ListElement CopyPoints(Element points_struct);
-
+/*
+ * free function for points object
+ */
 void FreePoints(Element points_struct);
 
-
-
-
+/*
+* all the functions that start with ADT
+ * are simple return\place function
+ * the location of the action is in the function name
+*/
 UniqueId ADTPointToRead(Element points);
+
 UniqueId ADTPointFromRead(Element points);
-
-
 
 
 #endif //MATAM1_POINTS_H
